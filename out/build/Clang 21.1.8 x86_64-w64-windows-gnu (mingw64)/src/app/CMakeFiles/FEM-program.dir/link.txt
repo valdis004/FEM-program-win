@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\FEM-program.dir/objects.a
+C:\PROGRA~1\LLVM\bin\llvm-ar.exe qc CMakeFiles\FEM-program.dir/objects.a @CMakeFiles\FEM-program.dir\objects1.rsp
+c:\msys64\mingw64\bin\clang++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\FEM-program.dir/objects.a -Wl,--no-whole-archive -o ..\..\FEM-program.exe -Wl,--out-implib,libFEM-program.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\FEM-program.dir\linkLibs.rsp

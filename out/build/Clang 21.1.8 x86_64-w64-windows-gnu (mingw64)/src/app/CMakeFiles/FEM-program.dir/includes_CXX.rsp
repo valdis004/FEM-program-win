@@ -1,0 +1,1 @@
+-I"C:/Users/vlada/DOCUME~1/FEM/FEM-PR~2/out/build/CLANG2~1.8X8/src/app/FEM-PR~1/include" -isystem C:/msys64/mingw64/include/qt6/QtCore -isystem C:/msys64/mingw64/include/qt6 -isystem "C:/msys64/mingw64/share/qt6/mkspecs/win32-g++" -isystem C:/msys64/mingw64/include/qt6/QtWidgets -isystem C:/msys64/mingw64/include/qt6/QtGui

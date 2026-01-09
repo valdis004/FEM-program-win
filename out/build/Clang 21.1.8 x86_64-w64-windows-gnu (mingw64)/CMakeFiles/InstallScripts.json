@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Clang 21.1.8 x86_64-w64-windows-gnu (mingw64)/cmake_install.cmake",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Clang 21.1.8 x86_64-w64-windows-gnu (mingw64)/src/app/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
