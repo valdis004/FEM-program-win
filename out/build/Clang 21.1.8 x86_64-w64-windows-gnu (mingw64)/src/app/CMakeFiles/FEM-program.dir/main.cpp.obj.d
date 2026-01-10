@@ -1,7 +1,8 @@
 src/app/CMakeFiles/FEM-program.dir/main.cpp.obj: \
-  C:/Users/vlada/Documents/FEM/FEM-program/src/app/main.cpp \
-  C:/msys64/mingw64/include/qt6/QtWidgets/QApplication \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qapplication.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/main.cpp \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/mainwindow.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QMainWindow \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qmainwindow.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qtwidgetsglobal.h \
   C:/msys64/mingw64/include/qt6/QtGui/qtguiglobal.h \
   C:/msys64/mingw64/include/qt6/QtCore/qglobal.h \
@@ -191,9 +192,10 @@ src/app/CMakeFiles/FEM-program.dir/main.cpp.obj: \
   C:/msys64/mingw64/include/qt6/QtGui/qtguiexports.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qtwidgets-config.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qtwidgetsexports.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qcoreapplication.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qstring.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qchar.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qwidget.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qwindowdefs.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qobjectdefs.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qnamespace.h \
   C:/msys64/mingw64/include/qt6/QtCore/qcompare.h \
   C:/msys64/mingw64/include/qt6/QtCore/qstdlibdetection.h \
   C:/msys64/mingw64/include/qt6/QtCore/qcomparehelpers.h \
@@ -227,22 +229,15 @@ src/app/CMakeFiles/FEM-program.dir/main.cpp.obj: \
   C:/msys64/mingw64/include/c++/15.2.0/array \
   C:/msys64/mingw64/include/c++/15.2.0/bits/move_only_function.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/mofunc_impl.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qstringview.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qbytearray.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qrefcount.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qnamespace.h \
   C:/msys64/mingw64/include/qt6/QtCore/qtmetamacros.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qarraydata.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qpair.h \
-  C:/msys64/mingw64/include/string.h \
-  C:/msys64/mingw64/include/sec_api/string_s.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qarraydatapointer.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qarraydataops.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qcontainertools_impl.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qxptype_traits.h \
-  C:/msys64/mingw64/include/c++/15.2.0/cstring \
-  C:/msys64/mingw64/include/c++/15.2.0/iterator \
-  C:/msys64/mingw64/include/c++/15.2.0/bits/stream_iterator.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qobjectdefs_impl.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qfunctionaltools_impl.h \
+  C:/msys64/mingw64/include/c++/15.2.0/memory \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/align.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/unique_ptr.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h \
+  C:/msys64/mingw64/include/c++/15.2.0/ios \
   C:/msys64/mingw64/include/c++/15.2.0/iosfwd \
   C:/msys64/mingw64/include/c++/15.2.0/bits/stringfwd.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/postypes.h \
@@ -253,8 +248,7 @@ src/app/CMakeFiles/FEM-program.dir/main.cpp.obj: \
   C:/msys64/mingw64/include/_mingw_stat64.h \
   C:/msys64/mingw64/include/swprintf.inl \
   C:/msys64/mingw64/include/sec_api/wchar_s.h \
-  C:/msys64/mingw64/include/c++/15.2.0/bits/streambuf_iterator.h \
-  C:/msys64/mingw64/include/c++/15.2.0/streambuf \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/char_traits.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/localefwd.h \
   C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/msys64/mingw64/include/c++/15.2.0/clocale \
@@ -267,7 +261,6 @@ src/app/CMakeFiles/FEM-program.dir/main.cpp.obj: \
   C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/locale_classes.h \
   C:/msys64/mingw64/include/c++/15.2.0/string \
-  C:/msys64/mingw64/include/c++/15.2.0/bits/char_traits.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/ostream_insert.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/cxxabi_forced.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/basic_string.h \
@@ -282,18 +275,14 @@ src/app/CMakeFiles/FEM-program.dir/main.cpp.obj: \
   C:/msys64/mingw64/include/c++/15.2.0/system_error \
   C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \
   C:/msys64/mingw64/include/c++/15.2.0/stdexcept \
+  C:/msys64/mingw64/include/c++/15.2.0/streambuf \
   C:/msys64/mingw64/include/c++/15.2.0/bits/streambuf.tcc \
-  C:/msys64/mingw64/include/c++/15.2.0/memory \
-  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/mingw64/include/c++/15.2.0/bits/align.h \
-  C:/msys64/mingw64/include/c++/15.2.0/bits/unique_ptr.h \
-  C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h \
-  C:/msys64/mingw64/include/c++/15.2.0/ios \
   C:/msys64/mingw64/include/c++/15.2.0/bits/basic_ios.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets.h \
   C:/msys64/mingw64/include/c++/15.2.0/cwctype \
   C:/msys64/mingw64/include/wctype.h \
   C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/streambuf_iterator.h \
   C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets.tcc \
   C:/msys64/mingw64/include/c++/15.2.0/bits/basic_ios.tcc \
@@ -306,6 +295,24 @@ src/app/CMakeFiles/FEM-program.dir/main.cpp.obj: \
   C:/msys64/mingw64/include/c++/15.2.0/bits/ranges_uninitialized.h \
   C:/msys64/mingw64/include/c++/15.2.0/bits/out_ptr.h \
   C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_memory_defs.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qwindowdefs_win.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qobject.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qstring.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qchar.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qstringview.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qbytearray.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qrefcount.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qarraydata.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qpair.h \
+  C:/msys64/mingw64/include/string.h \
+  C:/msys64/mingw64/include/sec_api/string_s.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qarraydatapointer.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qarraydataops.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qcontainertools_impl.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qxptype_traits.h \
+  C:/msys64/mingw64/include/c++/15.2.0/cstring \
+  C:/msys64/mingw64/include/c++/15.2.0/iterator \
+  C:/msys64/mingw64/include/c++/15.2.0/bits/stream_iterator.h \
   C:/msys64/mingw64/include/qt6/QtCore/q20functional.h \
   C:/msys64/mingw64/include/qt6/QtCore/q20memory.h \
   C:/msys64/mingw64/include/qt6/QtCore/q17memory.h \
@@ -329,13 +336,6 @@ src/app/CMakeFiles/FEM-program.dir/main.cpp.obj: \
   C:/msys64/mingw64/include/qt6/QtCore/qstringbuilder.h \
   C:/msys64/mingw64/include/qt6/QtCore/qstringconverter.h \
   C:/msys64/mingw64/include/qt6/QtCore/qstringconverter_base.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qcoreevent.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qbasictimer.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qabstracteventdispatcher.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qobject.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qobjectdefs.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qobjectdefs_impl.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qfunctionaltools_impl.h \
   C:/msys64/mingw64/include/qt6/QtCore/qlist.h \
   C:/msys64/mingw64/include/qt6/QtCore/qhashfunctions.h \
   C:/msys64/mingw64/include/c++/15.2.0/numeric \
@@ -393,23 +393,18 @@ src/app/CMakeFiles/FEM-program.dir/main.cpp.obj: \
   C:/msys64/mingw64/include/c++/15.2.0/bits/chrono_io.h \
   C:/msys64/mingw64/include/c++/15.2.0/iomanip \
   C:/msys64/mingw64/include/c++/15.2.0/bits/quoted_string.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qeventloop.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qdeadlinetimer.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qnativeinterface.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qcoreapplication_platform.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qwindowdefs.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qwindowdefs_win.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qpoint.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qmargins.h \
   C:/msys64/mingw64/include/qt6/QtCore/qcheckedint_impl.h \
   C:/msys64/mingw64/include/qt6/QtCore/q23utility.h \
   C:/msys64/mingw64/include/qt6/QtCore/q20utility.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qaction.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qkeysequence.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qicon.h \
   C:/msys64/mingw64/include/qt6/QtCore/qsize.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qmargins.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qcursor.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qbitmap.h \
   C:/msys64/mingw64/include/qt6/QtGui/qpixmap.h \
   C:/msys64/mingw64/include/qt6/QtGui/qpaintdevice.h \
   C:/msys64/mingw64/include/qt6/QtCore/qrect.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qpoint.h \
   C:/msys64/mingw64/include/qt6/QtGui/qcolor.h \
   C:/msys64/mingw64/include/qt6/QtGui/qrgb.h \
   C:/msys64/mingw64/include/qt6/QtGui/qrgba64.h \
@@ -423,9 +418,6 @@ src/app/CMakeFiles/FEM-program.dir/main.cpp.obj: \
   C:/msys64/mingw64/include/c++/15.2.0/cassert \
   C:/msys64/mingw64/include/qt6/QtCore/q20iterator.h \
   C:/msys64/mingw64/include/qt6/QtCore/qline.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qguiapplication.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qinputmethod.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qlocale.h \
   C:/msys64/mingw64/include/qt6/QtCore/qvariant.h \
   C:/msys64/mingw64/include/qt6/QtCore/qdebug.h \
   C:/msys64/mingw64/include/qt6/QtCore/qtextstream.h \
@@ -444,13 +436,6 @@ src/app/CMakeFiles/FEM-program.dir/main.cpp.obj: \
   C:/msys64/mingw64/include/qt6/QtCore/qhash.h \
   C:/msys64/mingw64/include/qt6/QtCore/qvarlengtharray.h \
   C:/msys64/mingw64/include/qt6/QtCore/qalloc.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qguiapplication_platform.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/QDockWidget \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qdockwidget.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qwidget.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qaction.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qkeysequence.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qicon.h \
   C:/msys64/mingw64/include/qt6/QtGui/qpalette.h \
   C:/msys64/mingw64/include/qt6/QtGui/qbrush.h \
   C:/msys64/mingw64/include/qt6/QtGui/qfont.h \
@@ -459,45 +444,22 @@ src/app/CMakeFiles/FEM-program.dir/main.cpp.obj: \
   C:/msys64/mingw64/include/qt6/QtGui/qfontinfo.h \
   C:/msys64/mingw64/include/qt6/QtGui/qfontvariableaxis.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qsizepolicy.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/QListWidget \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qlistwidget.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qlistview.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qabstractitemview.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qabstractscrollarea.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qframe.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qabstractitemmodel.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qitemselectionmodel.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qabstractitemdelegate.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qstyleoption.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qabstractspinbox.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qvalidator.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qregularexpression.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qslider.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qabstractslider.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qstyle.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qtabbar.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qcursor.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qbitmap.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qtabwidget.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qrubberband.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/QMainWindow \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qmainwindow.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/QMenu \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qmenu.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/QMenuBar \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qmenubar.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/QPushButton \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qpushbutton.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qabstractbutton.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QApplication \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qapplication.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qcoreapplication.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qcoreevent.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qbasictimer.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qabstracteventdispatcher.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qeventloop.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qdeadlinetimer.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qnativeinterface.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qcoreapplication_platform.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qguiapplication.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qinputmethod.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qlocale.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qguiapplication_platform.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/QStyleFactory \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qstylefactory.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/QTextEdit \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qtextedit.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qtextdocument.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qurl.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qtextoption.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qtextcursor.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qtextformat.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qpen.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/QTreeWidget \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qtreewidget.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qtreeview.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qtreewidgetitemiterator.h
+  C:/msys64/mingw64/include/qt6/QtWidgets/qstylefactory.h

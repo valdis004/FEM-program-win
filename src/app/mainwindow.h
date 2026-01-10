@@ -1,11 +1,28 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include <QWidget>
+// #include <QAbstractButton>
+// #include <QComboBox>
+// #include <QFontComboBox>
+#include <QMainWindow>
+// #include <QToolBar>
+// #include <QToolBox>
+// #include <QToolButton>
+// #include <QWidget>
+// #include <qdockwidget.h>
+// #include <qwidget.h>
+class QMdiArea;
 
-class MainWindow : public QWidget {
+class MainWindow : public QMainWindow {
+
 public:
-  explicit MainWindow(QWidget *parent = 0);
+  MainWindow();
+
+private:
+  void createLeftDock();
+  void createMenus();
+  void createToolBar();
+  void createToolStrip();
 };
 
 #endif // WINDOW_H

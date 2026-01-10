@@ -411,11 +411,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "FEM-program_autogen::@ff93792cf40911dae1b8"
+			"id" : "FEM-program_autogen_timestamp_deps::@ff93792cf40911dae1b8"
 		},
 		{
-			"id" : "FEM-program_autogen_timestamp_deps::@ff93792cf40911dae1b8"
+			"backtrace" : 0,
+			"id" : "FEM-program_autogen::@ff93792cf40911dae1b8"
 		}
 	],
 	"id" : "FEM-program::@ff93792cf40911dae1b8",
@@ -520,11 +520,11 @@
 			"id" : "Qt6::uic::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 0,
-			"id" : "FEM-program_autogen::@ff93792cf40911dae1b8"
+			"id" : "FEM-program_autogen_timestamp_deps::@ff93792cf40911dae1b8"
 		},
 		{
-			"id" : "FEM-program_autogen_timestamp_deps::@ff93792cf40911dae1b8"
+			"backtrace" : 0,
+			"id" : "FEM-program_autogen::@ff93792cf40911dae1b8"
 		}
 	],
 	"paths" : 

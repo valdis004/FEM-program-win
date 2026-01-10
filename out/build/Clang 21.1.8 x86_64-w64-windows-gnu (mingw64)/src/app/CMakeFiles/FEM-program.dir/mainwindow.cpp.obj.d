@@ -1,8 +1,8 @@
 src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.obj: \
-  C:/Users/vlada/Documents/FEM/FEM-program/src/app/mainwindow.cpp \
-  C:/Users/vlada/Documents/FEM/FEM-program/src/app/mainwindow.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/QWidget \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qwidget.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/mainwindow.cpp \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/mainwindow.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QMainWindow \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qmainwindow.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qtwidgetsglobal.h \
   C:/msys64/mingw64/include/qt6/QtGui/qtguiglobal.h \
   C:/msys64/mingw64/include/qt6/QtCore/qglobal.h \
@@ -192,6 +192,7 @@ src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.obj: \
   C:/msys64/mingw64/include/qt6/QtGui/qtguiexports.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qtwidgets-config.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qtwidgetsexports.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qwidget.h \
   C:/msys64/mingw64/include/qt6/QtGui/qwindowdefs.h \
   C:/msys64/mingw64/include/qt6/QtCore/qobjectdefs.h \
   C:/msys64/mingw64/include/qt6/QtCore/qnamespace.h \
@@ -445,21 +446,68 @@ src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.obj: \
   C:/msys64/mingw64/include/qt6/QtWidgets/qsizepolicy.h \
   C:/msys64/mingw64/include/qt6/QtGui/qcursor.h \
   C:/msys64/mingw64/include/qt6/QtGui/qbitmap.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qtabwidget.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QButtonGroup \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qbuttongroup.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QComboBox \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qcombobox.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qabstractitemdelegate.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qstyleoption.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qlocale.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qabstractspinbox.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qvalidator.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qregularexpression.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qslider.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qabstractslider.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qstyle.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qtabbar.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qrubberband.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qframe.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qabstractitemmodel.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QDockWidget \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qdockwidget.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QLabel \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qlabel.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qpicture.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qiodevice.h \
+  C:/msys64/mingw64/include/qt6/QtGui/qtextdocument.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qurl.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QMdiArea \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qmdiarea.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qabstractscrollarea.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QMenuBar \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qmenubar.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qmenu.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QProgressBar \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qprogressbar.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/QPushButton \
   C:/msys64/mingw64/include/qt6/QtWidgets/qpushbutton.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qabstractbutton.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/QTextEdit \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QStatusBar \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qstatusbar.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QTextBrowser \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qtextbrowser.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qtextedit.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qabstractscrollarea.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qframe.h \
-  C:/msys64/mingw64/include/qt6/QtGui/qtextdocument.h \
-  C:/msys64/mingw64/include/qt6/QtCore/qurl.h \
   C:/msys64/mingw64/include/qt6/QtGui/qtextoption.h \
   C:/msys64/mingw64/include/qt6/QtGui/qtextcursor.h \
   C:/msys64/mingw64/include/qt6/QtGui/qtextformat.h \
   C:/msys64/mingw64/include/qt6/QtGui/qpen.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QTextEdit \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QToolBar \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qtoolbar.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QToolBox \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qtoolbox.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QToolButton \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qtoolbutton.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QTreeWidget \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qtreewidget.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qtreeview.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qabstractitemview.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qitemselectionmodel.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qtreewidgetitemiterator.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/QVBoxLayout \
   C:/msys64/mingw64/include/qt6/QtWidgets/qboxlayout.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qlayout.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qlayoutitem.h \
-  C:/msys64/mingw64/include/qt6/QtWidgets/qgridlayout.h
+  C:/msys64/mingw64/include/qt6/QtWidgets/qgridlayout.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/QWidget
