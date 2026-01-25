@@ -1,12 +1,15 @@
-#include "mainwindow.h"
 #include <QApplication>
 #include <QStyleFactory>
 
-int main(int argc, char *argv[]) {
-  QApplication app(argc, argv);
-  app.setStyle(QStyleFactory::create("Universal"));
-  MainWindow mainWindow;
+#include "elements/elementprovider.h"
+#include "mainwindow.h"
 
+int main(int argc, char *argv[]) {
+  ElementProvider::init();
+
+  QApplication app(argc, argv);
+  app.setStyle(QStyleFactory::create("Fusion"));
+  MainWindow mainWindow;
   mainWindow.show();
   return app.exec();
 }

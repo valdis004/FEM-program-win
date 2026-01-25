@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/cmake_install.cmake",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

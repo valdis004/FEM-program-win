@@ -1,7 +1,0 @@
-C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Clang 21.1.8 x86_64-w64-windows-gnu (mingw64)/CMakeFiles/edit_cache.dir
-C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Clang 21.1.8 x86_64-w64-windows-gnu (mingw64)/CMakeFiles/rebuild_cache.dir
-C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Clang 21.1.8 x86_64-w64-windows-gnu (mingw64)/src/app/CMakeFiles/FEM-program.dir
-C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Clang 21.1.8 x86_64-w64-windows-gnu (mingw64)/src/app/CMakeFiles/edit_cache.dir
-C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Clang 21.1.8 x86_64-w64-windows-gnu (mingw64)/src/app/CMakeFiles/rebuild_cache.dir
-C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Clang 21.1.8 x86_64-w64-windows-gnu (mingw64)/src/app/CMakeFiles/FEM-program_autogen_timestamp_deps.dir
-C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Clang 21.1.8 x86_64-w64-windows-gnu (mingw64)/src/app/CMakeFiles/FEM-program_autogen.dir

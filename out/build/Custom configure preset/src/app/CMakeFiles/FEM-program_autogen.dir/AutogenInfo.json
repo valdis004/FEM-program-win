@@ -1,0 +1,283 @@
+{
+	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
+	"BUILD_DIR" : "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/vlada/Documents/FEM/FEM-program-win/src/app",
+	"CMAKE_EXECUTABLE" : "C:/Program Files/CMake/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : [ "C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/CMakeLists.txt" ],
+	"CMAKE_SOURCE_DIR" : "C:/Users/vlada/Documents/FEM/FEM-program-win",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "FEM-program_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/context-menu/treeContextMenu.h",
+			"MU",
+			"CO7GBIKHLH/moc_treeContextMenu.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/mainwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/displacement/femdisplacement.h",
+			"MU",
+			"JAYWTG6FWL/moc_femdisplacement.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/elementprovider.h",
+			"MU",
+			"LFVNSI46CU/moc_elementprovider.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.h",
+			"MU",
+			"LFVNSI46CU/moc_femelement.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/load/femload.h",
+			"MU",
+			"VOYFB2GSZI/moc_femload.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/plates/plates.h",
+			"MU",
+			"PWRSZVA2BX/moc_plates.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/displacement/displacement.h",
+			"MU",
+			"EZ2HBZ2EE3/moc_displacement.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/element.h",
+			"MU",
+			"FRPHIR3QIJ/moc_element.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/load/load.h",
+			"MU",
+			"A5MZWEWZXI/moc_load.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/plates/plate.h",
+			"MU",
+			"BSYQ7VZTOE/moc_plate.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/graphics/qtgl/qtgl.h",
+			"MU",
+			"UDFWO6HIE5/moc_qtgl.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/mesh/mesh.h",
+			"MU",
+			"LD7W27ASRM/moc_mesh.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/mesh/meshdata.h",
+			"MU",
+			"LD7W27ASRM/moc_meshdata.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/solver/solver.h",
+			"MU",
+			"LACER7ZNF2/moc_solver.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"MINGW_HAS_SECURE_API=1",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NEEDS_QMAIN",
+		"QT_OPENGLWIDGETS_LIB",
+		"QT_OPENGL_LIB",
+		"QT_WIDGETS_LIB",
+		"UNICODE",
+		"WIN32",
+		"WIN64",
+		"WINVER=0x0A00",
+		"_ENABLE_EXTENDED_ALIGNED_STORAGE",
+		"_UNICODE",
+		"_WIN32_WINNT=0x0A00",
+		"_WIN64"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"C:/Users/vlada/Documents/FEM/FEM-program-win",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/app",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/context-menu",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/load",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/displacement",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/plates",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/graphics",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/mesh",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/solver",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/load",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/displacement",
+		"C:/msys64/mingw64/include/qt6/QtWidgets",
+		"C:/msys64/mingw64/include/qt6",
+		"C:/msys64/mingw64/include/qt6/QtCore",
+		"C:/msys64/mingw64/share/qt6/mkspecs/win32-g++",
+		"C:/msys64/mingw64/include/qt6/QtGui",
+		"C:/msys64/mingw64/include/qt6/QtOpenGLWidgets",
+		"C:/msys64/mingw64/include/qt6/QtOpenGL",
+		"C:/msys64/mingw64/include/eigen3",
+		"C:/Program Files/LLVM/include/c++/v1",
+		"C:/Program Files/LLVM/lib/clang/21/include",
+		"C:/Program Files/LLVM/include"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"C:/Program Files/LLVM/bin/c++.exe",
+		"-std=gnu++23",
+		"-w",
+		"-dM",
+		"-E",
+		"C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 8,
+	"PARSE_CACHE_FILE" : "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/CMakeFiles/FEM-program_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "C:/msys64/mingw64/share/qt6/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "C:/msys64/mingw64/share/qt6/bin/uic.exe",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 10,
+	"SETTINGS_FILE" : "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/CMakeFiles/FEM-program_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/context-menu/treeContextMenu.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/displacement/femdisplacement.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/elementprovider.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/load/femload.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/plates/plates.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/displacement/displacement.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/element.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/load/load.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/plates/plate.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/graphics/qtgl/qtgl.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/mesh/mesh.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/mesh/meshdata.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/solver/solver.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}
