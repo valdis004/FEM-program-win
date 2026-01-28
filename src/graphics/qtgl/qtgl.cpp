@@ -34,7 +34,7 @@ Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
 
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
-  glTranslatef(0.0, 0.0, -4.0 * m_scale);
+  glTranslatef(m_ptPositionDelta.rx(), -m_ptPositionDelta.ry(), -4.0 * m_scale);
 
   glRotatef(m_xRotate, 1.0, 0.0, 0.0);
   glRotatef(m_yRotate, 0.0, 1.0, 0.0);
@@ -46,13 +46,19 @@ Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
 }
 
 /*virtual*/ void Qtgl::mousePressEvent(QMouseEvent *pe) {
-  if (pe->button() != Qt::LeftButton) {
+  if (pe->button() == Qt::LeftButton) {
+    isLeftBut = true;
+    m_ptPosition = pe->pos();
+  } else {
     isLeftBut = false;
-    return;
   }
 
-  isLeftBut = true;
-  m_ptPosition = pe->pos();
+  if (pe->button() == Qt::MiddleButton) {
+    isMiddleBut = true;
+    m_ptPositionOld = pe->pos();
+  } else {
+    isMiddleBut = false;
+  }
 }
 
 void Qtgl::wheelEvent(QWheelEvent *pe) {
@@ -65,14 +71,19 @@ void Qtgl::wheelEvent(QWheelEvent *pe) {
 }
 
 /*virtual*/ void Qtgl::mouseMoveEvent(QMouseEvent *pe) {
-  if (!isLeftBut)
-    return;
+  if (isLeftBut) {
+    m_xRotate += 180 * (GLfloat)(pe->pos().y() - m_ptPosition.y()) / height();
+    m_yRotate += 180 * (GLfloat)(pe->pos().x() - m_ptPosition.x()) / width();
+    update();
+  }
 
-  m_xRotate += 180 * (GLfloat)(pe->pos().y() - m_ptPosition.y()) / height();
-  m_yRotate += 180 * (GLfloat)(pe->pos().x() - m_ptPosition.x()) / width();
-  update();
-
+  if (isMiddleBut) {
+    m_ptPositionDelta += (pe->position() - m_ptPositionOld) * 0.005;
+    m_ptPositionOld = pe->pos();
+    update();
+  }
   m_ptPosition = pe->pos();
+  // m_ptPositionDelta = {0, 0};
 }
 
 void Qtgl::setMeshData(QVector<shared_ptr<AbstractElement>> *elements) {
@@ -193,7 +204,7 @@ void Qtgl::createMeshDisplayList() {
     // 2. Рисуем узлы (красные точки)
     glPointSize(7.0f);
     glBegin(GL_POINTS);
-    glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
+    glColor4f(0.0f, 0.0f, 0.0f, 1.0f);
 
     for (const auto node : nodes) {
       glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);

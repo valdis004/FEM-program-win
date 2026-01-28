@@ -6,6 +6,7 @@
 #include <qevent.h>
 #include <qglobal.h>
 #include <qmainwindow.h>
+#include <qpoint.h>
 #include <qtmetamacros.h>
 
 #include "elements/node.h"
@@ -27,8 +28,11 @@ private:
   GLfloat m_yRotate;
   GLfloat m_scale = 1.0f;
   QPoint m_ptPosition;
-  bool isLeftBut = false;
-  bool isNeedSetCoods = true;
+  QPoint m_ptPositionOld;
+  QPointF m_ptPositionDelta{0, 0};
+  bool isLeftBut{false};
+  bool isMiddleBut{false};
+  bool isNeedSetCoods{true};
 
   QVector<shared_ptr<AbstractElement>> *elements;
 
@@ -54,6 +58,7 @@ protected:
   virtual void mousePressEvent(QMouseEvent *pe);
   virtual void mouseMoveEvent(QMouseEvent *pe);
   virtual void wheelEvent(QWheelEvent *pe);
+  // virtual void mouseReleaseEvent(QMouseEvent *pe);
 
 public:
   Qtgl(QWidget *pwgt = 0);
