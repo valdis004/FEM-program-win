@@ -150,13 +150,14 @@ void Solver::calculate(QVector<shared_ptr<AbstractElement>> &elements) {
     // }
 
     void getOutputStep();
-    setOutputValuesToNodes(mesh, u);
+    setOutputValuesToNodes(mesh, u, element);
   }
   emit calcFinishedStep();
 }
 
 void Solver::setOutputValuesToNodes(shared_ptr<MeshData> mesh,
-                                    const SparseVector<double> &globalU) {
+                                    const SparseVector<double> &globalU,
+                                    shared_ptr<AbstractElement> elements) {
   bool flag = true;
 
   double maxAbsValues[ElementProvider::outputCounts]{0};
@@ -206,9 +207,9 @@ void Solver::setOutputValuesToNodes(shared_ptr<MeshData> mesh,
   }
 
   for (size_t j = 0; j < count; j++) {
-    this->maxAbsValues.push_back(maxAbsValues[j]);
-    this->maxValues.push_back(maxValues[j]);
-    this->minValues.push_back(minValues[j]);
+    elements->maxAbsValues.push_back(maxAbsValues[j]);
+    elements->maxValues.push_back(maxValues[j]);
+    elements->minValues.push_back(minValues[j]);
   }
 }
 

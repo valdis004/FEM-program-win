@@ -5,19 +5,24 @@
 #include <memory>
 #include <qboxlayout.h>
 #include <qcombobox.h>
+#include <qdialog.h>
 #include <qdialogbuttonbox.h>
 #include <qformlayout.h>
 #include <qglobal.h>
 #include <qmessagebox.h>
 #include <qprogressdialog.h>
+#include <qpushbutton.h>
 #include <qtimer.h>
 #include <qwidget.h>
 
+#include "PlateMaterial.h"
 #include "femtypes.h"
 #include "generalElement/plates/plate.h"
 #include "graphics/qtgl/qtgl.h"
 #include "load.h"
+#include "material.h"
 #include "mesh/mesh.h"
+#include "point.h"
 #include "treeContextMenu.h"
 
 #define TEXT_PLATE_STANDART_SCHEME "Create default scheme"
@@ -96,55 +101,64 @@ void TreeContextMenu::onActionTriggered() {
 void TreeContextMenu::createDiologDefualtSchemePlate(
     QVector<shared_ptr<AbstractElement>> *elements, QWidget *mainWindow,
     Qtgl *scene, Mesh *&mesh) {
-  QDialog *d = new QDialog(mainWindow);
-  d->setFixedSize({500, 260});
-  d->setWindowTitle("Settings of scheme");
-  // d->setModal(true);
-  // d->setWindowFlag(Qt);
-  // d->setWindowFlags(Qt::Window | Qt::CustomizeWindowHint |
-  // Qt::WindowTitleHint | Qt::WindowCloseButtonHint);
 
-  QVBoxLayout *mainLayout = new QVBoxLayout(d);
+  QDialog *diolog = new QDialog(mainWindow);
+  diolog->setFixedSize({500, 260});
+  diolog->setWindowTitle("Settings of scheme");
+  diolog->setModal(true);
+  diolog->setWindowFlags(Qt::Window | Qt::CustomizeWindowHint |
+                         Qt::WindowTitleHint | Qt::WindowCloseButtonHint);
+
+  QVBoxLayout *mainLayout = new QVBoxLayout(diolog);
   QFormLayout *formLayout = new QFormLayout();
-  QComboBox *comboBox = new QComboBox(d);
-  comboBox->addItem("MITC4");
-  comboBox->addItem("MITC9");
-  comboBox->addItem("MITC16");
-  formLayout->addRow("Тип элемента:", comboBox);
+  QComboBox *comboBox = new QComboBox(diolog);
+  setElementTypeComboBox(comboBox);
+  formLayout->addRow("Element type:", comboBox);
 
   // Выравнивание
   formLayout->setLabelAlignment(Qt::AlignRight | Qt::AlignVCenter);
   formLayout->setFieldGrowthPolicy(QFormLayout::FieldsStayAtSizeHint);
   formLayout->setRowWrapPolicy(QFormLayout::DontWrapRows);
 
-  d->setSizeGripEnabled(true); // Добавляет маркер изменения размера в углу
+  diolog->setSizeGripEnabled(true); // Добавляет маркер изменения размера в углу
 
   // 2. Создаем панель с кнопками
-  QDialogButtonBox *buttonBox = new QDialogButtonBox(d);
+  QDialogButtonBox *buttonBox = new QDialogButtonBox(diolog);
   // Добавляем стандартные кнопки
   buttonBox->setStandardButtons(QDialogButtonBox::Ok |
                                 QDialogButtonBox::Cancel);
   // Подключаем сигналы: нажатие OK/Отмена закроет диалог с соответствующим
   // результатом
-  connect(buttonBox, &QDialogButtonBox::accepted, d, &QDialog::accept);
-  connect(buttonBox, &QDialogButtonBox::rejected, d, &QDialog::reject);
+  connect(buttonBox, &QDialogButtonBox::accepted, diolog, &QDialog::accept);
+  connect(buttonBox, &QDialogButtonBox::rejected, diolog, &QDialog::reject);
 
   // 3. Задаем основную компоновку
   mainLayout->addLayout(formLayout);
   mainLayout->addWidget(buttonBox); // Панель кнопок — внизу
   // d->setLayout(mainLayout);
-  d->show();
+  diolog->show();
 
-  ElementType type = (ElementType)comboBox->currentIndex();
+  ElementType type{ElementType::MITC4MY};
+  connect(comboBox, &QComboBox::currentIndexChanged, this,
+          [&type](int id) { type = (ElementType)id; });
+
+  Point3 startPoint{0, 0, 0};
+  if (elements->size() > 0) {
+    auto element = elements->at(elements->size() - 1);
+    startPoint = element->getStartPoint();
+    startPoint.x += 1000 + element->getLenght();
+  }
   double loadv[] = {-100, 0, 0};
+  shared_ptr<Material> material = PlateMaterial::getDefaultMaterial();
   shared_ptr<AbstractLoad> load = make_shared<AreaLoadFzMxMy>(loadv, 3);
 
-  shared_ptr<AbstractElement> plate = std::make_shared<Plate>(load, type, 2000);
+  shared_ptr<AbstractElement> plate =
+      make_shared<Plate>(load, type, 3000, startPoint, material);
 
-  elements->push_back(plate);
+  if (diolog->exec() == QDialog::Accepted) {
+    elements->push_back(plate);
 
-  if (d->exec() == QDialog::Accepted) {
-    QProgressDialog *progressDilog = new QProgressDialog(mainWindow);
+    QProgressDialog *progressDilog = new QProgressDialog(diolog);
     progressDilog->setWindowTitle("Generating default mesh...");
     progressDilog->setLabelText("Initializing calculation...");
     progressDilog->setModal(true);
@@ -152,7 +166,18 @@ void TreeContextMenu::createDiologDefualtSchemePlate(
     progressDilog->setMinimumDuration(0);
     progressDilog->show();
 
-    mesh = new Mesh();
+    if (mesh) {
+      mesh->disconnect();
+    } else {
+      mesh = new Mesh();
+    }
+
+    // Создаем отдельный поток для mesh_
+    QThread *workerThread = new QThread();
+    mesh->moveToThread(workerThread); // mesh_ теперь принадлежит workerThread
+
+    connect(workerThread, &QThread::started, this,
+            [mesh, elements]() { mesh->meshCreateManager(elements, true); });
 
     connect(mesh, &Mesh::progressChanged, this, [progressDilog](int count) {
       progressDilog->setLabelText(QString("Creating element: %1").arg(count));
@@ -163,28 +188,73 @@ void TreeContextMenu::createDiologDefualtSchemePlate(
       progressDilog->close();
     });
 
-    // Создаем отдельный поток для mesh_
-    QThread *workerThread = new QThread();
-    mesh->moveToThread(workerThread); // mesh_ теперь принадлежит workerThread
-
-    // Когда поток запустится, выполним создание меша
-    connect(workerThread, &QThread::started, this,
-            [mesh, elements]() { mesh->meshCreateManager(elements, true); });
-
     connect(mesh, &Mesh::meshFinished, this,
             [mesh, scene, workerThread, elements](int count) {
               scene->setMeshData(elements);
-
-              // Завершаем поток
               workerThread->quit();
             });
 
-    // Удаляем поток и mesh_ при завершении
     connect(workerThread, &QThread::finished, workerThread,
             &QThread::deleteLater);
-    // connect(workerThread, &QThread::finished, mesh_, &Mesh::deleteLater);
 
     workerThread->start();
-    // delete mesh;
+    progressDilog->show();
   }
+}
+
+void TreeContextMenu::setElementTypeComboBox(QComboBox *comboBox) {
+  comboBox->addItem("MITC4");
+  comboBox->addItem("MITC9");
+  comboBox->addItem("MITC16");
+}
+
+void TreeContextMenu::createAddELementDiolog(
+    QDialog *MainDiolog, QVector<shared_ptr<AbstractElement>> *elements) {
+
+  QDialog *diolog = new QDialog(MainDiolog);
+  diolog->setFixedSize({500, 260});
+  diolog->setWindowTitle("Add one element to shceme");
+  diolog->setModal(true);
+  diolog->setWindowFlags(Qt::Window | Qt::CustomizeWindowHint |
+                         Qt::WindowTitleHint | Qt::WindowCloseButtonHint);
+
+  QVBoxLayout *mainLayout = new QVBoxLayout(diolog);
+  QFormLayout *formLayout = new QFormLayout();
+  QComboBox *comboBox = new QComboBox(diolog);
+  setElementTypeComboBox(comboBox);
+  formLayout->addRow("Element type:", comboBox);
+
+  // Выравнивание
+  formLayout->setLabelAlignment(Qt::AlignRight | Qt::AlignVCenter);
+  formLayout->setFieldGrowthPolicy(QFormLayout::FieldsStayAtSizeHint);
+  formLayout->setRowWrapPolicy(QFormLayout::DontWrapRows);
+
+  QDialogButtonBox *buttonBox = new QDialogButtonBox(diolog);
+  // Добавляем стандартные кнопки
+  buttonBox->setStandardButtons(QDialogButtonBox::Ok |
+                                QDialogButtonBox::Cancel);
+
+  ElementType type{ElementType::MITC4MY};
+  connect(comboBox, &QComboBox::currentIndexChanged, diolog,
+          [&type](int id) { type = (ElementType)id; });
+  mainLayout->addLayout(formLayout);
+  mainLayout->addWidget(buttonBox); // Панель кнопок — внизу
+
+  connect(buttonBox, &QDialogButtonBox::accepted, diolog, &QDialog::accept);
+  connect(buttonBox, &QDialogButtonBox::rejected, diolog, &QDialog::reject);
+
+  diolog->show();
+
+  double loadv[] = {-100, 0, 0};
+  Point3 startPoint = {0, 0, 0};
+  if (elements->size() > 0) {
+    auto element = elements->at(elements->size() - 1);
+    startPoint = element->getStartPoint();
+    startPoint.x += 1000 + element->getLenght();
+  }
+  shared_ptr<AbstractLoad> load = make_shared<AreaLoadFzMxMy>(loadv, 3);
+  shared_ptr<AbstractElement> plate =
+      std::make_shared<Plate>(load, type, 3000, startPoint);
+
+  elements->push_back(plate);
 }

@@ -9,10 +9,11 @@
 
 // class NodeLoad;
 
+static unsigned nodeCounter = 0;
+
 class Node {
 public:
   Point3 point;
-  Point3 glPoint;
   double glOutputValue;
   int dofCount;
   unsigned id;
@@ -21,15 +22,19 @@ public:
   unsigned firstGlobStiffId;
   QVector<double> outputValues;
 
+  // OpenGL
+  Point3 glPoint;
+  bool isNormolize{false};
+
   Node() = default;
 
-  Node(const Node &other)
+  Node(unsigned id, const Node &other)
       : point(other.point), glPoint(other.point), dofCount(other.dofCount),
-        id(other.id), nodeLoad(other.nodeLoad),
+        id(id), nodeLoad(other.nodeLoad),
         nodeDisplacement(other.nodeDisplacement),
         firstGlobStiffId(other.firstGlobStiffId) {}
 
-  Node(Point3 point, int dofCount, int id, short outputCount)
+  Node(unsigned id, Point3 point, int dofCount, short outputCount)
       : point(point), glPoint(point), dofCount(dofCount), id(id) {
     outputValues.resize(outputCount + 1);
   }

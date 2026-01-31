@@ -4,10 +4,10 @@
 
 class PlateMaterial : public Material {
 public:
-  double youngModule, kFactor, poissonRatio, thickness;
+  double youngModule{-1}, kFactor, poissonRatio, thickness;
   double Dplate = youngModule * thickness * thickness * thickness /
-                  (12 * (1 - poissonRatio * poissonRatio));
-  double shearModule = youngModule / (2 * (1 + poissonRatio));
+                  (12.0 * (1 - poissonRatio * poissonRatio));
+  double shearModule = youngModule / (2.0 * (1 + poissonRatio));
 
   PlateMaterial(const PlateMaterial &) = default;
   PlateMaterial(PlateMaterial &&) = default;
@@ -16,7 +16,9 @@ public:
 
   PlateMaterial(double youngModule, double kFactor, double poissonRatio,
                 double thickness);
-  static Material getDefaultMaterial();
+  static std::shared_ptr<Material> getDefaultMaterial();
 
   virtual double *getMaterialProperties(double *physicalPropertiesArr) override;
+
+  // void setMaterialProperties(double *physicalPropertiesArr);
 };

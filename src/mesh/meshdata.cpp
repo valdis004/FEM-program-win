@@ -28,3 +28,7 @@ void MeshData::setData(QVector<Node *> &&nodes,
   this->femElements = femElements;
   this->globaStiffMatrixSize = globaStiffMatrixSize;
 }
+
+bool MeshData::isEmpty() const noexcept {
+  return femElements.isEmpty() && nodes.isEmpty();
+}

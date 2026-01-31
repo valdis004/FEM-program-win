@@ -45,7 +45,8 @@ private:
                                shared_ptr<MeshData> mesh);
 
   void setOutputValuesToNodes(shared_ptr<MeshData> mesh,
-                              const SparseVector<double> &globalU);
+                              const SparseVector<double> &globalU,
+                              shared_ptr<AbstractElement> elements);
 
 public:
   QVector<double> maxAbsValues;

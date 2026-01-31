@@ -1,36 +1,41 @@
 #include <Eigen/Core>
 #include <cstddef>
 #include <exception>
+#include <memory>
 #include <qdebug.h>
 #include <qexception.h>
 #include <qglobal.h>
 
 #include "elementprovider.h"
 #include "femelement.h"
+#include "femtypes.h"
 #include "generalElement/displacement/displacement.h"
 #include "load/femload.h"
 // #include "load/load.h"
 #include "plates/plates.h"
 
-FemAbstractElement::FemAbstractElement(size_t id, Node **nodes, int count,
-                                       ElementType type)
-    : data(ElementProvider::elementData[type]), id(id), type(type) {
+FemAbstractElement::FemAbstractElement(
+    unsigned id, Node **nodes, int count, ElementType type,
+    std::shared_ptr<AbstractElement> generalElement)
+    : data(ElementProvider::elementData[type]), id(id), nodesCount(count),
+      type(type), genetalElement(generalElement) {
   for (size_t i = 0; i < count; i++) {
     this->nodes.push_back(nodes[i]);
   }
-  nodesCount = count;
 }
 
-FemAbstractElement::FemAbstractElement(size_t id, Node **nodes, int count,
-                                       const Material &material,
-                                       ElementType type)
-    : FemAbstractElement(id, nodes, count, type) {}
+FemAbstractElement::FemAbstractElement(
+    unsigned id, Node **nodes, int count, const Material &material,
+    ElementType type, std::shared_ptr<AbstractElement> generalElement)
+    : FemAbstractElement(id, nodes, count, type, generalElement) {}
 
-FemAbstractElement *FemAbstractElement::create(size_t id, ElementType type,
-                                               Node **nodes, int count) {
+FemAbstractElement *
+FemAbstractElement::create(unsigned id, ElementType type, Node **nodes,
+                           int count,
+                           std::shared_ptr<AbstractElement> generalElement) {
   switch (type) {
   case ElementType::MITC4MY: {
-    return new MITC4PlateMy(id, nodes);
+    return new MITC4PlateMy(id, nodes, generalElement);
   }
   default:
     throw std::exception();

@@ -2,12 +2,15 @@
 
 #include <QVector>
 #include <memory>
+#include <qcontainerfwd.h>
 #include <qglobal.h>
 
 #include "displacement/displacement.h"
 #include "elements/femtypes.h"
+#include "elements/global.h"
 #include "elements/point.h"
 #include "load/load.h"
+#include "material.h"
 #include "mesh/meshdata.h"
 
 class Node;
@@ -27,6 +30,7 @@ private:
   // Structural parameters
   QVector<shared_ptr<AbstractLoad>> loads;
   QVector<shared_ptr<AbstractDisplacement>> displacements;
+  shared_ptr<Material> material{nullptr};
 
 public:
   // Mesh
@@ -35,10 +39,29 @@ public:
   // Other
   QString name;
 
+  // Elasticity matrix (elasticity matrix, since it will be the same for all
+  // finite elements created on the basis of this historical element). Such
+  // matrix could be 2 and that why its vector
+  QVector<MatrixXd> elasticityMatrix;
+
+  // Output maximum values for graphic
+  QVector<double> maxAbsValues;
+  QVector<double> maxValues;
+  QVector<double> minValues;
+
   AbstractElement();
 
   AbstractElement(shared_ptr<AbstractLoad> load, ElementType type,
                   unsigned lenght);
+
+  AbstractElement(shared_ptr<AbstractLoad> load, ElementType type,
+                  unsigned lenght, Point3 startPoint);
+
+  AbstractElement(shared_ptr<AbstractLoad> load, ElementType type,
+                  unsigned lenght, Point3 startPoint,
+                  shared_ptr<Material> material);
+
+  static sptrAbsElem createByType(ElementType type);
 
   ElementType getType() const;
 
@@ -46,11 +69,15 @@ public:
 
   double getLenght() const;
 
+  shared_ptr<Material> getMaterial() const;
+
   void addLoad(shared_ptr<AbstractLoad> load);
 
   inline short loadCount() const;
 
   virtual shared_ptr<AbstractLoad> createAndAddLoad() = 0;
+
+  virtual void initElasticityMatrixies() = 0;
 
   // void setMeshData(shared_ptr<MeshData> meshData);
 };

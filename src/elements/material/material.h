@@ -1,8 +1,8 @@
 #pragma once
 
+#include <memory>
+
 class Material {
 public:
-  static Material getDefaultMaterial();
-
-  virtual double *getMaterialProperties(double *physicalPropertiesArr);
+  virtual double *getMaterialProperties(double *physicalPropertiesArr) = 0;
 };

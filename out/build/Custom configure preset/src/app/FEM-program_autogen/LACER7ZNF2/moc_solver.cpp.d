@@ -894,6 +894,7 @@ C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom\ configure\ preset
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/elementprovider.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femtypes.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/global.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/load/femload.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/material.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/node.h \

@@ -894,6 +894,7 @@ C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom\ configure\ preset
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/elementprovider.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femtypes.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/global.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/load/femload.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/material.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/node.h \
@@ -1282,6 +1283,7 @@ C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom\ configure\ preset
   C:/msys64/mingw64/include/qt6/QtWidgets/qabstractscrollarea.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qabstractslider.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qabstractspinbox.h \
+  C:/msys64/mingw64/include/qt6/QtWidgets/qcombobox.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qdialog.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qdialogbuttonbox.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qframe.h \

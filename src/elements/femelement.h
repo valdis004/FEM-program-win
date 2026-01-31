@@ -11,22 +11,26 @@
 // #include <exception>
 // #include "elementprovider.h"
 #include <cstddef>
+#include <memory>
 #include <qglobal.h>
 #include <qmap.h>
 #include <qnamespace.h>
 
+// #include "element.h"
 #include "elementprovider.h"
-#include "generalElement/displacement/displacement.h"
-#include "material/material.h"
-// #include "/home/vladislav/Документы/FEM/FEM
-// program/src/elements/elementprovider.h"
-#include "generalElement/load/load.h"
-#include "node.h"
-// #include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
+#include "elements/global.h"
 #include "femtypes.h"
+#include "generalElement/displacement/displacement.h"
+#include "generalElement/load/load.h"
+#include "material/material.h"
+#include "node.h"
+
+class AbstractElement;
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
+
+static unsigned counterOfElements = 0;
 
 class FemAbstractElement {
 private:
@@ -40,14 +44,15 @@ public:
   size_t id;
   AbstractLoad *generalLoad;
   AbstractDisplacement *generalDisp;
+  std::shared_ptr<AbstractElement> genetalElement;
 
 public:
-  FemAbstractElement(size_t id, Node **nodes, int count,
-                     ElementType type = ElementType::NONE);
+  FemAbstractElement(unsigned id, Node **nodes, int count, ElementType type,
+                     std::shared_ptr<AbstractElement> generalElement);
 
-  FemAbstractElement(size_t id, Node **nodes, int count,
-                     const Material &material,
-                     ElementType type = ElementType::NONE);
+  FemAbstractElement(unsigned id, Node **nodes, int count,
+                     const Material &material, ElementType type,
+                     std::shared_ptr<AbstractElement> generalElement);
 
   virtual MatrixXd getLocalStiffMatrix() = 0;
 
@@ -58,8 +63,9 @@ public:
 
   virtual ~FemAbstractElement() = default;
 
-  static FemAbstractElement *create(size_t id, ElementType type, Node **nodes,
-                                    int count);
+  static FemAbstractElement *
+  create(unsigned id, ElementType type, Node **nodes, int count,
+         std::shared_ptr<AbstractElement> generalElement);
 
   static void setCalcProps(FemAbstractElement *ptr, unsigned &globalMatrixSize);
 

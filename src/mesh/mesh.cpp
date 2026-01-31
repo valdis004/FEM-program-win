@@ -47,7 +47,8 @@ void Mesh::meshCreateManager(QVector<shared_ptr<AbstractElement>> *elements,
 
   if (standartScheme) {
     for (auto element : *elements) {
-      createDefaultMesh(element);
+      if (element->meshData->isEmpty())
+        createDefaultMesh(element);
     }
   }
 }
@@ -76,14 +77,14 @@ void Mesh::createDefaultMesh(shared_ptr<AbstractElement> element) {
   float sinA = 0;
   float cosA = 1;
 
-  int crtdElmtsCnt = 0;
-  int crtdNdsCnt = 0;
+  int elemCounter = 0;
+  int nodeCounter = 0;
 
   for (int l = 0; l < steps; l++) {
     for (int k = 0; k < steps; k++) {
 
       Point3 point0{point00.x + l * step * cosA, point00.y + k * step,
-                    point00.x + l * step * sinA};
+                    point00.z + l * step * sinA};
       const int ndsCntElm = DATA.NODES_COUNT;
       Node *nodesToElem[ndsCntElm];
       float checkValue = 0.01f;
@@ -103,14 +104,21 @@ void Mesh::createDefaultMesh(shared_ptr<AbstractElement> element) {
           }
         }
 
-        node = new Node(pointForNode, DATA.FULL_DOF_COUNT, crtdNdsCnt++,
+        node = new Node(nodeCounter++, pointForNode, DATA.FULL_DOF_COUNT,
                         DATA.OUTPUT_VALUES_COUNT);
 
         // Add displ
         if (node->point.x == point00.x ||
             node->point.x == point00.x + lenghtPlate) {
           NodeDisplacementUzPsixPsiy *disp =
-              new NodeDisplacementUzPsixPsiy(true, true, true);
+              new NodeDisplacementUzPsixPsiy(true, false, false);
+          node->nodeDisplacement = disp;
+        }
+
+        if (node->point.y == point00.y ||
+            node->point.y == point00.y + lenghtPlate) {
+          NodeDisplacementUzPsixPsiy *disp =
+              new NodeDisplacementUzPsixPsiy(true, false, false);
           node->nodeDisplacement = disp;
         }
 
@@ -120,12 +128,12 @@ void Mesh::createDefaultMesh(shared_ptr<AbstractElement> element) {
       }
 
       auto femElement = FemAbstractElement::create(
-          crtdElmtsCnt++, type, nodesToElem, DATA.NODES_COUNT);
+          elemCounter++, type, nodesToElem, DATA.NODES_COUNT, element);
       femElement->setLoad(load);
       FemAbstractElement::setCalcProps(femElement, globaStiffMatrixSize);
       femElements.push_back(femElement);
 
-      emit progressChanged(crtdElmtsCnt);
+      emit progressChanged(elemCounter);
     }
   }
 

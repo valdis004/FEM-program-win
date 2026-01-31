@@ -49,6 +49,12 @@
 			null
 		],
 		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/PlateMaterial.h",
+			"MU",
+			"WPEKB7VXEX/moc_PlateMaterial.cpp",
+			null
+		],
+		[
 			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/plates/plates.h",
 			"MU",
 			"PWRSZVA2BX/moc_plates.cpp",
@@ -225,6 +231,11 @@
 		],
 		[
 			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/load/femload.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/PlateMaterial.cpp",
 			"MU",
 			null
 		],

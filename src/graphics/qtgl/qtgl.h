@@ -3,6 +3,7 @@
 #include <QLabel>
 #include <QList>
 #include <QOpenGLWidget>
+#include <qcontainerfwd.h>
 #include <qevent.h>
 #include <qglobal.h>
 #include <qmainwindow.h>
@@ -14,6 +15,7 @@
 #include "generalElement/element.h"
 
 class MainWindow;
+class AbstractElement;
 
 struct GraphickElement {
   QVector<Point3> points;
@@ -50,6 +52,7 @@ private:
   void calculateMeshBounds(); // Вычисление границ
   void createMeshDisplayList();
   void normalizeOutData();
+  void updateProjection();
 
 protected:
   virtual void initializeGL();

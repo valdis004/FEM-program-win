@@ -6,6 +6,7 @@
 #include <QTreeWidget>
 
 #include <QTreeWidgetItem>
+#include <qcombobox.h>
 #include <qmessagebox.h>
 #include <qobject.h>
 #include <qwidget.h>
@@ -16,6 +17,10 @@ class Qtgl;
 
 class TreeContextMenu : public QObject {
   Q_OBJECT
+private:
+  void setElementTypeComboBox(QComboBox *comboBox);
+  void createAddELementDiolog(QDialog *MainDiolog,
+                              QVector<shared_ptr<AbstractElement>> *elements);
 
 public:
   explicit TreeContextMenu(QTreeWidget *treeWidget, QObject *parent = nullptr);

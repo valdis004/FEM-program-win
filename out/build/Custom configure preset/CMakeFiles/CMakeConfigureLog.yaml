@@ -44,8 +44,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/SIMULIA/Commands/ninja-build.com"
       - "C:/SIMULIA/Commands/ninja-build.exe"
@@ -150,8 +154,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -194,8 +202,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/SIMULIA/Commands/cc.com"
       - "C:/SIMULIA/Commands/cc.exe"
@@ -363,8 +375,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -408,8 +424,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "message-v1"
@@ -469,8 +489,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-ar.com"
     found: "C:/Program Files/LLVM/bin/llvm-ar.exe"
@@ -491,8 +515,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -530,8 +558,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-ranlib.com"
     found: "C:/Program Files/LLVM/bin/llvm-ranlib.exe"
@@ -552,8 +584,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -591,8 +627,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-strip.com"
     found: "C:/Program Files/LLVM/bin/llvm-strip.exe"
@@ -613,8 +653,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -652,8 +696,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/ld.lld.com"
     found: "C:/Program Files/LLVM/bin/ld.lld.exe"
@@ -674,8 +722,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -713,8 +765,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-nm.com"
     found: "C:/Program Files/LLVM/bin/llvm-nm.exe"
@@ -735,8 +791,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -774,8 +834,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-objdump.com"
     found: "C:/Program Files/LLVM/bin/llvm-objdump.exe"
@@ -796,8 +860,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -835,8 +903,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-objcopy.com"
     found: "C:/Program Files/LLVM/bin/llvm-objcopy.exe"
@@ -857,8 +929,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -896,8 +972,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-readelf.com"
     found: "C:/Program Files/LLVM/bin/llvm-readelf.exe"
@@ -918,8 +998,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -957,8 +1041,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-dlltool.com"
     found: "C:/Program Files/LLVM/bin/llvm-dlltool.exe"
@@ -979,8 +1067,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -1018,8 +1110,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-addr2line.com"
     found: "C:/Program Files/LLVM/bin/llvm-addr2line.exe"
@@ -1040,8 +1136,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -1078,8 +1178,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/tapi.com"
       - "C:/Program Files/LLVM/bin/tapi.exe"
@@ -1126,12 +1230,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/tapi.com"
       - "C:/msys64/mingw64/share/qt6/bin/tapi.exe"
       - "C:/msys64/mingw64/share/qt6/bin/tapi"
+      - "C:/Program Files/Wolfram Research/WolframScript/tapi.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/tapi.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/tapi"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/tapi.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/tapi.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/tapi"
+      - "C:/Program Files/dotnet/tapi.com"
+      - "C:/Program Files/dotnet/tapi.exe"
+      - "C:/Program Files/dotnet/tapi"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/tapi.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/tapi.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/tapi"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/tapi.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/tapi.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/tapi"
+      - "C:/Users/vlada/.dotnet/tools/tapi.com"
+      - "C:/Users/vlada/.dotnet/tools/tapi.exe"
+      - "C:/Users/vlada/.dotnet/tools/tapi"
     found: false
     search_context:
       ENV{PATH}:
@@ -1150,8 +1266,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -1191,8 +1311,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-ar-21.1.com"
       - "C:/Program Files/LLVM/bin/llvm-ar-21.1.exe"
@@ -1239,12 +1363,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar-21.1.com"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar-21.1.exe"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar-21.1"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar-21.1.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar-21.1.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar-21.1"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar-21.1.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar-21.1.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar-21.1"
+      - "C:/Program Files/dotnet/llvm-ar-21.1.com"
+      - "C:/Program Files/dotnet/llvm-ar-21.1.exe"
+      - "C:/Program Files/dotnet/llvm-ar-21.1"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.1.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.1.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.1"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.1.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.1.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.1"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar-21.1.com"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar-21.1.exe"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar-21.1"
       - "C:/Program Files/LLVM/bin/llvm-ar-21.com"
       - "C:/Program Files/LLVM/bin/llvm-ar-21.exe"
       - "C:/Program Files/LLVM/bin/llvm-ar-21"
@@ -1290,12 +1426,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar-21.com"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar-21.exe"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar-21"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar-21.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar-21.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar-21"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar-21.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar-21.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar-21"
+      - "C:/Program Files/dotnet/llvm-ar-21.com"
+      - "C:/Program Files/dotnet/llvm-ar-21.exe"
+      - "C:/Program Files/dotnet/llvm-ar-21"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar-21"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar-21.com"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar-21.exe"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar-21"
       - "C:/Program Files/LLVM/bin/llvm-ar21.com"
       - "C:/Program Files/LLVM/bin/llvm-ar21.exe"
       - "C:/Program Files/LLVM/bin/llvm-ar21"
@@ -1341,12 +1489,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar21.com"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar21.exe"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar21"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar21.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar21.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar21"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar21.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar21.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar21"
+      - "C:/Program Files/dotnet/llvm-ar21.com"
+      - "C:/Program Files/dotnet/llvm-ar21.exe"
+      - "C:/Program Files/dotnet/llvm-ar21"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar21.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar21.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar21"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar21.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar21.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar21"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar21.com"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar21.exe"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar21"
       - "C:/Program Files/LLVM/bin/llvm-ar.com"
     found: "C:/Program Files/LLVM/bin/llvm-ar.exe"
     search_context:
@@ -1366,8 +1526,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -1407,8 +1571,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-ranlib-21.1.com"
       - "C:/Program Files/LLVM/bin/llvm-ranlib-21.1.exe"
@@ -1455,12 +1623,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib-21.1.com"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib-21.1.exe"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib-21.1"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib-21.1.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib-21.1.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib-21.1"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib-21.1.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib-21.1.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib-21.1"
+      - "C:/Program Files/dotnet/llvm-ranlib-21.1.com"
+      - "C:/Program Files/dotnet/llvm-ranlib-21.1.exe"
+      - "C:/Program Files/dotnet/llvm-ranlib-21.1"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.1.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.1.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.1"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.1.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.1.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.1"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib-21.1.com"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib-21.1.exe"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib-21.1"
       - "C:/Program Files/LLVM/bin/llvm-ranlib-21.com"
       - "C:/Program Files/LLVM/bin/llvm-ranlib-21.exe"
       - "C:/Program Files/LLVM/bin/llvm-ranlib-21"
@@ -1506,12 +1686,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib-21.com"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib-21.exe"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib-21"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib-21.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib-21.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib-21"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib-21.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib-21.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib-21"
+      - "C:/Program Files/dotnet/llvm-ranlib-21.com"
+      - "C:/Program Files/dotnet/llvm-ranlib-21.exe"
+      - "C:/Program Files/dotnet/llvm-ranlib-21"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib-21.com"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib-21.exe"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib-21"
       - "C:/Program Files/LLVM/bin/llvm-ranlib21.com"
       - "C:/Program Files/LLVM/bin/llvm-ranlib21.exe"
       - "C:/Program Files/LLVM/bin/llvm-ranlib21"
@@ -1557,12 +1749,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib21.com"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib21.exe"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib21"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib21.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib21.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib21"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib21.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib21.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib21"
+      - "C:/Program Files/dotnet/llvm-ranlib21.com"
+      - "C:/Program Files/dotnet/llvm-ranlib21.exe"
+      - "C:/Program Files/dotnet/llvm-ranlib21"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib21.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib21.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib21"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib21.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib21.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib21"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib21.com"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib21.exe"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib21"
       - "C:/Program Files/LLVM/bin/llvm-ranlib.com"
     found: "C:/Program Files/LLVM/bin/llvm-ranlib.exe"
     search_context:
@@ -1582,8 +1786,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -1623,8 +1831,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/clang-scan-deps-21.1.com"
       - "C:/Program Files/LLVM/bin/clang-scan-deps-21.1.exe"
@@ -1671,12 +1883,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps-21.1.com"
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps-21.1.exe"
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps-21.1"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps-21.1.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps-21.1.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps-21.1"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps-21.1.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps-21.1.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps-21.1"
+      - "C:/Program Files/dotnet/clang-scan-deps-21.1.com"
+      - "C:/Program Files/dotnet/clang-scan-deps-21.1.exe"
+      - "C:/Program Files/dotnet/clang-scan-deps-21.1"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.1.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.1.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.1"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.1.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.1.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.1"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps-21.1.com"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps-21.1.exe"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps-21.1"
       - "C:/Program Files/LLVM/bin/clang-scan-deps-21.com"
       - "C:/Program Files/LLVM/bin/clang-scan-deps-21.exe"
       - "C:/Program Files/LLVM/bin/clang-scan-deps-21"
@@ -1722,12 +1946,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps-21.com"
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps-21.exe"
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps-21"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps-21.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps-21.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps-21"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps-21.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps-21.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps-21"
+      - "C:/Program Files/dotnet/clang-scan-deps-21.com"
+      - "C:/Program Files/dotnet/clang-scan-deps-21.exe"
+      - "C:/Program Files/dotnet/clang-scan-deps-21"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps-21.com"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps-21.exe"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps-21"
       - "C:/Program Files/LLVM/bin/clang-scan-deps21.com"
       - "C:/Program Files/LLVM/bin/clang-scan-deps21.exe"
       - "C:/Program Files/LLVM/bin/clang-scan-deps21"
@@ -1773,12 +2009,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps21.com"
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps21.exe"
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps21"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps21.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps21.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps21"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps21.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps21.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps21"
+      - "C:/Program Files/dotnet/clang-scan-deps21.com"
+      - "C:/Program Files/dotnet/clang-scan-deps21.exe"
+      - "C:/Program Files/dotnet/clang-scan-deps21"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps21.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps21.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps21"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps21.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps21.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps21"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps21.com"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps21.exe"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps21"
       - "C:/Program Files/LLVM/bin/clang-scan-deps.com"
     found: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
     search_context:
@@ -1798,8 +2046,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -1847,8 +2099,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -1892,8 +2148,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "message-v1"
@@ -1955,8 +2215,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-ar-21.1.com"
       - "C:/Program Files/LLVM/bin/llvm-ar-21.1.exe"
@@ -2003,12 +2267,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar-21.1.com"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar-21.1.exe"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar-21.1"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar-21.1.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar-21.1.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar-21.1"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar-21.1.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar-21.1.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar-21.1"
+      - "C:/Program Files/dotnet/llvm-ar-21.1.com"
+      - "C:/Program Files/dotnet/llvm-ar-21.1.exe"
+      - "C:/Program Files/dotnet/llvm-ar-21.1"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.1.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.1.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.1"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.1.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.1.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.1"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar-21.1.com"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar-21.1.exe"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar-21.1"
       - "C:/Program Files/LLVM/bin/llvm-ar-21.com"
       - "C:/Program Files/LLVM/bin/llvm-ar-21.exe"
       - "C:/Program Files/LLVM/bin/llvm-ar-21"
@@ -2054,12 +2330,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar-21.com"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar-21.exe"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar-21"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar-21.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar-21.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar-21"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar-21.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar-21.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar-21"
+      - "C:/Program Files/dotnet/llvm-ar-21.com"
+      - "C:/Program Files/dotnet/llvm-ar-21.exe"
+      - "C:/Program Files/dotnet/llvm-ar-21"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar-21"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar-21.com"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar-21.exe"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar-21"
       - "C:/Program Files/LLVM/bin/llvm-ar21.com"
       - "C:/Program Files/LLVM/bin/llvm-ar21.exe"
       - "C:/Program Files/LLVM/bin/llvm-ar21"
@@ -2105,12 +2393,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar21.com"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar21.exe"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ar21"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar21.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar21.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ar21"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar21.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar21.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ar21"
+      - "C:/Program Files/dotnet/llvm-ar21.com"
+      - "C:/Program Files/dotnet/llvm-ar21.exe"
+      - "C:/Program Files/dotnet/llvm-ar21"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar21.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar21.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ar21"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar21.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar21.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar21"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar21.com"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar21.exe"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ar21"
       - "C:/Program Files/LLVM/bin/llvm-ar.com"
     found: "C:/Program Files/LLVM/bin/llvm-ar.exe"
     search_context:
@@ -2130,8 +2430,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -2171,8 +2475,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/llvm-ranlib-21.1.com"
       - "C:/Program Files/LLVM/bin/llvm-ranlib-21.1.exe"
@@ -2219,12 +2527,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib-21.1.com"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib-21.1.exe"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib-21.1"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib-21.1.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib-21.1.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib-21.1"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib-21.1.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib-21.1.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib-21.1"
+      - "C:/Program Files/dotnet/llvm-ranlib-21.1.com"
+      - "C:/Program Files/dotnet/llvm-ranlib-21.1.exe"
+      - "C:/Program Files/dotnet/llvm-ranlib-21.1"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.1.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.1.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.1"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.1.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.1.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.1"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib-21.1.com"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib-21.1.exe"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib-21.1"
       - "C:/Program Files/LLVM/bin/llvm-ranlib-21.com"
       - "C:/Program Files/LLVM/bin/llvm-ranlib-21.exe"
       - "C:/Program Files/LLVM/bin/llvm-ranlib-21"
@@ -2270,12 +2590,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib-21.com"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib-21.exe"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib-21"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib-21.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib-21.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib-21"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib-21.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib-21.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib-21"
+      - "C:/Program Files/dotnet/llvm-ranlib-21.com"
+      - "C:/Program Files/dotnet/llvm-ranlib-21.exe"
+      - "C:/Program Files/dotnet/llvm-ranlib-21"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib-21.com"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib-21.exe"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib-21"
       - "C:/Program Files/LLVM/bin/llvm-ranlib21.com"
       - "C:/Program Files/LLVM/bin/llvm-ranlib21.exe"
       - "C:/Program Files/LLVM/bin/llvm-ranlib21"
@@ -2321,12 +2653,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib21.com"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib21.exe"
       - "C:/msys64/mingw64/share/qt6/bin/llvm-ranlib21"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib21.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib21.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/llvm-ranlib21"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib21.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib21.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/llvm-ranlib21"
+      - "C:/Program Files/dotnet/llvm-ranlib21.com"
+      - "C:/Program Files/dotnet/llvm-ranlib21.exe"
+      - "C:/Program Files/dotnet/llvm-ranlib21"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib21.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib21.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/llvm-ranlib21"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib21.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib21.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib21"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib21.com"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib21.exe"
+      - "C:/Users/vlada/.dotnet/tools/llvm-ranlib21"
       - "C:/Program Files/LLVM/bin/llvm-ranlib.com"
     found: "C:/Program Files/LLVM/bin/llvm-ranlib.exe"
     search_context:
@@ -2346,8 +2690,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -2387,8 +2735,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
     searched_directories:
       - "C:/Program Files/LLVM/bin/clang-scan-deps-21.1.com"
       - "C:/Program Files/LLVM/bin/clang-scan-deps-21.1.exe"
@@ -2435,12 +2787,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps-21.1.com"
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps-21.1.exe"
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps-21.1"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps-21.1.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps-21.1.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps-21.1"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps-21.1.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps-21.1.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps-21.1"
+      - "C:/Program Files/dotnet/clang-scan-deps-21.1.com"
+      - "C:/Program Files/dotnet/clang-scan-deps-21.1.exe"
+      - "C:/Program Files/dotnet/clang-scan-deps-21.1"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.1.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.1.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.1"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.1.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.1.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.1"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps-21.1.com"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps-21.1.exe"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps-21.1"
       - "C:/Program Files/LLVM/bin/clang-scan-deps-21.com"
       - "C:/Program Files/LLVM/bin/clang-scan-deps-21.exe"
       - "C:/Program Files/LLVM/bin/clang-scan-deps-21"
@@ -2486,12 +2850,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps-21.com"
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps-21.exe"
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps-21"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps-21.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps-21.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps-21"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps-21.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps-21.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps-21"
+      - "C:/Program Files/dotnet/clang-scan-deps-21.com"
+      - "C:/Program Files/dotnet/clang-scan-deps-21.exe"
+      - "C:/Program Files/dotnet/clang-scan-deps-21"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps-21.com"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps-21.exe"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps-21"
       - "C:/Program Files/LLVM/bin/clang-scan-deps21.com"
       - "C:/Program Files/LLVM/bin/clang-scan-deps21.exe"
       - "C:/Program Files/LLVM/bin/clang-scan-deps21"
@@ -2537,12 +2913,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps21.com"
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps21.exe"
       - "C:/msys64/mingw64/share/qt6/bin/clang-scan-deps21"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps21.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps21.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/clang-scan-deps21"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps21.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps21.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/clang-scan-deps21"
+      - "C:/Program Files/dotnet/clang-scan-deps21.com"
+      - "C:/Program Files/dotnet/clang-scan-deps21.exe"
+      - "C:/Program Files/dotnet/clang-scan-deps21"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps21.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps21.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/clang-scan-deps21"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps21.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps21.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps21"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps21.com"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps21.exe"
+      - "C:/Users/vlada/.dotnet/tools/clang-scan-deps21"
       - "C:/Program Files/LLVM/bin/clang-scan-deps.com"
     found: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
     search_context:
@@ -2562,8 +2950,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
   -
     kind: "find-v1"
@@ -2605,8 +2997,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -2660,8 +3056,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -2677,8 +3077,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-kvx3ls"
-      binary: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-kvx3ls"
+      source: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-zocjwd"
+      binary: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-zocjwd"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_C_FLAGS: ""
@@ -2688,17 +3088,17 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-kvx3ls'
+        Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-zocjwd'
         
-        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_6fa86
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\cc.exe   -v -MD -MT CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_6fa86.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_44ccb
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\cc.exe   -v -MD -MT CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_44ccb.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c"
         clang version 21.1.7 (https://github.com/llvm/llvm-project.git 292dc2b86f66e39f4b85ec8b185fd8b60f5213ce)
         Target: x86_64-w64-windows-gnu
         Thread model: posix
         InstalledDir: C:/Program Files/LLVM/bin
         Configuration file: C:/Program Files/LLVM/bin/x86_64-w64-windows-gnu.cfg
          (in-process)
-         "C:/Program Files/LLVM/bin/clang-21.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb "-fdebug-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-kvx3ls" -v "-fcoverage-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-kvx3ls" -resource-dir "C:/Program Files/LLVM/lib/clang/21" -dependency-file "CMakeFiles\\\\cmTC_6fa86.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem "C:/Program Files/LLVM/lib/clang/21/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/usr/include" -internal-isystem "C:/Program Files/LLVM/include" -ferror-limit 19 -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -exception-model=seh -faddrsig -o CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj -x c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c"
+         "C:/Program Files/LLVM/bin/clang-21.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb "-fdebug-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-zocjwd" -v "-fcoverage-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-zocjwd" -resource-dir "C:/Program Files/LLVM/lib/clang/21" -dependency-file "CMakeFiles\\\\cmTC_44ccb.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem "C:/Program Files/LLVM/lib/clang/21/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/usr/include" -internal-isystem "C:/Program Files/LLVM/include" -ferror-limit 19 -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -exception-model=seh -faddrsig -o CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj -x c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c"
         clang -cc1 version 21.1.7 based upon LLVM 21.1.7 default target x86_64-w64-mingw32
         ignoring nonexistent directory "C:/Program Files/LLVM/x86_64-w64-mingw32/include"
         ignoring nonexistent directory "C:/Program Files/LLVM/x86_64-w64-mingw32/usr/include"
@@ -2707,13 +3107,13 @@ events:
          C:/Program Files/LLVM/lib/clang/21/include
          C:/Program Files/LLVM/include
         End of search list.
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\cc.exe  -v -Wl,-v CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj -o cmTC_6fa86.exe -Wl,--out-implib,libcmTC_6fa86.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\cc.exe  -v -Wl,-v CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj -o cmTC_44ccb.exe -Wl,--out-implib,libcmTC_44ccb.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         clang version 21.1.7 (https://github.com/llvm/llvm-project.git 292dc2b86f66e39f4b85ec8b185fd8b60f5213ce)
         Target: x86_64-w64-windows-gnu
         Thread model: posix
         InstalledDir: C:/Program Files/LLVM/bin
         Configuration file: C:/Program Files/LLVM/bin/x86_64-w64-windows-gnu.cfg
-         "C:/Program Files/LLVM/bin/ld.lld" -m i386pep -Bdynamic -o cmTC_6fa86.exe "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crt2.o" "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtbegin.o" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/lib" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/mingw/lib" "-LC:/Program Files/LLVM/lib" "-LC:/Program Files/LLVM/lib/clang/21/lib/windows" -v CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_6fa86.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -lkernel32 "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtend.o"
+         "C:/Program Files/LLVM/bin/ld.lld" -m i386pep -Bdynamic -o cmTC_44ccb.exe "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crt2.o" "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtbegin.o" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/lib" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/mingw/lib" "-LC:/Program Files/LLVM/lib" "-LC:/Program Files/LLVM/lib/clang/21/lib/windows" -v CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_44ccb.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -lkernel32 "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtend.o"
         LLD 21.1.7 (https://github.com/llvm/llvm-project.git 292dc2b86f66e39f4b85ec8b185fd8b60f5213ce) (compatible with GNU linkers)
         
       exitCode: 0
@@ -2745,17 +3145,17 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-kvx3ls']
+        ignore line: [Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-zocjwd']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_6fa86]
-        ignore line: [[1/2] C:\\PROGRA~1\\LLVM\\bin\\cc.exe   -v -MD -MT CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_6fa86.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_44ccb]
+        ignore line: [[1/2] C:\\PROGRA~1\\LLVM\\bin\\cc.exe   -v -MD -MT CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_44ccb.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c"]
         ignore line: [clang version 21.1.7 (https://github.com/llvm/llvm-project.git 292dc2b86f66e39f4b85ec8b185fd8b60f5213ce)]
         ignore line: [Target: x86_64-w64-windows-gnu]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: C:/Program Files/LLVM/bin]
         ignore line: [Configuration file: C:/Program Files/LLVM/bin/x86_64-w64-windows-gnu.cfg]
         ignore line: [ (in-process)]
-        ignore line: [ "C:/Program Files/LLVM/bin/clang-21.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb "-fdebug-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-kvx3ls" -v "-fcoverage-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-kvx3ls" -resource-dir "C:/Program Files/LLVM/lib/clang/21" -dependency-file "CMakeFiles\\\\cmTC_6fa86.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem "C:/Program Files/LLVM/lib/clang/21/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/usr/include" -internal-isystem "C:/Program Files/LLVM/include" -ferror-limit 19 -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -exception-model=seh -faddrsig -o CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj -x c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c"]
+        ignore line: [ "C:/Program Files/LLVM/bin/clang-21.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb "-fdebug-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-zocjwd" -v "-fcoverage-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-zocjwd" -resource-dir "C:/Program Files/LLVM/lib/clang/21" -dependency-file "CMakeFiles\\\\cmTC_44ccb.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem "C:/Program Files/LLVM/lib/clang/21/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/usr/include" -internal-isystem "C:/Program Files/LLVM/include" -ferror-limit 19 -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -exception-model=seh -faddrsig -o CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj -x c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c"]
         ignore line: [clang -cc1 version 21.1.7 based upon LLVM 21.1.7 default target x86_64-w64-mingw32]
         ignore line: [ignoring nonexistent directory "C:/Program Files/LLVM/x86_64-w64-mingw32/include"]
         ignore line: [ignoring nonexistent directory "C:/Program Files/LLVM/x86_64-w64-mingw32/usr/include"]
@@ -2764,19 +3164,19 @@ events:
         ignore line: [ C:/Program Files/LLVM/lib/clang/21/include]
         ignore line: [ C:/Program Files/LLVM/include]
         ignore line: [End of search list.]
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\cc.exe  -v -Wl -v CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj -o cmTC_6fa86.exe -Wl --out-implib libcmTC_6fa86.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\cc.exe  -v -Wl -v CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj -o cmTC_44ccb.exe -Wl --out-implib libcmTC_44ccb.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [clang version 21.1.7 (https://github.com/llvm/llvm-project.git 292dc2b86f66e39f4b85ec8b185fd8b60f5213ce)]
         ignore line: [Target: x86_64-w64-windows-gnu]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: C:/Program Files/LLVM/bin]
         ignore line: [Configuration file: C:/Program Files/LLVM/bin/x86_64-w64-windows-gnu.cfg]
-        link line: [ "C:/Program Files/LLVM/bin/ld.lld" -m i386pep -Bdynamic -o cmTC_6fa86.exe "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crt2.o" "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtbegin.o" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/lib" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/mingw/lib" "-LC:/Program Files/LLVM/lib" "-LC:/Program Files/LLVM/lib/clang/21/lib/windows" -v CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_6fa86.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -lkernel32 "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtend.o"]
+        link line: [ "C:/Program Files/LLVM/bin/ld.lld" -m i386pep -Bdynamic -o cmTC_44ccb.exe "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crt2.o" "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtbegin.o" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/lib" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/mingw/lib" "-LC:/Program Files/LLVM/lib" "-LC:/Program Files/LLVM/lib/clang/21/lib/windows" -v CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_44ccb.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -lkernel32 "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtend.o"]
           arg [C:/Program Files/LLVM/bin/ld.lld] ==> ignore
           arg [-m] ==> ignore
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_6fa86.exe] ==> ignore
+          arg [cmTC_44ccb.exe] ==> ignore
           arg [C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crt2.o] ==> obj [C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crt2.o]
           arg [C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtbegin.o] ==> obj [C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtbegin.o]
           arg [-LC:/Program Files/LLVM/x86_64-w64-mingw32/lib] ==> dir [C:/Program Files/LLVM/x86_64-w64-mingw32/lib]
@@ -2784,9 +3184,9 @@ events:
           arg [-LC:/Program Files/LLVM/lib] ==> dir [C:/Program Files/LLVM/lib]
           arg [-LC:/Program Files/LLVM/lib/clang/21/lib/windows] ==> dir [C:/Program Files/LLVM/lib/clang/21/lib/windows]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_6fa86.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_44ccb.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_6fa86.dll.a] ==> ignore
+          arg [libcmTC_44ccb.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -2843,8 +3243,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-36o6de"
-      binary: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-36o6de"
+      source: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-uj9x8e"
+      binary: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-uj9x8e"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: ""
@@ -2855,17 +3255,17 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-36o6de'
+        Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-uj9x8e'
         
-        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_7501e
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\C__~1.EXE   -v -MD -MT CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_7501e.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_f91f9
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\C__~1.EXE   -v -MD -MT CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_f91f9.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"
         clang version 21.1.7 (https://github.com/llvm/llvm-project.git 292dc2b86f66e39f4b85ec8b185fd8b60f5213ce)
         Target: x86_64-w64-windows-gnu
         Thread model: posix
         InstalledDir: C:/Program Files/LLVM/bin
         Configuration file: C:/Program Files/LLVM/bin/x86_64-w64-windows-gnu.cfg
          (in-process)
-         "C:/Program Files/LLVM/bin/clang-21.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb "-fdebug-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-36o6de" -v "-fcoverage-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-36o6de" -resource-dir "C:/Program Files/LLVM/lib/clang/21" -dependency-file "CMakeFiles\\\\cmTC_7501e.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/include/c++/v1" -internal-isystem "C:/Program Files/LLVM/include/c++/v1" -internal-isystem "C:/Program Files/LLVM/lib/clang/21/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/usr/include" -internal-isystem "C:/Program Files/LLVM/include" -fdeprecated-macro -ferror-limit 19 -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -exception-model=seh -faddrsig -o CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj -x c++ "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"
+         "C:/Program Files/LLVM/bin/clang-21.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb "-fdebug-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-uj9x8e" -v "-fcoverage-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-uj9x8e" -resource-dir "C:/Program Files/LLVM/lib/clang/21" -dependency-file "CMakeFiles\\\\cmTC_f91f9.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/include/c++/v1" -internal-isystem "C:/Program Files/LLVM/include/c++/v1" -internal-isystem "C:/Program Files/LLVM/lib/clang/21/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/usr/include" -internal-isystem "C:/Program Files/LLVM/include" -fdeprecated-macro -ferror-limit 19 -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -exception-model=seh -faddrsig -o CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj -x c++ "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"
         clang -cc1 version 21.1.7 based upon LLVM 21.1.7 default target x86_64-w64-mingw32
         ignoring nonexistent directory "C:/Program Files/LLVM/x86_64-w64-mingw32/include/c++/v1"
         ignoring nonexistent directory "C:/Program Files/LLVM/x86_64-w64-mingw32/include"
@@ -2876,13 +3276,13 @@ events:
          C:/Program Files/LLVM/lib/clang/21/include
          C:/Program Files/LLVM/include
         End of search list.
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\C__~1.EXE  -v -Wl,-v CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_7501e.exe -Wl,--out-implib,libcmTC_7501e.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\C__~1.EXE  -v -Wl,-v CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_f91f9.exe -Wl,--out-implib,libcmTC_f91f9.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         clang version 21.1.7 (https://github.com/llvm/llvm-project.git 292dc2b86f66e39f4b85ec8b185fd8b60f5213ce)
         Target: x86_64-w64-windows-gnu
         Thread model: posix
         InstalledDir: C:/Program Files/LLVM/bin
         Configuration file: C:/Program Files/LLVM/bin/x86_64-w64-windows-gnu.cfg
-         "C:/Program Files/LLVM/bin/ld.lld" -m i386pep -Bdynamic -o cmTC_7501e.exe "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crt2.o" "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtbegin.o" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/lib" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/mingw/lib" "-LC:/Program Files/LLVM/lib" "-LC:/Program Files/LLVM/lib/clang/21/lib/windows" -v CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_7501e.dll.a --major-image-version 0 --minor-image-version 0 -lc++ -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -lkernel32 "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtend.o"
+         "C:/Program Files/LLVM/bin/ld.lld" -m i386pep -Bdynamic -o cmTC_f91f9.exe "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crt2.o" "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtbegin.o" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/lib" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/mingw/lib" "-LC:/Program Files/LLVM/lib" "-LC:/Program Files/LLVM/lib/clang/21/lib/windows" -v CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_f91f9.dll.a --major-image-version 0 --minor-image-version 0 -lc++ -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -lkernel32 "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtend.o"
         LLD 21.1.7 (https://github.com/llvm/llvm-project.git 292dc2b86f66e39f4b85ec8b185fd8b60f5213ce) (compatible with GNU linkers)
         
       exitCode: 0
@@ -2916,17 +3316,17 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-36o6de']
+        ignore line: [Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-uj9x8e']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_7501e]
-        ignore line: [[1/2] C:\\PROGRA~1\\LLVM\\bin\\C__~1.EXE   -v -MD -MT CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_7501e.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_f91f9]
+        ignore line: [[1/2] C:\\PROGRA~1\\LLVM\\bin\\C__~1.EXE   -v -MD -MT CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_f91f9.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [clang version 21.1.7 (https://github.com/llvm/llvm-project.git 292dc2b86f66e39f4b85ec8b185fd8b60f5213ce)]
         ignore line: [Target: x86_64-w64-windows-gnu]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: C:/Program Files/LLVM/bin]
         ignore line: [Configuration file: C:/Program Files/LLVM/bin/x86_64-w64-windows-gnu.cfg]
         ignore line: [ (in-process)]
-        ignore line: [ "C:/Program Files/LLVM/bin/clang-21.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb "-fdebug-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-36o6de" -v "-fcoverage-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-36o6de" -resource-dir "C:/Program Files/LLVM/lib/clang/21" -dependency-file "CMakeFiles\\\\cmTC_7501e.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/include/c++/v1" -internal-isystem "C:/Program Files/LLVM/include/c++/v1" -internal-isystem "C:/Program Files/LLVM/lib/clang/21/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/usr/include" -internal-isystem "C:/Program Files/LLVM/include" -fdeprecated-macro -ferror-limit 19 -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -exception-model=seh -faddrsig -o CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj -x c++ "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [ "C:/Program Files/LLVM/bin/clang-21.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb "-fdebug-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-uj9x8e" -v "-fcoverage-compilation-dir=C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-uj9x8e" -resource-dir "C:/Program Files/LLVM/lib/clang/21" -dependency-file "CMakeFiles\\\\cmTC_f91f9.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/include/c++/v1" -internal-isystem "C:/Program Files/LLVM/include/c++/v1" -internal-isystem "C:/Program Files/LLVM/lib/clang/21/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/include" -internal-isystem "C:/Program Files/LLVM/x86_64-w64-mingw32/usr/include" -internal-isystem "C:/Program Files/LLVM/include" -fdeprecated-macro -ferror-limit 19 -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -exception-model=seh -faddrsig -o CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj -x c++ "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [clang -cc1 version 21.1.7 based upon LLVM 21.1.7 default target x86_64-w64-mingw32]
         ignore line: [ignoring nonexistent directory "C:/Program Files/LLVM/x86_64-w64-mingw32/include/c++/v1"]
         ignore line: [ignoring nonexistent directory "C:/Program Files/LLVM/x86_64-w64-mingw32/include"]
@@ -2937,19 +3337,19 @@ events:
         ignore line: [ C:/Program Files/LLVM/lib/clang/21/include]
         ignore line: [ C:/Program Files/LLVM/include]
         ignore line: [End of search list.]
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\C__~1.EXE  -v -Wl -v CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_7501e.exe -Wl --out-implib libcmTC_7501e.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\C__~1.EXE  -v -Wl -v CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_f91f9.exe -Wl --out-implib libcmTC_f91f9.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [clang version 21.1.7 (https://github.com/llvm/llvm-project.git 292dc2b86f66e39f4b85ec8b185fd8b60f5213ce)]
         ignore line: [Target: x86_64-w64-windows-gnu]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: C:/Program Files/LLVM/bin]
         ignore line: [Configuration file: C:/Program Files/LLVM/bin/x86_64-w64-windows-gnu.cfg]
-        link line: [ "C:/Program Files/LLVM/bin/ld.lld" -m i386pep -Bdynamic -o cmTC_7501e.exe "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crt2.o" "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtbegin.o" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/lib" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/mingw/lib" "-LC:/Program Files/LLVM/lib" "-LC:/Program Files/LLVM/lib/clang/21/lib/windows" -v CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_7501e.dll.a --major-image-version 0 --minor-image-version 0 -lc++ -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -lkernel32 "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtend.o"]
+        link line: [ "C:/Program Files/LLVM/bin/ld.lld" -m i386pep -Bdynamic -o cmTC_f91f9.exe "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crt2.o" "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtbegin.o" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/lib" "-LC:/Program Files/LLVM/x86_64-w64-mingw32/mingw/lib" "-LC:/Program Files/LLVM/lib" "-LC:/Program Files/LLVM/lib/clang/21/lib/windows" -v CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_f91f9.dll.a --major-image-version 0 --minor-image-version 0 -lc++ -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 "C:/Program Files/LLVM/lib/clang/21/lib/windows/libclang_rt.builtins-x86_64.a" -lunwind -lmoldname -lmingwex -lmsvcrt -lkernel32 "C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtend.o"]
           arg [C:/Program Files/LLVM/bin/ld.lld] ==> ignore
           arg [-m] ==> ignore
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_7501e.exe] ==> ignore
+          arg [cmTC_f91f9.exe] ==> ignore
           arg [C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crt2.o] ==> obj [C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crt2.o]
           arg [C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtbegin.o] ==> obj [C:/Program Files/LLVM/x86_64-w64-mingw32/lib/crtbegin.o]
           arg [-LC:/Program Files/LLVM/x86_64-w64-mingw32/lib] ==> dir [C:/Program Files/LLVM/x86_64-w64-mingw32/lib]
@@ -2957,9 +3357,9 @@ events:
           arg [-LC:/Program Files/LLVM/lib] ==> dir [C:/Program Files/LLVM/lib]
           arg [-LC:/Program Files/LLVM/lib/clang/21/lib/windows] ==> dir [C:/Program Files/LLVM/lib/clang/21/lib/windows]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_7501e.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_f91f9.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_7501e.dll.a] ==> ignore
+          arg [libcmTC_f91f9.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -3024,8 +3424,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-yxv0ga"
-      binary: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-yxv0ga"
+      source: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-dbvk0o"
+      binary: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-dbvk0o"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_C_FLAGS: ""
@@ -3036,27 +3436,27 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-yxv0ga'
+        Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-dbvk0o'
         
-        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_bc675
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\cc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -MD -MT CMakeFiles/cmTC_bc675.dir/src.c.obj -MF CMakeFiles\\cmTC_bc675.dir\\src.c.obj.d -o CMakeFiles/cmTC_bc675.dir/src.c.obj -c "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-yxv0ga/src.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\cc.exe   CMakeFiles/cmTC_bc675.dir/src.c.obj -o cmTC_bc675.exe -Wl,--out-implib,libcmTC_bc675.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
-        FAILED: [code=1] cmTC_bc675.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\cc.exe   CMakeFiles/cmTC_bc675.dir/src.c.obj -o cmTC_bc675.exe -Wl,--out-implib,libcmTC_bc675.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_a482e
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\cc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -MD -MT CMakeFiles/cmTC_a482e.dir/src.c.obj -MF CMakeFiles\\cmTC_a482e.dir\\src.c.obj.d -o CMakeFiles/cmTC_a482e.dir/src.c.obj -c "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-dbvk0o/src.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\cc.exe   CMakeFiles/cmTC_a482e.dir/src.c.obj -o cmTC_a482e.exe -Wl,--out-implib,libcmTC_a482e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: [code=1] cmTC_a482e.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\cc.exe   CMakeFiles/cmTC_a482e.dir/src.c.obj -o cmTC_a482e.exe -Wl,--out-implib,libcmTC_a482e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         ld.lld: error: undefined symbol: pthread_create
-        >>> referenced by CMakeFiles/cmTC_bc675.dir/src.c.obj:(main)
+        >>> referenced by CMakeFiles/cmTC_a482e.dir/src.c.obj:(main)
         
         ld.lld: error: undefined symbol: pthread_detach
-        >>> referenced by CMakeFiles/cmTC_bc675.dir/src.c.obj:(main)
+        >>> referenced by CMakeFiles/cmTC_a482e.dir/src.c.obj:(main)
         
         ld.lld: error: undefined symbol: pthread_cancel
-        >>> referenced by CMakeFiles/cmTC_bc675.dir/src.c.obj:(main)
+        >>> referenced by CMakeFiles/cmTC_a482e.dir/src.c.obj:(main)
         
         ld.lld: error: undefined symbol: pthread_join
-        >>> referenced by CMakeFiles/cmTC_bc675.dir/src.c.obj:(main)
+        >>> referenced by CMakeFiles/cmTC_a482e.dir/src.c.obj:(main)
         
         ld.lld: error: undefined symbol: pthread_exit
-        >>> referenced by CMakeFiles/cmTC_bc675.dir/src.c.obj:(main)
+        >>> referenced by CMakeFiles/cmTC_a482e.dir/src.c.obj:(main)
         clang-21: error: linker command failed with exit code 1 (use -v to see invocation)
         ninja: build stopped: subcommand failed.
         
@@ -3075,8 +3475,8 @@ events:
     checks:
       - "Check if compiler accepts -pthread"
     directories:
-      source: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-bi12yq"
-      binary: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-bi12yq"
+      source: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-w0ipou"
+      binary: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-w0ipou"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_C_FLAGS: ""
@@ -3087,11 +3487,11 @@ events:
       variable: "THREADS_HAVE_PTHREAD_ARG"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-bi12yq'
+        Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-w0ipou'
         
-        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_e1d2a
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\cc.exe    -MD -MT CMakeFiles/cmTC_e1d2a.dir/CheckForPthreads.c.obj -MF CMakeFiles\\cmTC_e1d2a.dir\\CheckForPthreads.c.obj.d -o CMakeFiles/cmTC_e1d2a.dir/CheckForPthreads.c.obj -c "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-bi12yq/CheckForPthreads.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\cc.exe   CMakeFiles/cmTC_e1d2a.dir/CheckForPthreads.c.obj -o cmTC_e1d2a.exe -Wl,--out-implib,libcmTC_e1d2a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -pthread  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_02380
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\cc.exe    -MD -MT CMakeFiles/cmTC_02380.dir/CheckForPthreads.c.obj -MF CMakeFiles\\cmTC_02380.dir\\CheckForPthreads.c.obj.d -o CMakeFiles/cmTC_02380.dir/CheckForPthreads.c.obj -c "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-w0ipou/CheckForPthreads.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\cc.exe   CMakeFiles/cmTC_02380.dir/CheckForPthreads.c.obj -o cmTC_02380.exe -Wl,--out-implib,libcmTC_02380.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -pthread  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -3266,8 +3666,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -3446,8 +3850,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -3623,8 +4031,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -3652,8 +4064,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-qwcppo"
-      binary: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-qwcppo"
+      source: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-4xtq59"
+      binary: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-4xtq59"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: ""
@@ -3664,11 +4076,11 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-qwcppo'
+        Change Dir: 'C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-4xtq59'
         
-        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_8ec81
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\C__~1.EXE -DHAVE_STDATOMIC  -std=gnu++23 -MD -MT CMakeFiles/cmTC_8ec81.dir/src.cxx.obj -MF CMakeFiles\\cmTC_8ec81.dir\\src.cxx.obj.d -o CMakeFiles/cmTC_8ec81.dir/src.cxx.obj -c "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-qwcppo/src.cxx"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\C__~1.EXE   CMakeFiles/cmTC_8ec81.dir/src.cxx.obj -o cmTC_8ec81.exe -Wl,--out-implib,libcmTC_8ec81.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_775b3
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\C__~1.EXE -DHAVE_STDATOMIC  -std=gnu++23 -MD -MT CMakeFiles/cmTC_775b3.dir/src.cxx.obj -MF CMakeFiles\\cmTC_775b3.dir\\src.cxx.obj.d -o CMakeFiles/cmTC_775b3.dir/src.cxx.obj -c "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/CMakeScratch/TryCompile-4xtq59/src.cxx"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\C__~1.EXE   CMakeFiles/cmTC_775b3.dir/src.cxx.obj -o cmTC_775b3.exe -Wl,--out-implib,libcmTC_775b3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -3759,8 +4171,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -3809,8 +4225,12 @@ events:
       - "C:/Program Files/Bentley/Geotechnical/PLAXIS 3D CONNECT Edition V21/python/plxpy/"
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -3843,8 +4263,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -3950,8 +4374,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -4003,8 +4431,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
       - "C:/Program Files/include/"
       - "C:/Program Files/"
       - "C:/Program Files (x86)/include/"
@@ -4030,8 +4462,12 @@ events:
       - "C:/Program Files/Git/cmd/vulkan/vulkan.h"
       - "C:/msys64/mingw64/bin/vulkan/vulkan.h"
       - "C:/msys64/mingw64/share/qt6/bin/vulkan/vulkan.h"
+      - "C:/Program Files/Wolfram Research/WolframScript/vulkan/vulkan.h"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/vulkan/vulkan.h"
+      - "C:/Program Files/dotnet/vulkan/vulkan.h"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/vulkan/vulkan.h"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/vulkan/vulkan.h"
+      - "C:/Users/vlada/.dotnet/tools/vulkan/vulkan.h"
       - "C:/Program Files/include/vulkan/vulkan.h"
       - "C:/Program Files/vulkan/vulkan.h"
       - "C:/Program Files (x86)/include/vulkan/vulkan.h"
@@ -4058,8 +4494,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -4112,8 +4552,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
       - "C:/Program Files/lib/"
       - "C:/Program Files/"
       - "C:/Program Files (x86)/lib/"
@@ -4141,8 +4585,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
       - "C:/Program Files/lib/"
       - "C:/Program Files/"
       - "C:/Program Files (x86)/lib/"
@@ -4170,8 +4618,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -4227,8 +4679,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -4290,12 +4746,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/glslc.com"
       - "C:/msys64/mingw64/share/qt6/bin/glslc.exe"
       - "C:/msys64/mingw64/share/qt6/bin/glslc"
+      - "C:/Program Files/Wolfram Research/WolframScript/glslc.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/glslc.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/glslc"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslc.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslc.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslc"
+      - "C:/Program Files/dotnet/glslc.com"
+      - "C:/Program Files/dotnet/glslc.exe"
+      - "C:/Program Files/dotnet/glslc"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/glslc.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/glslc.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/glslc"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/glslc.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/glslc.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/glslc"
+      - "C:/Users/vlada/.dotnet/tools/glslc.com"
+      - "C:/Users/vlada/.dotnet/tools/glslc.exe"
+      - "C:/Users/vlada/.dotnet/tools/glslc"
       - "C:/Program Files/bin/glslc.com"
       - "C:/Program Files/bin/glslc.exe"
       - "C:/Program Files/bin/glslc"
@@ -4350,8 +4818,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -4403,8 +4875,12 @@ events:
       - "C:/Program Files/Git/cmd/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/share/qt6/bin/"
+      - "C:/Program Files/Wolfram Research/WolframScript/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/vlada/.dotnet/tools/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -4466,12 +4942,24 @@ events:
       - "C:/msys64/mingw64/share/qt6/bin/glslangValidator.com"
       - "C:/msys64/mingw64/share/qt6/bin/glslangValidator.exe"
       - "C:/msys64/mingw64/share/qt6/bin/glslangValidator"
+      - "C:/Program Files/Wolfram Research/WolframScript/glslangValidator.com"
+      - "C:/Program Files/Wolfram Research/WolframScript/glslangValidator.exe"
+      - "C:/Program Files/Wolfram Research/WolframScript/glslangValidator"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslangValidator.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslangValidator.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslangValidator"
+      - "C:/Program Files/dotnet/glslangValidator.com"
+      - "C:/Program Files/dotnet/glslangValidator.exe"
+      - "C:/Program Files/dotnet/glslangValidator"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/glslangValidator.com"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/glslangValidator.exe"
       - "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/glslangValidator"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/glslangValidator.com"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/glslangValidator.exe"
       - "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/bin/glslangValidator"
+      - "C:/Users/vlada/.dotnet/tools/glslangValidator.com"
+      - "C:/Users/vlada/.dotnet/tools/glslangValidator.exe"
+      - "C:/Users/vlada/.dotnet/tools/glslangValidator"
       - "C:/Program Files/bin/glslangValidator.com"
       - "C:/Program Files/bin/glslangValidator.exe"
       - "C:/Program Files/bin/glslangValidator"
@@ -4526,8 +5014,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -4633,8 +5125,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -4732,8 +5228,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -4839,8 +5339,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -4922,8 +5426,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -6575,8 +7083,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -6755,506 +7267,12 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\msys64\\mingw64\\bin"
         - "C:\\msys64\\mingw64\\share\\qt6\\bin"
+        - "C:\\Program Files\\Wolfram Research\\WolframScript\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
         - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
-      CMAKE_MODULE_PATH:
-        - "C:/msys64/mingw64/lib/cmake/Qt6"
-        - "C:/msys64/mingw64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules"
-        - "C:/msys64/mingw64/lib/cmake/Qt6/3rdparty/kwin"
-...
-
----
-events:
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "CMakeLists.txt:13 (find_package)"
-    name: "Eigen3"
-    configs:
-      -
-        filename: "Eigen3Config.cmake"
-        kind: "cmake"
-      -
-        filename: "eigen3-config.cmake"
-        kind: "cmake"
-    version_request:
-      version: "3.4"
-      version_complete: "3.4"
-      exact: false
-    settings:
-      required: "required_explicit"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "Eigen3"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: true
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "C:/msys64/mingw64/share/eigen3/cmake/Eigen3Config.cmake"
-        mode: "none?"
-        reason: "insufficient_version"
-        message: "The version found is not compatible with the version requested."
-      -
-        path: "C:/msys64/mingw64/share/eigen3/cmake/eigen3-config.cmake"
-        mode: "none?"
-        reason: "no_exist"
-      -
-        path: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/pkgRedirects/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/pkgRedirects/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/SIMULIA/Commands/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/SIMULIA/Commands/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft MPI/Bin/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft MPI/Bin/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/wbem/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/wbem/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/WindowsPowerShell/v1.0/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/WindowsPowerShell/v1.0/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/OpenSSH/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/OpenSSH/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/LLVM/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/LLVM/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/CMake/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/CMake/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Ninja/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Ninja/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Git/cmd/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Git/cmd/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/share/eigen3/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/share/eigen3/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/share/eigen3/cmake/Eigen3Config.cmake"
-        mode: "config"
-        reason: "insufficient_version"
-        message: "The version found is not compatible with the version requested."
-      -
-        path: "C:/msys64/mingw64/share/eigen3/cmake/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/share/qt6/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/share/qt6/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/CMake/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/CMake/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found: null
-    search_context:
-      ENV{PATH}:
-        - "C:\\SIMULIA\\Commands"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\LLVM\\bin"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\Ninja"
-        - "C:\\Program Files\\Bentley\\Geotechnical\\PLAXIS 2D CONNECT Edition V21\\python\\plxpy\\"
-        - "C:\\Program Files\\Bentley\\Geotechnical\\PLAXIS 3D CONNECT Edition V21\\python\\plxpy\\"
-        - "C:\\Program Files\\Git\\cmd"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:\\msys64\\mingw64\\share\\qt6\\bin"
-        - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
-      CMAKE_MODULE_PATH:
-        - "C:/msys64/mingw64/lib/cmake/Qt6"
-        - "C:/msys64/mingw64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules"
-        - "C:/msys64/mingw64/lib/cmake/Qt6/3rdparty/kwin"
-...
-
----
-events:
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "CMakeLists.txt:13 (find_package)"
-    name: "Eigen3"
-    configs:
-      -
-        filename: "Eigen3Config.cmake"
-        kind: "cmake"
-      -
-        filename: "eigen3-config.cmake"
-        kind: "cmake"
-    version_request:
-      version: "3.4"
-      version_complete: "3.4"
-      exact: false
-    settings:
-      required: "required_explicit"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "Eigen3"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: true
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "C:/msys64/mingw64/share/eigen3/cmake/Eigen3Config.cmake"
-        mode: "none?"
-        reason: "insufficient_version"
-        message: "The version found is not compatible with the version requested."
-      -
-        path: "C:/msys64/mingw64/share/eigen3/cmake/eigen3-config.cmake"
-        mode: "none?"
-        reason: "no_exist"
-      -
-        path: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/pkgRedirects/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/CMakeFiles/pkgRedirects/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/SIMULIA/Commands/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/SIMULIA/Commands/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft MPI/Bin/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Microsoft MPI/Bin/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/wbem/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/wbem/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/WindowsPowerShell/v1.0/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/WindowsPowerShell/v1.0/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/OpenSSH/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Windows/System32/OpenSSH/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/LLVM/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/LLVM/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/CMake/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/CMake/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Ninja/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Ninja/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Git/cmd/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Git/cmd/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/share/eigen3/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/share/eigen3/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/share/eigen3/cmake/Eigen3Config.cmake"
-        mode: "config"
-        reason: "insufficient_version"
-        message: "The version found is not compatible with the version requested."
-      -
-        path: "C:/msys64/mingw64/share/eigen3/cmake/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/share/qt6/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/msys64/mingw64/share/qt6/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/vlada/AppData/Local/Microsoft/WindowsApps/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/vlada/AppData/Local/Programs/Microsoft VS Code/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/CMake/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files/CMake/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/Eigen3Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Program Files (x86)/eigen3-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found: null
-    search_context:
-      ENV{PATH}:
-        - "C:\\SIMULIA\\Commands"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\LLVM\\bin"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\Ninja"
-        - "C:\\Program Files\\Bentley\\Geotechnical\\PLAXIS 2D CONNECT Edition V21\\python\\plxpy\\"
-        - "C:\\Program Files\\Bentley\\Geotechnical\\PLAXIS 3D CONNECT Edition V21\\python\\plxpy\\"
-        - "C:\\Program Files\\Git\\cmd"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:\\msys64\\mingw64\\share\\qt6\\bin"
-        - "C:\\Users\\vlada\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\vlada\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\vlada\\.dotnet\\tools"
       CMAKE_INSTALL_PREFIX: "C:/Users/vlada/Documents/FEM/FEM-program-win/out/install/Custom configure preset"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"

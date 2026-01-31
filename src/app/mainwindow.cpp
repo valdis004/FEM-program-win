@@ -135,49 +135,22 @@ void MainWindow::createToolBar() {
   connect(newBtn, &QToolButton::clicked, this,
           &MainWindow::calculateButtonClicked);
 
-  QPushButton *openBtn =
-      new QPushButton(QIcon::fromTheme("document-open"), "Открыть");
-  openBtn->setFixedHeight(30);
-  row1Layout->addWidget(openBtn);
-
-  QPushButton *saveBtn =
-      new QPushButton(QIcon::fromTheme("document-save"), "Сохранить");
-  saveBtn->setFixedHeight(30);
-  row1Layout->addWidget(saveBtn);
+  QToolButton *addElementButton = new QToolButton(mainTab);
+  addElementButton->setFixedHeight(30);
+  addElementButton->setAutoRaise(true);
+  addElementButton->setText("Add element");
+  row1Layout->addWidget(addElementButton);
+  connect(addElementButton, &QToolButton::clicked, this, [this]() {
+    this->treeContextMenu->createDiologDefualtSchemePlate(
+        &this->elements, this, this->scene, this->mesh);
+  });
 
   row1Layout->addSpacing(10); // Небольшой разделитель
-
-  QPushButton *cutBtn =
-      new QPushButton(QIcon::fromTheme("edit-cut"), "Вырезать");
-  cutBtn->setFixedHeight(30);
-  row1Layout->addWidget(cutBtn);
-
-  QPushButton *copyBtn =
-      new QPushButton(QIcon::fromTheme("edit-copy"), "Копировать");
-  copyBtn->setFixedHeight(30);
-  row1Layout->addWidget(copyBtn);
-
-  QPushButton *pasteBtn =
-      new QPushButton(QIcon::fromTheme("edit-paste"), "Вставить");
-  pasteBtn->setFixedHeight(30);
-  row1Layout->addWidget(pasteBtn);
-
   row1Layout->addStretch();
 
   // Второй ряд кнопок
   QHBoxLayout *row2Layout = new QHBoxLayout();
   row2Layout->setSpacing(2);
-
-  QPushButton *undoBtn =
-      new QPushButton(QIcon::fromTheme("edit-undo"), "Отменить");
-  undoBtn->setFixedHeight(30);
-  row2Layout->addWidget(undoBtn);
-
-  QPushButton *redoBtn =
-      new QPushButton(QIcon::fromTheme("edit-redo"), "Повторить");
-  redoBtn->setFixedHeight(30);
-  row2Layout->addWidget(redoBtn);
-
   row2Layout->addStretch();
 
   mainLayout->addLayout(row1Layout);

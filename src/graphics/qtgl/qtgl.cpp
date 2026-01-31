@@ -10,11 +10,11 @@
 #include "qtgl.h"
 
 Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
-    : QOpenGLWidget(pwgt), m_xRotate(0), m_yRotate(0) {}
+    : QOpenGLWidget(pwgt), m_xRotate(0), m_yRotate(0), m_scale(1.0f) {}
 
 /*virtual*/ void Qtgl::initializeGL() {
   QOpenGLFunctions *pFunc = QOpenGLContext::currentContext()->functions();
-  pFunc->glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+  pFunc->glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
   pFunc->glEnable(GL_DEPTH_TEST);
   glShadeModel(GL_FLAT);
@@ -26,7 +26,35 @@ Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
   glViewport(0, 0, (GLint)nWidth, (GLint)nHeight);
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  glFrustum(-0.2, 0.2, -0.2, 0.2, 0.2, 20.0);
+
+  float aspect = (float)nWidth / (float)nHeight;
+
+  if (m_meshDataValid) {
+    // Используем ортографическую проекцию на основе размеров модели
+    float modelSize =
+        1.0f; // Для нормализованных данных в диапазоне [-0.5, 0.5]
+
+    // Добавляем запас 20%
+    float padding = 1.2f;
+
+    if (aspect > 1.0f) {
+      // Широкое окно
+      glOrtho(-modelSize * padding * aspect, modelSize * padding * aspect,
+              -modelSize * padding, modelSize * padding, -10.0, 10.0);
+    } else {
+      // Высокое окно
+      glOrtho(-modelSize * padding, modelSize * padding,
+              -modelSize * padding / aspect, modelSize * padding / aspect,
+              -10.0, 10.0);
+    }
+  } else {
+    // Стандартная проекция, если модель не загружена
+    if (aspect > 1.0f) {
+      glOrtho(-1.0 * aspect, 1.0 * aspect, -1.0, 1.0, -10.0, 10.0);
+    } else {
+      glOrtho(-1.0, 1.0, -1.0 / aspect, 1.0 / aspect, -10.0, 10.0);
+    }
+  }
 }
 
 /*virtual*/ void Qtgl::paintGL() {
@@ -34,8 +62,14 @@ Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
 
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
-  glTranslatef(m_ptPositionDelta.rx(), -m_ptPositionDelta.ry(), -4.0 * m_scale);
 
+  // Управление камерой - убираем фиксированное смещение по Z
+  glTranslatef(m_ptPositionDelta.rx(), -m_ptPositionDelta.ry(), 0.0f);
+
+  // Масштабирование
+  glScalef(m_scale, m_scale, m_scale);
+
+  // Вращение
   glRotatef(m_xRotate, 1.0, 0.0, 0.0);
   glRotatef(m_yRotate, 0.0, 1.0, 0.0);
 
@@ -64,9 +98,9 @@ Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
 void Qtgl::wheelEvent(QWheelEvent *pe) {
   GLfloat delta = pe->angleDelta().y();
   if (delta > 0)
-    m_scale /= 1.1f;
+    m_scale *= 1.1f; // Увеличиваем масштаб
   else
-    m_scale *= 1.1f;
+    m_scale /= 1.1f; // Уменьшаем масштаб
   update();
 }
 
@@ -78,12 +112,12 @@ void Qtgl::wheelEvent(QWheelEvent *pe) {
   }
 
   if (isMiddleBut) {
-    m_ptPositionDelta += (pe->position() - m_ptPositionOld) * 0.005;
+    // Более медленное перемещение для ортографической проекции
+    m_ptPositionDelta += (pe->position() - m_ptPositionOld) * 0.002;
     m_ptPositionOld = pe->pos();
     update();
   }
   m_ptPosition = pe->pos();
-  // m_ptPositionDelta = {0, 0};
 }
 
 void Qtgl::setMeshData(QVector<shared_ptr<AbstractElement>> *elements) {
@@ -99,7 +133,7 @@ void Qtgl::setMeshData(QVector<shared_ptr<AbstractElement>> *elements) {
   }
 
   if (m_meshDataValid) {
-    // Нормируем данные для лучшего отображения
+    // Нормируем данные
     normalizeMeshData();
 
     // Пересоздаем дисплейный список
@@ -107,6 +141,9 @@ void Qtgl::setMeshData(QVector<shared_ptr<AbstractElement>> *elements) {
       glDeleteLists(m_nMesh, 1);
     }
     createMeshDisplayList();
+
+    // Обновляем проекцию для новой модели
+    updateProjection();
     update();
   }
 }
@@ -121,11 +158,17 @@ void Qtgl::setResulthData(const QVector<double> &maxAbsValues,
 
 void Qtgl::setResulthIndex(MainWindow *mainwindow, short index) {
   resultIndex = index;
-  mainwindow->statusLabel->setText(
-      QString("max value: %1, ").arg(maxValues[index]) +
-      QString("min value: %1").arg(minValues[index]));
+  QString labelText;
 
-  double scaleForOutput = 1000.0 / maxAbsValues[resultIndex];
+  for (const auto &element : *elements) {
+    labelText += QString("max value: %1, ").arg(element->maxValues[index]) +
+                 QString("min value: %1").arg(element->minValues[index]) + "\t";
+  }
+
+  mainwindow->statusLabel->setText(labelText);
+
+  double scaleForOutput =
+      1000.0 / (*elements).first()->maxAbsValues[resultIndex];
 
   for (auto &element : *elements) {
     auto nodes = element->meshData->nodes;
@@ -136,15 +179,13 @@ void Qtgl::setResulthIndex(MainWindow *mainwindow, short index) {
     }
   }
 
+  // Нормализуем выходные данные
   normalizeOutData();
 
   if (m_nMesh) {
     glDeleteLists(m_nMesh, 1);
   }
   createMeshDisplayList();
-
-  // if (!mainwindow->resultsView)
-  //   emit needOutputTableDock(m_nodes, isNeedSetCoods);
 
   isNeedSetCoods = false;
   update();
@@ -161,13 +202,15 @@ void Qtgl::createMeshDisplayList() {
   m_nMesh = glGenLists(1);
   glNewList(m_nMesh, GL_COMPILE);
 
-  // 1. Рисуем элементы (прямоугольники)
-  glColor4f(0.8f, 0.8f, 0.8f, 0.7f); // Полупрозрачный серый для элементов
-
+  // Loop through str elements
   for (const auto element : *elements) {
+    // 1. Рисуем элементы (прямоугольники)
+    glColor4f(0.8f, 0.8f, 0.8f, 0.7f); // Полупрозрачный серый для элементов
+
     auto nodes = element->meshData->nodes;
     auto femElements = element->meshData->femElements;
 
+    // Loop through fem elements
     for (const auto &element : femElements) {
       glBegin(GL_QUADS);
       // Рисуем прямоугольник по 4 узлам
@@ -196,12 +239,11 @@ void Qtgl::createMeshDisplayList() {
         }
         glEnd();
       }
-
-      glColor4f(0.8f, 0.8f, 0.8f,
-                0.7f); // Возвращаем цвет для следующих элементов
+      // Return color for next elements
+      glColor4f(0.8f, 0.8f, 0.8f, 0.7f);
     }
 
-    // 2. Рисуем узлы (красные точки)
+    // 2. Draw nodes (black dots)
     glPointSize(7.0f);
     glBegin(GL_POINTS);
     glColor4f(0.0f, 0.0f, 0.0f, 1.0f);
@@ -210,21 +252,21 @@ void Qtgl::createMeshDisplayList() {
       glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);
     }
     glEnd();
-
-    glEndList();
   }
+
+  glEndList();
 }
 
 void Qtgl::calculateMeshBounds() {
+  m_minX = m_maxX = elements->first()->meshData->nodes[0]->point.x;
+  m_minY = m_maxY = elements->first()->meshData->nodes[0]->point.y;
+  m_minZ = m_maxZ = elements->first()->meshData->nodes[0]->point.z;
+
   for (auto &element : *elements) {
     auto nodes = element->meshData->nodes;
 
     if (nodes.empty())
       return;
-
-    m_minX = m_maxX = nodes[0]->point.x;
-    m_minY = m_maxY = nodes[0]->point.y;
-    m_minZ = m_maxZ = nodes[0]->point.z;
 
     for (const auto node : nodes) {
       m_minX = std::min(m_minX, node->glPoint.x);
@@ -247,6 +289,10 @@ void Qtgl::calculateMeshBounds() {
 
     if (m_scaleFactor < 0.001f)
       m_scaleFactor = 1.0f;
+    else {
+      // Увеличиваем масштаб для лучшего отображения
+      m_scaleFactor = m_scaleFactor * 1.5f;
+    }
   }
 }
 
@@ -255,16 +301,17 @@ void Qtgl::normalizeMeshData() {
 
   for (auto &element : *elements) {
     auto nodes = element->meshData->nodes;
-    auto elements = element->meshData->femElements;
 
     // Центрируем и нормируем узлы
     for (auto node : nodes) {
-      node->glPoint.x = (node->glPoint.x - m_centerX) / m_scaleFactor;
-      node->glPoint.y = (node->glPoint.y - m_centerY) / m_scaleFactor;
-      node->glPoint.z = (node->glPoint.z - m_centerZ) / m_scaleFactor;
+      // if (node->isNormolize)
+      //   continue;
 
-      // node->glOutputValue = (node->glOutputValue - m_centerZ) /
-      // m_scaleFactor;
+      node->glPoint.x = (node->point.x - m_centerX) / m_scaleFactor;
+      node->glPoint.y = (node->point.y - m_centerY) / m_scaleFactor;
+      node->glPoint.z = (node->point.z - m_centerZ) / m_scaleFactor;
+
+      // node->isNormolize = true;
     }
   }
 }
@@ -273,7 +320,13 @@ void Qtgl::normalizeOutData() {
   for (auto &element : *elements) {
     auto nodes = element->meshData->nodes;
     for (const auto &node : nodes) {
+      // Нормализуем выходные данные так же, как и геометрию
       node->glOutputValue = (node->glOutputValue - m_centerZ) / m_scaleFactor;
     }
   }
+}
+
+void Qtgl::updateProjection() {
+  // Принудительно обновляем проекцию для текущего размера окна
+  resizeGL(width(), height());
 }

@@ -11,7 +11,7 @@ class FemAbstractElement;
 class MeshData {
 public:
   // Settings of mesh
-  int step{100};
+  int step{200};
 
   QVector<Node *> nodes;
   QVector<FemAbstractElement *> femElements;
@@ -25,6 +25,8 @@ public:
   void setData(QVector<Node *> &&nodes,
                QVector<FemAbstractElement *> &&femElements,
                unsigned globaStiffMatrixSize) noexcept;
+
+  bool isEmpty() const noexcept;
 
   ~MeshData();
 };

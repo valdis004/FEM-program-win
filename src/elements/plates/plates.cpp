@@ -3,6 +3,7 @@
 #include <qdebug.h>
 #include <qglobal.h>
 
+#include "generalELement/element.h"
 #include "plates.h"
 
 using ShapeFunc = double (*)(double, double);
@@ -90,14 +91,14 @@ constexpr static auto NDiffAny = [](double *arr, double xi, double eta,
   return arr;
 };
 
-// const int MITC4PlateMy::nodeCOunt = 4;
+MITC4PlateMy::MITC4PlateMy(unsigned id, Node **nodes,
+                           std::shared_ptr<AbstractElement> generalElement)
+    : FemAbstractElement(id, nodes, 4, ElementType::MITC4MY, generalElement) {};
 
-MITC4PlateMy::MITC4PlateMy(size_t id, Node **nodes, int count)
-    : FemAbstractElement(id, nodes, count, ElementType::MITC4MY) {};
-
-MITC4PlateMy::MITC4PlateMy(size_t id, Node **nodes, const Material &material,
-                           int count)
-    : FemAbstractElement(id, nodes, count, material, ElementType::MITC4MY) {};
+MITC4PlateMy::MITC4PlateMy(unsigned id, Node **nodes, const Material &material,
+                           std::shared_ptr<AbstractElement> generalElement)
+    : FemAbstractElement(id, nodes, 4, material, ElementType::MITC4MY,
+                         generalElement) {};
 
 MatrixXd MITC4PlateMy::jMatrix(double xi, double eta) {
   double y1 = nodes[0]->point.y / 1000.0;
@@ -127,22 +128,17 @@ MatrixXd MITC4PlateMy::jMatrix(double xi, double eta) {
   };
 }
 
-MatrixXd MITC4PlateMy::cMatrix(int type) {
+/* static  */ MatrixXd MITC4PlateMy::cMatrix(std::shared_ptr<Material> material,
+                                             int type) {
+
   double physicalProperties[6];
-
-  // double Em = 190;
-  // double K = physicalProperties[1];
-  // double nu = physicalProperties[2];
-  // double t = physicalProperties[3];
-  // double D = physicalProperties[4];
-  // double G = physicalProperties[5];
-
-  double Em = 100;
-  double K = 0.8333;
-  double nu = 0.25;
-  double t = 0.5;
-  double D = 3;
-  double G = Em / (2 * (1 + nu));
+  material->getMaterialProperties(physicalProperties);
+  double Em = physicalProperties[0];
+  double K = physicalProperties[1];
+  double nu = physicalProperties[2];
+  double t = physicalProperties[3];
+  double D = physicalProperties[4];
+  double G = physicalProperties[5];
 
   MatrixXd Cb = MatrixXd(3, 3);
   MatrixXd Cs = MatrixXd(2, 2);
@@ -194,8 +190,8 @@ MatrixXd MITC4PlateMy::bMatrix(double xi, double eta, int type) {
   double xCoords[4];
   double yCoords[4];
   for (int i = 0; i < 4; i++) {
-    xCoords[i] = nodes[i]->point.x;
-    yCoords[i] = nodes[i]->point.y;
+    xCoords[i] = nodes[i]->point.x / 1000.0;
+    yCoords[i] = nodes[i]->point.y / 1000.0;
   }
 
   MatrixXd Ngm = MatrixXd{
@@ -245,8 +241,8 @@ MatrixXd MITC4PlateMy::integrateingFn(double xi, double eta, int type) {
 
   MatrixXd Bb = bMatrix(xi, eta, 0);
   MatrixXd Bs = bMatrix(xi, eta, 1);
-  MatrixXd Cb = cMatrix(0);
-  MatrixXd Cs = cMatrix(1);
+  MatrixXd Cb = genetalElement->elasticityMatrix[0];
+  MatrixXd Cs = genetalElement->elasticityMatrix[1];
 
   if (type == 0) {
     return Bb.transpose() * Cb * Bb * detJ;
@@ -278,20 +274,6 @@ VectorXd MITC4PlateMy::getLoadVector() {
 
   for (size_t i = 0; i < 2; i++) {
     for (size_t j = 0; j < 2; j++) {
-      // double jdet = jMatrix(data.XI_SET[i], data.ETA_SET[j]).determinant();
-      // double xi = data.XI_SET[i];
-      // double n0 = N(data.XI_SET[i], data.ETA_SET[j])(0);
-      // double n1 = N(data.XI_SET[i], data.ETA_SET[j])(1);
-      // double n2 = N(data.XI_SET[i], data.ETA_SET[j])(2);
-      // double n3 = N(data.XI_SET[i], data.ETA_SET[j])(3);
-      // double n4 = N(data.XI_SET[i], data.ETA_SET[j])(4);
-      // double n5 = N(data.XI_SET[i], data.ETA_SET[j])(5);
-      // double n6 = N(data.XI_SET[i], data.ETA_SET[j])(6);
-      // double n7 = N(data.XI_SET[i], data.ETA_SET[j])(7);
-      // double n8 = N(data.XI_SET[i], data.ETA_SET[j])(8);
-      // double n9 = N(data.XI_SET[i], data.ETA_SET[j])(9);
-      // double n10 = N(data.XI_SET[i], data.ETA_SET[j])(10);
-      // double n11 = N(data.XI_SET[i], data.ETA_SET[j])(11);
 
       loadCoefVector += N(data.XI_SET[i], data.ETA_SET[j]) *
                         jMatrix(data.XI_SET[i], data.ETA_SET[j]).determinant() *
@@ -320,8 +302,8 @@ QVector<double> MITC4PlateMy::getResultVector(VectorXd U, double xi,
   MatrixXd Bb = bMatrix(xi, eta, 0);
   MatrixXd Bs = bMatrix(xi, eta, 1);
 
-  MatrixXd Cb = -cMatrix(0);
-  MatrixXd Cs = cMatrix(1);
+  MatrixXd Cb = -genetalElement->elasticityMatrix[0];
+  MatrixXd Cs = genetalElement->elasticityMatrix[1];
 
   VectorXd M = Cb * Bb * U;
   VectorXd Q = Cs * Bs * U;
