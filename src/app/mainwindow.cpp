@@ -181,7 +181,9 @@ void MainWindow::createToolBar() {
   Uz->setAutoRaise(true);
   Uz->setText("U_z");
   connect(Uz, &QToolButton::clicked, this, [this]() {
-    short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Uz];
+    ElementType type = solver->elements->first()->getType();
+    short index =
+        ElementProvider.at(type).OUTPUT_INDEX_MAP[(int)OutputType::Uz];
     scene->setResulthIndex(this, index);
   });
 
@@ -190,7 +192,9 @@ void MainWindow::createToolBar() {
   Rx->setAutoRaise(true);
   Rx->setText("R_x");
   connect(Rx, &QToolButton::clicked, this, [this]() {
-    short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Rx];
+    ElementType type = solver->elements->first()->getType();
+    short index =
+        ElementProvider.at(type).OUTPUT_INDEX_MAP[(int)OutputType::Rx];
     scene->setResulthIndex(this, index);
   });
 
@@ -199,7 +203,9 @@ void MainWindow::createToolBar() {
   Ry->setAutoRaise(true);
   Ry->setText("R_y");
   connect(Ry, &QToolButton::clicked, this, [this]() {
-    short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Ry];
+    ElementType type = solver->elements->first()->getType();
+    short index =
+        ElementProvider.at(type).OUTPUT_INDEX_MAP[(int)OutputType::Ry];
     scene->setResulthIndex(this, index);
   });
 
@@ -228,7 +234,9 @@ void MainWindow::createToolBar() {
   Qx->setAutoRaise(true);
   Qx->setText("Q_x");
   connect(Qx, &QToolButton::clicked, this, [this]() {
-    short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Qx];
+    ElementType type = solver->elements->first()->getType();
+    short index =
+        ElementProvider.at(type).OUTPUT_INDEX_MAP[(int)OutputType::Qx];
     scene->setResulthIndex(this, index);
   });
 
@@ -237,7 +245,9 @@ void MainWindow::createToolBar() {
   Qy->setAutoRaise(true);
   Qy->setText("Q_y");
   connect(Qy, &QToolButton::clicked, this, [this]() {
-    short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Qy];
+    ElementType type = solver->elements->first()->getType();
+    short index =
+        ElementProvider.at(type).OUTPUT_INDEX_MAP[(int)OutputType::Qy];
     scene->setResulthIndex(this, index);
   });
 
@@ -246,7 +256,9 @@ void MainWindow::createToolBar() {
   Mx->setAutoRaise(true);
   Mx->setText("M_x");
   connect(Mx, &QToolButton::clicked, this, [this]() {
-    short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Mx];
+    ElementType type = solver->elements->first()->getType();
+    short index =
+        ElementProvider.at(type).OUTPUT_INDEX_MAP[(int)OutputType::Mx];
     scene->setResulthIndex(this, index);
   });
 
@@ -255,7 +267,9 @@ void MainWindow::createToolBar() {
   My->setAutoRaise(true);
   My->setText("M_y");
   connect(My, &QToolButton::clicked, this, [this]() {
-    short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::My];
+    ElementType type = solver->elements->first()->getType();
+    short index =
+        ElementProvider.at(type).OUTPUT_INDEX_MAP[(int)OutputType::My];
     scene->setResulthIndex(this, index);
   });
 
@@ -264,7 +278,9 @@ void MainWindow::createToolBar() {
   Mxy->setAutoRaise(true);
   Mxy->setText("M_xy");
   connect(Mxy, &QToolButton::clicked, this, [this]() {
-    short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Mxy];
+    ElementType type = solver->elements->first()->getType();
+    short index =
+        ElementProvider.at(type).OUTPUT_INDEX_MAP[(int)OutputType::Mxy];
     scene->setResulthIndex(this, index);
   });
 
@@ -410,13 +426,17 @@ void MainWindow::calculateButtonClicked() {
             this->scene->setResulthData(solver->maxAbsValues, solver->maxValues,
                                         solver->minValues);
 
-            auto data = this->solver->data;
-            for (size_t i = 0; i < data->STR_OUTPUT_VALUES.size(); i++) {
-              for (size_t j = 0; j < this->resultButtons.size(); j++) {
-                if (data->STR_OUTPUT_VALUES[i] ==
-                    this->resultButtons[j]->text()) {
-                  this->resultButtons[j]->setEnabled(true);
-                  break;
+            const auto *elems = solver->elements;
+
+            for (const auto &element : *elems) {
+              auto data = ElementProvider.at(element->getType());
+              for (size_t i = 0; i < data.STR_OUTPUT_VALUES.size(); i++) {
+                for (size_t j = 0; j < this->resultButtons.size(); j++) {
+                  if (data.STR_OUTPUT_VALUES[i] ==
+                      this->resultButtons[j]->text()) {
+                    this->resultButtons[j]->setEnabled(true);
+                    break;
+                  }
                 }
               }
             }
@@ -430,9 +450,6 @@ void MainWindow::calculateButtonClicked() {
   // Убираем объекты при завершении
   connect(workerThread, &QThread::finished, workerThread,
           &QThread::deleteLater);
-  // connect(workerThread, &QThread::finished, solver, &Solver::deleteLater);
-  // connect(workerThread, &QThread::finished, this,
-  //         [mes]() { mes->deleteLater(); });
 
   // Запускаем поток
   workerThread->start();
@@ -455,8 +472,8 @@ void MainWindow::createTableResultsTab() {
   QComboBox *comboBoxForSelectedElement = new QComboBox(tableWindow);
   for (const auto &element : elements) {
     auto type = element->getType();
-    auto DATA = ElementProvider::elementData[type];
-    comboBoxForSelectedElement->addItem(element->name);
+    auto DATA = ElementProvider.at(type);
+    comboBoxForSelectedElement->addItem(element->name_);
   }
 
   selectedELement = elements.first();
@@ -476,7 +493,7 @@ void MainWindow::createTableResultsTab() {
 
   auto element = elements.first();
   auto type = element->getType();
-  auto DATA = ElementProvider::elementData[type];
+  auto DATA = ElementProvider.at(type);
 
   for (const auto &resultName : DATA.STR_OUTPUT_VALUES) {
     comboBoxForResultType->addItem(resultName);
@@ -522,8 +539,8 @@ void MainWindow::createTableResultsTab() {
 // Initialize s default result table with all results type
 void MainWindow::getResultTable(shared_ptr<AbstractElement> selectedELement,
                                 int selectedId) {
-  auto mesh = selectedELement->meshData;
-  auto DATA = ElementProvider::elementData[selectedELement->getType()];
+  auto mesh = selectedELement->meshData_;
+  auto DATA = ElementProvider.at(selectedELement->getType());
   auto nodes = mesh->nodes;
   resultsView->setColumnCount(5 + DATA.OUTPUT_VALUES_COUNT);
   resultsView->setRowCount(nodes.size());
@@ -586,8 +603,8 @@ void MainWindow::getResultTable(shared_ptr<AbstractElement> selectedELement,
 // Span element rows
 void MainWindow::setSpanResultTable(shared_ptr<AbstractElement> selectedELement,
                                     QTableView *resultsView) {
-  auto mesh = selectedELement->meshData;
-  auto DATA = ElementProvider::elementData[selectedELement->getType()];
+  auto mesh = selectedELement->meshData_;
+  auto DATA = ElementProvider.at(selectedELement->getType());
   auto nodes = mesh->nodes;
 
   for (size_t i = 0; i < nodes.size(); i++) {
@@ -601,8 +618,8 @@ void MainWindow::setSpanResultTable(shared_ptr<AbstractElement> selectedELement,
 void MainWindow::updateResultTable() {
   QComboBox *comboBox = (QComboBox *)sender();
   int selectedIndex = comboBox->currentIndex();
-  auto mesh = selectedELement->meshData;
-  auto DATA = ElementProvider::elementData[selectedELement->getType()];
+  auto mesh = selectedELement->meshData_;
+  auto DATA = ElementProvider.at(selectedELement->getType());
   short outputValuesCount = DATA.OUTPUT_VALUES_COUNT;
   const auto &nodes = mesh->nodes;
 

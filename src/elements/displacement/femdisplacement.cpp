@@ -21,7 +21,7 @@
 
 NodeDisplacement *NodeDisplacement::createNodeDisplacementFromDisplacement(
     ElementType type, AbstractDisplacement *displ, Node *node, int locId) {
-  auto data = ElementProvider::elementData[type];
+  auto data = ElementProvider.at(type);
 
   bool values[data.NODES_COUNT];
   displ->setValues(

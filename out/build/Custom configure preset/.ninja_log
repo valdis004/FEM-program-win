@@ -1,74 +1,79 @@
 # ninja log v7
-89	2611	7915761120394945	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-89	2611	7915761120394945	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-89	2611	7915761120394945	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-89	2611	7915761120394945	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-2650	3016	7915761121425479	src/app/CMakeFiles/FEM-program.dir/__/elements/material/PlateMaterial.cpp.obj	5f8c5c406a30b04d
-2307	4249	7915740352439111	src/app/CMakeFiles/FEM-program.dir/__/generalElement/displacement/displacement.cpp.obj	98e3577a3a210013
-2333	4525	7915740352709489	src/app/CMakeFiles/FEM-program.dir/__/elements/load/femload.cpp.obj	aa5222d0f5c9bfbc
-2339	4574	7915740352759646	src/app/CMakeFiles/FEM-program.dir/__/elements/displacement/femdisplacement.cpp.obj	156bf70aaf58edb1
-2346	4629	7915740352823699	src/app/CMakeFiles/FEM-program.dir/__/elements/elementprovider.cpp.obj	115193b030d112ee
-2278	5035	7915740352324281	src/app/CMakeFiles/FEM-program.dir/__/generalElement/load/load.cpp.obj	286dcfd2d3cf1f21
-3021	5881	7915744438774883	src/app/CMakeFiles/FEM-program.dir/__/mesh/meshdata.cpp.obj	1e2f70b9280970d5
-3028	6093	7915744438849655	src/app/CMakeFiles/FEM-program.dir/__/generalElement/plates/plate.cpp.obj	be9f12fd7e9cf5b7
-3035	6458	7915744438919364	src/app/CMakeFiles/FEM-program.dir/__/generalElement/element.cpp.obj	78b22eff12edd975
-2327	6051	7915740352637241	src/app/CMakeFiles/FEM-program.dir/__/elements/femelement.cpp.obj	268ce9101f006c20
-3014	6959	7915744438704417	src/app/CMakeFiles/FEM-program.dir/__/mesh/mesh.cpp.obj	8e0d747ab25c4e66
-2243	6623	7915740351809610	src/app/CMakeFiles/FEM-program.dir/main.cpp.obj	5c66f82586d35bef
-2625	6750	7915761121194418	src/app/CMakeFiles/FEM-program.dir/context-menu/treeContextMenu.cpp.obj	1c46c9ccfaf17ea0
-2613	6808	7915761121088268	src/app/CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.obj	ae138b8c783cdd35
-2619	7394	7915761121122862	src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.obj	6eeb91ad2e9fc56f
-2631	8275	7915761121265332	src/app/CMakeFiles/FEM-program.dir/__/graphics/qtgl/qtgl.cpp.obj	1fb4504c03c58132
-2644	9501	7915761121298582	src/app/CMakeFiles/FEM-program.dir/__/solver/solver.cpp.obj	46eafcb3f71e36dc
-2637	9763	7915761121298582	src/app/CMakeFiles/FEM-program.dir/__/elements/plates/plates.cpp.obj	d43c0e170fc62bf8
-9763	10040	7915761192559239	FEM-program.exe	c63db2863f1857fe
-82	426	7915762184449932	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-82	426	7915762184449932	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-82	426	7915762184449932	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-82	426	7915762184449932	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-447	871	7915762188150634	src/app/CMakeFiles/FEM-program.dir/__/elements/material/PlateMaterial.cpp.obj	5f8c5c406a30b04d
-428	4352	7915762187920360	src/app/CMakeFiles/FEM-program.dir/context-menu/treeContextMenu.cpp.obj	1c46c9ccfaf17ea0
-437	6721	7915762188043277	src/app/CMakeFiles/FEM-program.dir/__/elements/plates/plates.cpp.obj	d43c0e170fc62bf8
-6721	6927	7915762250863696	FEM-program.exe	c63db2863f1857fe
-101	499	7915762891862818	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-101	499	7915762891862818	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-101	499	7915762891862818	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-101	499	7915762891862818	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-534	998	7915762896247337	src/app/CMakeFiles/FEM-program.dir/__/elements/material/PlateMaterial.cpp.obj	5f8c5c406a30b04d
-501	6757	7915762895904043	src/app/CMakeFiles/FEM-program.dir/context-menu/treeContextMenu.cpp.obj	1c46c9ccfaf17ea0
-513	8424	7915762896043105	src/app/CMakeFiles/FEM-program.dir/__/graphics/qtgl/qtgl.cpp.obj	1fb4504c03c58132
-523	9517	7915762896140078	src/app/CMakeFiles/FEM-program.dir/__/elements/plates/plates.cpp.obj	d43c0e170fc62bf8
-9517	9807	7915762986065868	FEM-program.exe	c63db2863f1857fe
-107	2390	7915818981826985	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-107	2390	7915818981826985	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-107	2390	7915818981826985	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-107	2390	7915818981826985	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-2445	2831	7915818982959929	src/app/CMakeFiles/FEM-program.dir/__/elements/material/PlateMaterial.cpp.obj	5f8c5c406a30b04d
-2422	5035	7915818982738206	src/app/CMakeFiles/FEM-program.dir/__/generalElement/plates/plate.cpp.obj	be9f12fd7e9cf5b7
-2428	5449	7915818982782584	src/app/CMakeFiles/FEM-program.dir/__/generalElement/element.cpp.obj	78b22eff12edd975
-2415	5767	7915818982671754	src/app/CMakeFiles/FEM-program.dir/__/mesh/mesh.cpp.obj	8e0d747ab25c4e66
-2402	6679	7915818982496844	src/app/CMakeFiles/FEM-program.dir/context-menu/treeContextMenu.cpp.obj	1c46c9ccfaf17ea0
-2391	6841	7915818982429059	src/app/CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.obj	ae138b8c783cdd35
-2397	7405	7915818982476775	src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.obj	6eeb91ad2e9fc56f
-2408	8357	7915818982593817	src/app/CMakeFiles/FEM-program.dir/__/graphics/qtgl/qtgl.cpp.obj	1fb4504c03c58132
-2439	9305	7915818982902052	src/app/CMakeFiles/FEM-program.dir/__/solver/solver.cpp.obj	46eafcb3f71e36dc
-2434	9582	7915818982853941	src/app/CMakeFiles/FEM-program.dir/__/elements/plates/plates.cpp.obj	d43c0e170fc62bf8
-9582	9763	7915819054316460	FEM-program.exe	c63db2863f1857fe
-68	517	7915820585733394	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-68	517	7915820585733394	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-68	517	7915820585733394	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-68	517	7915820585733394	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-519	8237	7915820590270897	src/app/CMakeFiles/FEM-program.dir/__/graphics/qtgl/qtgl.cpp.obj	1fb4504c03c58132
-8238	8500	7915820667408215	FEM-program.exe	c63db2863f1857fe
-124	654	7915821696499240	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-124	654	7915821696499240	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-124	654	7915821696499240	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-124	654	7915821696499240	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-658	8228	7915821701829705	src/app/CMakeFiles/FEM-program.dir/__/graphics/qtgl/qtgl.cpp.obj	1fb4504c03c58132
-8229	8480	7915821777544731	FEM-program.exe	c63db2863f1857fe
-43	443	7915824175188496	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-43	443	7915824175188496	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-43	443	7915824175188496	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
-43	443	7915824175188496	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
-444	8167	7915824179156806	src/app/CMakeFiles/FEM-program.dir/__/graphics/qtgl/qtgl.cpp.obj	1fb4504c03c58132
-8168	8419	7915824256402737	FEM-program.exe	c63db2863f1857fe
+61	2782	7916664898978708	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+61	2782	7916664898978708	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+61	2782	7916664898978708	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+61	2782	7916664898978708	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+2905	3421	7916664900946011	src/app/CMakeFiles/FEM-program.dir/__/elements/material/PlateMaterial.cpp.obj	8a1a6c29f7ff4fd3
+2843	4993	7916664900322608	src/app/CMakeFiles/FEM-program.dir/__/generalElement/displacement/displacement.cpp.obj	8d79b821f3cee21e
+2873	5140	7916664900620842	src/app/CMakeFiles/FEM-program.dir/__/elements/load/femload.cpp.obj	1112aa0a56b3dcc8
+2880	5187	7916664900695893	src/app/CMakeFiles/FEM-program.dir/__/elements/displacement/femdisplacement.cpp.obj	22e2ce8879ebb07c
+2888	6316	7916664900779494	src/app/CMakeFiles/FEM-program.dir/__/elements/elementprovider.cpp.obj	640e05b0cb580095
+2836	5891	7916664900260566	src/app/CMakeFiles/FEM-program.dir/__/generalElement/load/load.cpp.obj	872dd8c4fe402fe3
+2821	6122	7916664900122986	src/app/CMakeFiles/FEM-program.dir/__/mesh/meshdata.cpp.obj	176ecf2f48f11072
+2828	6476	7916664900175462	src/app/CMakeFiles/FEM-program.dir/__/generalElement/plates/plate.cpp.obj	5170d6d228822ed7
+2851	6806	7916664900418203	src/app/CMakeFiles/FEM-program.dir/__/generalElement/element.cpp.obj	f41b9e54a1f4d9b1
+2866	6819	7916664900560477	src/app/CMakeFiles/FEM-program.dir/__/elements/femelement.cpp.obj	73a78bf78f898ce8
+2814	7133	7916664900033821	src/app/CMakeFiles/FEM-program.dir/__/mesh/mesh.cpp.obj	454e422796d1fc00
+2795	7611	7916664899825130	src/app/CMakeFiles/FEM-program.dir/main.cpp.obj	d50532b7ddaaa95b
+2801	8096	7916664899904335	src/app/CMakeFiles/FEM-program.dir/context-menu/treeContextMenu.cpp.obj	bc760ed6b7133173
+2784	8287	7916664899674395	src/app/CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.obj	39709d881116b9f2
+2789	8733	7916664899798479	src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.obj	a0eda89ae2eb81b8
+2808	9821	7916664899986681	src/app/CMakeFiles/FEM-program.dir/__/graphics/qtgl/qtgl.cpp.obj	ce7f1481b5c6cc92
+2895	10840	7916664900859865	src/app/CMakeFiles/FEM-program.dir/__/solver/solver.cpp.obj	ae767429e19a1b38
+2881	10224	7916603701416845	src/app/CMakeFiles/FEM-program.dir/__/elements/plates/plates.cpp.obj	d43c0e170fc62bf8
+10847	11036	7916664980362443	FEM-program.exe	aba6728808c53094
+2858	10847	7916664900476454	src/app/CMakeFiles/FEM-program.dir/__/elements/fem_plates/fem_plate_mitc4my.cpp.obj	110caca031524343
+54	2884	7916686665842835	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+54	2884	7916686665842835	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+54	2884	7916686665842835	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+54	2884	7916686665842835	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+2928	6110	7916686666940424	src/app/CMakeFiles/FEM-program.dir/__/mesh/meshdata.cpp.obj	176ecf2f48f11072
+2975	6276	7916686667403497	src/app/CMakeFiles/FEM-program.dir/__/elements/displacement/femdisplacement.cpp.obj	22e2ce8879ebb07c
+2968	6298	7916686667343264	src/app/CMakeFiles/FEM-program.dir/__/elements/load/femload.cpp.obj	1112aa0a56b3dcc8
+2983	6346	7916686667483325	src/app/CMakeFiles/FEM-program.dir/__/elements/elementprovider.cpp.obj	640e05b0cb580095
+2935	6490	7916686667002375	src/app/CMakeFiles/FEM-program.dir/__/generalElement/plates/plate.cpp.obj	5170d6d228822ed7
+2941	6964	7916686667080662	src/app/CMakeFiles/FEM-program.dir/__/generalElement/element.cpp.obj	f41b9e54a1f4d9b1
+2961	6993	7916686667267011	src/app/CMakeFiles/FEM-program.dir/__/elements/femelement.cpp.obj	73a78bf78f898ce8
+2921	7262	7916686666878526	src/app/CMakeFiles/FEM-program.dir/__/mesh/mesh.cpp.obj	454e422796d1fc00
+2898	7700	7916686666643202	src/app/CMakeFiles/FEM-program.dir/main.cpp.obj	d50532b7ddaaa95b
+2904	8299	7916686666704323	src/app/CMakeFiles/FEM-program.dir/context-menu/treeContextMenu.cpp.obj	bc760ed6b7133173
+2885	8449	7916686666510629	src/app/CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.obj	39709d881116b9f2
+2892	9073	7916686666590944	src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.obj	a0eda89ae2eb81b8
+2911	10212	7916686666763005	src/app/CMakeFiles/FEM-program.dir/__/graphics/qtgl/qtgl.cpp.obj	ce7f1481b5c6cc92
+2990	11555	7916686667563635	src/app/CMakeFiles/FEM-program.dir/__/solver/solver.cpp.obj	ae767429e19a1b38
+2948	11739	7916686667145858	src/app/CMakeFiles/FEM-program.dir/__/elements/fem_plates/fem_plate_mitc4my.cpp.obj	110caca031524343
+107	546	7916687328147768	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+107	546	7916687328147768	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+107	546	7916687328147768	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+107	546	7916687328147768	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+548	3021	7916687332549820	src/app/CMakeFiles/FEM-program.dir/__/generalElement/plates/plate.cpp.obj	5170d6d228822ed7
+98	499	7916688696155002	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+98	499	7916688696155002	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+98	499	7916688696155002	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+98	499	7916688696155002	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+501	6635	7916688700186321	src/app/CMakeFiles/FEM-program.dir/__/elements/fem_plates/fem_plate_dkmq.cpp.obj	7f124ee177245634
+6635	6835	7916688761519643	FEM-program.exe	a9a6fb2b91d8d946
+70	446	7916690285644210	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+70	446	7916690285644210	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+70	446	7916690285644210	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+70	446	7916690285644210	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+448	3415	7916690289531123	src/app/CMakeFiles/FEM-program.dir/__/elements/femelement.cpp.obj	73a78bf78f898ce8
+3415	3632	7916690319170317	FEM-program.exe	a9a6fb2b91d8d946
+42	468	7916692658114620	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+42	468	7916692658114620	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+42	468	7916692658114620	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+42	468	7916692658114620	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+470	4532	7916692662343536	src/app/CMakeFiles/FEM-program.dir/context-menu/treeContextMenu.cpp.obj	bc760ed6b7133173
+4533	4732	7916692702964627	FEM-program.exe	a9a6fb2b91d8d946
+19	281	7916694610307915	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+19	281	7916694610307915	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+19	281	7916694610307915	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+19	281	7916694610307915	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+282	2486	7916694612931843	src/app/CMakeFiles/FEM-program.dir/__/elements/elementprovider.cpp.obj	640e05b0cb580095
+2487	2700	7916694634995932	FEM-program.exe	a9a6fb2b91d8d946
+37	474	7916697815197296	src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+37	474	7916697815197296	src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+37	474	7916697815197296	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	b31ea041d3e8481e
+37	474	7916697815197296	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation.cpp	b31ea041d3e8481e
+476	4720	7916697819597065	src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.obj	a0eda89ae2eb81b8
+4720	4912	7916697861994788	FEM-program.exe	a9a6fb2b91d8d946

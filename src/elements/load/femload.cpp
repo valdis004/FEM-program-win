@@ -8,7 +8,7 @@
 NodeLoad *NodeLoad::createNodeLoadFromLoad(ElementType type, AbstractLoad *load,
                                            double *coefs, int localNodeId) {
 
-  auto data = ElementProvider::elementData[type];
+  auto data = ElementProvider.at(type);
   const int dof = data.FULL_DOF_COUNT;
 
   double values[dof];

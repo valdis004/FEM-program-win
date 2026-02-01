@@ -12,8 +12,8 @@
 
 void Solver::setParams(size_t i, const FemAbstractElement *element,
                        unsigned &correction, unsigned &curDof,
-                       unsigned &localId, unsigned &nodeId, unsigned &fullDof) {
-  auto data = element->data;
+                       unsigned &localId, unsigned &nodeId, unsigned &fullDof,
+                       const ElementData &data) {
   correction = 0;
   localId = data.LOCAL_ID_FROM_STIFFMAT[i];
   nodeId = element->nodes[localId]->id;
@@ -28,26 +28,28 @@ void Solver::setParams(size_t i, const FemAbstractElement *element,
   }
 }
 
-unsigned Solver::getGlobalIndex(size_t i, const FemAbstractElement *element) {
+unsigned Solver::getGlobalIndex(size_t i, const FemAbstractElement *element,
+                                const ElementData &data) {
   unsigned correction;
   unsigned localId;
   unsigned nodeId;
   unsigned curDof;
   unsigned fullDof;
-  setParams(i, element, correction, curDof, localId, nodeId, fullDof);
+  setParams(i, element, correction, curDof, localId, nodeId, fullDof, data);
 
   return nodeId * fullDof + i % curDof - correction;
 }
 
 unsigned
 Solver::getGlobalIndexAndSetLoad(size_t i, const FemAbstractElement *element,
-                                 SparseVector<double> &globalLoadVector) {
+                                 SparseVector<double> &globalLoadVector,
+                                 const ElementData &data) {
   unsigned correction;
   unsigned localId;
   unsigned nodeId;
   unsigned curDof;
   unsigned fullDof;
-  setParams(i, element, correction, curDof, localId, nodeId, fullDof);
+  setParams(i, element, correction, curDof, localId, nodeId, fullDof, data);
 
   unsigned dofIndex = i % curDof;
   double value = element->nodes[localId]->nodeLoad->values[dofIndex];
@@ -58,7 +60,8 @@ Solver::getGlobalIndexAndSetLoad(size_t i, const FemAbstractElement *element,
 }
 
 std::pair<SparseMatrix<double>, SparseVector<double>>
-Solver::getGlobalStiffMatrixAndLoadVector(shared_ptr<MeshData> mesh) {
+Solver::getGlobalStiffMatrixAndLoadVector(shared_ptr<MeshData> mesh,
+                                          const ElementData &data) {
   globalMatrixSize = mesh->globaStiffMatrixSize;
   SparseMatrix<double> globalStiffMatrix(globalMatrixSize, globalMatrixSize);
   SparseVector<double> globalLoadVector(globalMatrixSize);
@@ -68,15 +71,14 @@ Solver::getGlobalStiffMatrixAndLoadVector(shared_ptr<MeshData> mesh) {
   for (FemAbstractElement *element : elements) {
     emit newElementStiffMatrixStep(count++);
 
-    ElementData data = element->data;
-    QVector<Node *> nodes = element->nodes;
+    const QVector<Node *> &nodes = element->nodes;
     MatrixXd localStiffMatrix = element->getLocalStiffMatrix();
 
     for (size_t i = 0; i < data.STIFF_MATRIX_SIZE; i++) {
       unsigned colGlobId =
-          getGlobalIndexAndSetLoad(i, element, globalLoadVector);
+          getGlobalIndexAndSetLoad(i, element, globalLoadVector, data);
       for (size_t j = 0; j < data.STIFF_MATRIX_SIZE; j++) {
-        unsigned rowGlobId = getGlobalIndex(j, element);
+        unsigned rowGlobId = getGlobalIndex(j, element, data);
         double loc = localStiffMatrix(i, j);
         globalStiffMatrix.coeffRef(rowGlobId, colGlobId) +=
             localStiffMatrix(i, j);
@@ -113,10 +115,13 @@ void Solver::applyBaundaryConditions(SparseMatrix<double> &globalMatrix,
 }
 
 void Solver::calculate(QVector<shared_ptr<AbstractElement>> &elements) {
+  this->elements = &elements;
 
   for (auto &element : elements) {
-    auto mesh = element->meshData;
-    auto stiffAndLoad = getGlobalStiffMatrixAndLoadVector(mesh);
+    auto mesh = element->meshData_;
+    auto &data = ElementProvider.at(element->getType());
+
+    auto stiffAndLoad = getGlobalStiffMatrixAndLoadVector(mesh, data);
     auto stiff = stiffAndLoad.first;
     auto load = stiffAndLoad.second;
 
@@ -157,21 +162,20 @@ void Solver::calculate(QVector<shared_ptr<AbstractElement>> &elements) {
 
 void Solver::setOutputValuesToNodes(shared_ptr<MeshData> mesh,
                                     const SparseVector<double> &globalU,
-                                    shared_ptr<AbstractElement> elements) {
+                                    shared_ptr<AbstractElement> element) {
   bool flag = true;
+  const auto &data = ElementProvider.at(element->getType());
 
-  double maxAbsValues[ElementProvider::outputCounts]{0};
-  double maxValues[ElementProvider::outputCounts]{0};
-  double minValues[ElementProvider::outputCounts]{0};
-  short count = mesh->femElements.first()->data.OUTPUT_VALUES_COUNT;
-  this->data = &(mesh->femElements.first()->data);
+  double maxAbsValues[16]{0};
+  double maxValues[16]{0};
+  double minValues[16]{0};
+  short count = data.OUTPUT_VALUES_COUNT;
 
   for (auto &element : mesh->femElements) {
-    auto data = element->data;
 
     VectorXd elementU{data.STIFF_MATRIX_SIZE};
     for (size_t i = 0; i < data.STIFF_MATRIX_SIZE; i++) {
-      unsigned globalId = getGlobalIndex(i, element);
+      unsigned globalId = getGlobalIndex(i, element, data);
       elementU(i) = globalU.coeff(globalId);
     }
 
@@ -207,9 +211,9 @@ void Solver::setOutputValuesToNodes(shared_ptr<MeshData> mesh,
   }
 
   for (size_t j = 0; j < count; j++) {
-    elements->maxAbsValues.push_back(maxAbsValues[j]);
-    elements->maxValues.push_back(maxValues[j]);
-    elements->minValues.push_back(minValues[j]);
+    element->max_abs_values_.push_back(maxAbsValues[j]);
+    element->min_values_.push_back(maxValues[j]);
+    element->max_values_.push_back(minValues[j]);
   }
 }
 

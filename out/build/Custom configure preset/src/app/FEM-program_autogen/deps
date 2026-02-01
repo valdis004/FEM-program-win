@@ -900,6 +900,10 @@ FEM-program_autogen/timestamp: \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/displacement/femdisplacement.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/elementprovider.cpp \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/elementprovider.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_dkmq.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_dkmq.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc4my.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc4my.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.cpp \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femtypes.h \
@@ -910,8 +914,6 @@ FEM-program_autogen/timestamp: \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/PlateMaterial.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/material.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/node.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/plates/plates.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/plates/plates.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/point.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/displacement/displacement.cpp \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/displacement/displacement.h \

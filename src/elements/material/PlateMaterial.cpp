@@ -9,7 +9,7 @@ PlateMaterial::PlateMaterial(double youngModule, double kFactor,
       thickness(thickness) {};
 
 /* static */ std::shared_ptr<Material> PlateMaterial::getDefaultMaterial() {
-  return std::make_shared<PlateMaterial>(3e7, 0.833333, 0.2, 0.375);
+  return std::make_shared<PlateMaterial>(3e7, 0.833333, 0.2, 4.0);
 };
 
 double *PlateMaterial::getMaterialProperties(double *physicalPropertiesArr) {

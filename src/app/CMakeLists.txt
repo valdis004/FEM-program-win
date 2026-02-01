@@ -10,7 +10,8 @@ add_executable(FEM-program
      ${CMAKE_HOME_DIRECTORY}/src/generalElement/load/load.cpp
      ${CMAKE_HOME_DIRECTORY}/src/generalElement/displacement/displacement.cpp
      ${CMAKE_HOME_DIRECTORY}/src/generalElement/element.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/elements/plates/plates.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/elements/fem_plates/fem_plate_mitc4my.cpp
+      ${CMAKE_HOME_DIRECTORY}/src/elements/fem_plates/fem_plate_dkmq.cpp
      ${CMAKE_HOME_DIRECTORY}/src/elements/femelement.cpp
      ${CMAKE_HOME_DIRECTORY}/src/elements/load/femload.cpp
      ${CMAKE_HOME_DIRECTORY}/src/elements/displacement/femdisplacement.cpp
@@ -30,7 +31,7 @@ target_include_directories(FEM-program
         ${PROJECT_SOURCE_DIR}/src/elements/load
         ${PROJECT_SOURCE_DIR}/src/elements/displacement
         ${PROJECT_SOURCE_DIR}/src/elements/material
-        ${PROJECT_SOURCE_DIR}/src/elements/plates
+        ${PROJECT_SOURCE_DIR}/src/elements/fem_plates
         ${PROJECT_SOURCE_DIR}/src/graphics
         ${PROJECT_SOURCE_DIR}/src/mesh
         ${PROJECT_SOURCE_DIR}/src/solver

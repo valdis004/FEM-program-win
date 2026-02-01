@@ -37,6 +37,18 @@
 			null
 		],
 		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_dkmq.h",
+			"MU",
+			"3UGVIL2ZXO/moc_fem_plate_dkmq.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc4my.h",
+			"MU",
+			"3UGVIL2ZXO/moc_fem_plate_mitc4my.cpp",
+			null
+		],
+		[
 			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.h",
 			"MU",
 			"LFVNSI46CU/moc_femelement.cpp",
@@ -52,12 +64,6 @@
 			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/PlateMaterial.h",
 			"MU",
 			"WPEKB7VXEX/moc_PlateMaterial.cpp",
-			null
-		],
-		[
-			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/plates/plates.h",
-			"MU",
-			"PWRSZVA2BX/moc_plates.cpp",
 			null
 		],
 		[
@@ -147,7 +153,7 @@
 		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/load",
 		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/displacement",
 		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material",
-		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/plates",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates",
 		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/graphics",
 		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/mesh",
 		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/solver",
@@ -225,6 +231,16 @@
 			null
 		],
 		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_dkmq.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc4my.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.cpp",
 			"MU",
 			null
@@ -236,11 +252,6 @@
 		],
 		[
 			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/PlateMaterial.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/plates/plates.cpp",
 			"MU",
 			null
 		],

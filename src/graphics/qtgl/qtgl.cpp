@@ -124,8 +124,8 @@ void Qtgl::setMeshData(QVector<shared_ptr<AbstractElement>> *elements) {
   this->elements = elements;
 
   for (auto &element : *elements) {
-    auto nodes = element->meshData->nodes;
-    auto elements = element->meshData->femElements;
+    auto nodes = element->meshData_->nodes;
+    auto elements = element->meshData_->femElements;
 
     m_meshDataValid = !nodes.empty() && !elements.empty();
     if (!m_meshDataValid)
@@ -161,17 +161,18 @@ void Qtgl::setResulthIndex(MainWindow *mainwindow, short index) {
   QString labelText;
 
   for (const auto &element : *elements) {
-    labelText += QString("max value: %1, ").arg(element->maxValues[index]) +
-                 QString("min value: %1").arg(element->minValues[index]) + "\t";
+    labelText += QString("max value: %1, ").arg(element->min_values_[index]) +
+                 QString("min value: %1").arg(element->max_values_[index]) +
+                 "\t";
   }
 
   mainwindow->statusLabel->setText(labelText);
 
   double scaleForOutput =
-      1000.0 / (*elements).first()->maxAbsValues[resultIndex];
+      1000.0 / (*elements).first()->max_abs_values_[resultIndex];
 
   for (auto &element : *elements) {
-    auto nodes = element->meshData->nodes;
+    auto nodes = element->meshData_->nodes;
 
     for (const auto &node : nodes) {
       double value = node->outputValues[resultIndex];
@@ -207,8 +208,8 @@ void Qtgl::createMeshDisplayList() {
     // 1. Рисуем элементы (прямоугольники)
     glColor4f(0.8f, 0.8f, 0.8f, 0.7f); // Полупрозрачный серый для элементов
 
-    auto nodes = element->meshData->nodes;
-    auto femElements = element->meshData->femElements;
+    auto nodes = element->meshData_->nodes;
+    auto femElements = element->meshData_->femElements;
 
     // Loop through fem elements
     for (const auto &element : femElements) {
@@ -258,12 +259,12 @@ void Qtgl::createMeshDisplayList() {
 }
 
 void Qtgl::calculateMeshBounds() {
-  m_minX = m_maxX = elements->first()->meshData->nodes[0]->point.x;
-  m_minY = m_maxY = elements->first()->meshData->nodes[0]->point.y;
-  m_minZ = m_maxZ = elements->first()->meshData->nodes[0]->point.z;
+  m_minX = m_maxX = elements->first()->meshData_->nodes[0]->point.x;
+  m_minY = m_maxY = elements->first()->meshData_->nodes[0]->point.y;
+  m_minZ = m_maxZ = elements->first()->meshData_->nodes[0]->point.z;
 
   for (auto &element : *elements) {
-    auto nodes = element->meshData->nodes;
+    auto nodes = element->meshData_->nodes;
 
     if (nodes.empty())
       return;
@@ -300,7 +301,7 @@ void Qtgl::normalizeMeshData() {
   calculateMeshBounds();
 
   for (auto &element : *elements) {
-    auto nodes = element->meshData->nodes;
+    auto nodes = element->meshData_->nodes;
 
     // Центрируем и нормируем узлы
     for (auto node : nodes) {
@@ -318,7 +319,7 @@ void Qtgl::normalizeMeshData() {
 
 void Qtgl::normalizeOutData() {
   for (auto &element : *elements) {
-    auto nodes = element->meshData->nodes;
+    auto nodes = element->meshData_->nodes;
     for (const auto &node : nodes) {
       // Нормализуем выходные данные так же, как и геометрию
       node->glOutputValue = (node->glOutputValue - m_centerZ) / m_scaleFactor;

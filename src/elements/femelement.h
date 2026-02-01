@@ -1,5 +1,7 @@
 #pragma once
 
+#define FEM_ELEMENT
+
 // #include "displacement/displacement.h"
 // #include "displacement/displacement.h"
 // #include "elementprovider.h
@@ -17,6 +19,7 @@
 #include <qnamespace.h>
 
 // #include "element.h"
+// #include "elementprovider.h"
 #include "elementprovider.h"
 #include "elements/global.h"
 #include "femtypes.h"
@@ -38,7 +41,6 @@ private:
 
 public:
   const ElementType type;
-  ElementData &data;
   QVector<Node *> nodes;
   unsigned nodesCount;
   size_t id;
@@ -67,7 +69,8 @@ public:
   create(unsigned id, ElementType type, Node **nodes, int count,
          std::shared_ptr<AbstractElement> generalElement);
 
-  static void setCalcProps(FemAbstractElement *ptr, unsigned &globalMatrixSize);
+  static void setCalcProps(FemAbstractElement *ptr, unsigned &globalMatrixSize,
+                           const ElementData &data);
 
   void setLoad(AbstractLoad *load) { this->generalLoad = load; }
 

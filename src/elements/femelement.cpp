@@ -7,18 +7,18 @@
 #include <qglobal.h>
 
 #include "elementprovider.h"
+#include "fem_plates/fem_plate_dkmq.h"
 #include "femelement.h"
 #include "femtypes.h"
 #include "generalElement/displacement/displacement.h"
 #include "load/femload.h"
 // #include "load/load.h"
-#include "plates/plates.h"
+#include "fem_plates/fem_plate_mitc4my.h"
 
 FemAbstractElement::FemAbstractElement(
     unsigned id, Node **nodes, int count, ElementType type,
     std::shared_ptr<AbstractElement> generalElement)
-    : data(ElementProvider::elementData[type]), id(id), nodesCount(count),
-      type(type), genetalElement(generalElement) {
+    : id(id), nodesCount(count), type(type), genetalElement(generalElement) {
   for (size_t i = 0; i < count; i++) {
     this->nodes.push_back(nodes[i]);
   }
@@ -35,7 +35,10 @@ FemAbstractElement::create(unsigned id, ElementType type, Node **nodes,
                            std::shared_ptr<AbstractElement> generalElement) {
   switch (type) {
   case ElementType::MITC4MY: {
-    return new MITC4PlateMy(id, nodes, generalElement);
+    return new FemPlateMitc4My(id, nodes, generalElement);
+  }
+  case ElementType::DKMQ: {
+    return new FemPlateDkmq(id, nodes, generalElement);
   }
   default:
     throw std::exception();
@@ -43,12 +46,12 @@ FemAbstractElement::create(unsigned id, ElementType type, Node **nodes,
 }
 
 void FemAbstractElement::setCalcProps(FemAbstractElement *ptr,
-                                      unsigned &globalMatrixSize) {
+                                      unsigned &global_matrix_size,
+                                      const ElementData &data) {
 
-  auto &data = ElementProvider::elementData[ptr->type];
   // Set load parameters
-  bool isLoad = ptr->generalLoad != nullptr;
-  bool isDispl = ptr->generalDisp != nullptr;
+  bool is_load = ptr->generalLoad != nullptr;
+  bool is_displ = ptr->generalDisp != nullptr;
   VectorXd coefs = ptr->getLoadVector();
 
   // for (size_t i = 0; i < coefs.size(); i++) {
@@ -56,49 +59,49 @@ void FemAbstractElement::setCalcProps(FemAbstractElement *ptr,
   // }
 
   // Bad dof parameters
-  short badDofBegin = data.BAD_DOF_BEGIN;
-  short badDofCount = data.BAD_DOF_COUNT;
-  short correcCount, correctFromPrevNode, corFromCurNode;
-  bool isFullDof = data.IS_FULL_DOF;
+  short bad_dof_begin = data.BAD_DOF_BEGIN;
+  short bad_dof_count = data.BAD_DOF_COUNT;
+  short correc_count, correctFromPrevNode, corFromCurNode;
+  bool is_full_dof = data.IS_FULL_DOF;
 
-  auto dofMap = data.DOF_MAP;
-  auto badDofMap = data.BAD_DOF_MAP;
+  auto dof_map = data.DOF_MAP;
+  auto bad_dof_map = data.BAD_DOF_MAP;
 
-  int countCoefs = 0;
+  int count_coefs = 0;
   for (size_t i = 0; i < data.NODES_COUNT; i++) {
-    const short curDof = dofMap[i];
-    Node *currentNode = ptr->nodes[i];
-    double currentCoefs[curDof];
-    short id = currentNode->id;
+    const short cur_dof = dof_map[i];
+    Node *current_node = ptr->nodes[i];
+    double current_coefs[cur_dof];
+    short id = current_node->id;
 
     short correction = 0;
-    if (!isFullDof) {
-      correcCount = id / badDofBegin;
-      correctFromPrevNode = correcCount * badDofCount;
-      corFromCurNode = badDofMap[i];
+    if (!is_full_dof) {
+      correc_count = id / bad_dof_begin;
+      correctFromPrevNode = correc_count * bad_dof_count;
+      corFromCurNode = bad_dof_map[i];
 
       correction = correctFromPrevNode + corFromCurNode;
     }
 
-    unsigned globalIndex = id * curDof - correction;
-    currentNode->firstGlobStiffId = globalIndex;
+    unsigned global_index = id * cur_dof - correction;
+    current_node->firstGlobStiffId = global_index;
 
     // Добавление свойства размера глобальной матрицы жесткости для Sovet
-    if (globalIndex + curDof > globalMatrixSize) {
-      globalMatrixSize = globalIndex + curDof;
+    if (global_index + cur_dof > global_matrix_size) {
+      global_matrix_size = global_index + cur_dof;
     }
 
-    for (size_t j = 0; j < curDof; j++) {
-      currentCoefs[j] = coefs[countCoefs++];
+    for (size_t j = 0; j < cur_dof; j++) {
+      current_coefs[j] = coefs[count_coefs++];
     }
 
-    if (currentNode->nodeDisplacement) {
-      currentNode->nodeDisplacement->setIndexesToZero(currentNode);
+    if (current_node->nodeDisplacement) {
+      current_node->nodeDisplacement->setIndexesToZero(current_node);
     }
 
-    if (isLoad && !currentNode->nodeLoad) {
-      currentNode->nodeLoad = NodeLoad::createNodeLoadFromLoad(
-          ptr->type, ptr->generalLoad, currentCoefs, i);
+    if (is_load && !current_node->nodeLoad) {
+      current_node->nodeLoad = NodeLoad::createNodeLoadFromLoad(
+          ptr->type, ptr->generalLoad, current_coefs, i);
     }
 
     // if (isLoad) {

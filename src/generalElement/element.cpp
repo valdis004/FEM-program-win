@@ -3,22 +3,21 @@
 #include "meshdata.h"
 #include <memory>
 #include <qobject.h>
-#include <stdexcept>
 
 AbstractElement::AbstractElement(shared_ptr<AbstractLoad> load,
                                  ElementType type, unsigned lenght) {
-  this->lenght = lenght;
-  this->type = type;
-  loads.push_back(load);
-  meshData = std::make_shared<MeshData>();
-  this->name = QString("Element %1").arg(count++);
+  this->lenght_ = lenght;
+  this->type_ = type;
+  loads_.push_back(load);
+  meshData_ = std::make_shared<MeshData>();
+  this->name_ = QString("Element %1").arg(count_++);
 }
 
 AbstractElement::AbstractElement(shared_ptr<AbstractLoad> load,
                                  ElementType type, unsigned lenght,
                                  Point3 startPoint)
     : AbstractElement(load, type, lenght) {
-  this->statrtPoint = startPoint;
+  this->statrt_point_ = startPoint;
 }
 
 AbstractElement::AbstractElement(shared_ptr<AbstractLoad> load,
@@ -27,19 +26,19 @@ AbstractElement::AbstractElement(shared_ptr<AbstractLoad> load,
                                  shared_ptr<Material> material)
     : AbstractElement(load, type, lenght, startPoint) {
 
-  this->material = material;
+  this->material_ = material;
 }
 
-double AbstractElement::getLenght() const { return lenght; }
+double AbstractElement::getLenght() const { return lenght_; }
 
-ElementType AbstractElement::getType() const { return type; }
+ElementType AbstractElement::getType() const { return type_; }
 
-Point3 AbstractElement::getStartPoint() const { return statrtPoint; };
+Point3 AbstractElement::getStartPoint() const { return statrt_point_; };
 
 void AbstractElement::addLoad(shared_ptr<AbstractLoad> load) {
-  loads.push_back(load);
+  loads_.push_back(load);
 }
 
-shared_ptr<Material> AbstractElement::getMaterial() const { return material; }
+shared_ptr<Material> AbstractElement::getMaterial() const { return material_; }
 
-inline short AbstractElement::loadCount() const { return loads.size(); }
+inline short AbstractElement::loadCount() const { return loads_.size(); }

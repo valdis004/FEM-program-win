@@ -13,6 +13,7 @@
 #include <qprogressdialog.h>
 #include <qpushbutton.h>
 #include <qtimer.h>
+#include <qvariant.h>
 #include <qwidget.h>
 
 #include "PlateMaterial.h"
@@ -138,24 +139,31 @@ void TreeContextMenu::createDiologDefualtSchemePlate(
   // d->setLayout(mainLayout);
   diolog->show();
 
-  ElementType type{ElementType::MITC4MY};
+  ElementType selectedType{ElementType::MITC4MY};
   connect(comboBox, &QComboBox::currentIndexChanged, this,
-          [&type](int id) { type = (ElementType)id; });
+          [&selectedType, comboBox]() {
+            selectedType = comboBox->currentData().value<ElementType>();
+          });
 
-  Point3 startPoint{0, 0, 0};
-  if (elements->size() > 0) {
-    auto element = elements->at(elements->size() - 1);
-    startPoint = element->getStartPoint();
-    startPoint.x += 1000 + element->getLenght();
-  }
-  double loadv[] = {-100, 0, 0};
-  shared_ptr<Material> material = PlateMaterial::getDefaultMaterial();
-  shared_ptr<AbstractLoad> load = make_shared<AreaLoadFzMxMy>(loadv, 3);
-
-  shared_ptr<AbstractElement> plate =
-      make_shared<Plate>(load, type, 3000, startPoint, material);
-
+  // When dialog closed
   if (diolog->exec() == QDialog::Accepted) {
+
+    // Creating a general element (Plate)
+    Point3 startPoint{0, 0, 0};
+    // Find the last point of existed elements
+    if (elements->size() > 0) {
+      auto element = elements->at(elements->size() - 1);
+      startPoint = element->getStartPoint();
+      startPoint.x += 1000 + element->getLenght();
+    }
+
+    double loadv[] = {-100, 0, 0};
+    shared_ptr<Material> material = PlateMaterial::getDefaultMaterial();
+    shared_ptr<AbstractLoad> load = make_shared<AreaLoadFzMxMy>(loadv, 3);
+
+    shared_ptr<AbstractElement> plate =
+        make_shared<Plate>(load, selectedType, 16000, startPoint, material);
+
     elements->push_back(plate);
 
     QProgressDialog *progressDilog = new QProgressDialog(diolog);
@@ -203,9 +211,10 @@ void TreeContextMenu::createDiologDefualtSchemePlate(
 }
 
 void TreeContextMenu::setElementTypeComboBox(QComboBox *comboBox) {
-  comboBox->addItem("MITC4");
-  comboBox->addItem("MITC9");
-  comboBox->addItem("MITC16");
+  QVariant var = ElementType::MITC4MY;
+  comboBox->addItem("my MITC4", ElementType::MITC4MY);
+  comboBox->addItem("DKMQ", ElementType::DKMQ);
+  // comboBox->addItem("MITC16");
 }
 
 void TreeContextMenu::createAddELementDiolog(

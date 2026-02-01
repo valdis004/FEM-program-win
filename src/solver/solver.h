@@ -2,6 +2,7 @@
 
 // #include "/home/vladislav/Документы/FEM/FEM
 // program/src/elements/elementprovider.h"
+#include "elementprovider.h"
 #include "qtgl/qtgl.h"
 #include <Eigen/Dense>
 #include <Eigen/Sparse>
@@ -27,16 +28,20 @@ private:
 
   inline void setParams(size_t i, const FemAbstractElement *element,
                         unsigned &correction, unsigned &curDof,
-                        unsigned &localId, unsigned &nodeId, unsigned &fullDof);
+                        unsigned &localId, unsigned &nodeId, unsigned &fullDof,
+                        const ElementData &data);
 
   inline unsigned
   getGlobalIndexAndSetLoad(size_t i, const FemAbstractElement *element,
-                           SparseVector<double> &globalLoadVector);
+                           SparseVector<double> &globalLoadVector,
+                           const ElementData &data);
 
-  inline unsigned getGlobalIndex(size_t i, const FemAbstractElement *element);
+  inline unsigned getGlobalIndex(size_t i, const FemAbstractElement *element,
+                                 const ElementData &data);
 
   std::pair<SparseMatrix<double>, SparseVector<double>>
-  getGlobalStiffMatrixAndLoadVector(shared_ptr<MeshData> mesh);
+  getGlobalStiffMatrixAndLoadVector(shared_ptr<MeshData> mesh,
+                                    const ElementData &data);
 
   SparseVector<double> getGlobalLoadVector(shared_ptr<MeshData> mesh);
 
@@ -52,7 +57,7 @@ public:
   QVector<double> maxAbsValues;
   QVector<double> maxValues;
   QVector<double> minValues;
-  ElementData *data;
+  QVector<shared_ptr<AbstractElement>> *elements;
 
   void calculate(QVector<shared_ptr<AbstractElement>> &elements);
 

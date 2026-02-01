@@ -47,23 +47,21 @@ void Mesh::meshCreateManager(QVector<shared_ptr<AbstractElement>> *elements,
 
   if (standartScheme) {
     for (auto element : *elements) {
-      if (element->meshData->isEmpty())
+      if (element->meshData_->isEmpty())
         createDefaultMesh(element);
     }
   }
 }
 
 void Mesh::createDefaultMesh(shared_ptr<AbstractElement> element) {
-  // ElementProvider::initialize();
-
   ElementType type = element->getType();
-  auto DATA = ElementProvider::elementData[type];
+  auto &DATA = ElementProvider.at(element->getType());
   double loadv[] = {-100, 0, 0};
   AbstractLoad *load = new AreaLoadFzMxMy(loadv, 3);
 
   Point3 point00 = element->getStartPoint();
 
-  float step = element->meshData->step;
+  float step = element->meshData_->step;
   float lenghtPlate = element->getLenght(); // В мм
   int steps = (int)(lenghtPlate / step);
   int elementCount = lenghtPlate * lenghtPlate / (step * step);
@@ -130,15 +128,15 @@ void Mesh::createDefaultMesh(shared_ptr<AbstractElement> element) {
       auto femElement = FemAbstractElement::create(
           elemCounter++, type, nodesToElem, DATA.NODES_COUNT, element);
       femElement->setLoad(load);
-      FemAbstractElement::setCalcProps(femElement, globaStiffMatrixSize);
+      FemAbstractElement::setCalcProps(femElement, globaStiffMatrixSize, DATA);
       femElements.push_back(femElement);
 
       emit progressChanged(elemCounter);
     }
   }
 
-  element->meshData->setData(std::move(nodes), std::move(femElements),
-                             globaStiffMatrixSize);
+  element->meshData_->setData(std::move(nodes), std::move(femElements),
+                              globaStiffMatrixSize);
 
   emit meshFinished(elementCount);
 }
