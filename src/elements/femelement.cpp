@@ -57,7 +57,7 @@ FemAbstractElement::create(unsigned id, ElementType type, Node **nodes,
   unsigned cor_count = 0;
 
   for (size_t i = 0; i < ids_to_cor.size(); i++) {
-    if (cur_node_glob_id < ids_to_cor[i]) {
+    if (cur_node_glob_id <= ids_to_cor[i]) {
       break;
     } else {
       cor_count++;

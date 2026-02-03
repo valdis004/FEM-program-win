@@ -7,6 +7,7 @@
 #include <qpoint.h>
 
 #include "app/mainwindow.h"
+#include "elements/elementprovider.h"
 #include "qtgl.h"
 
 Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
@@ -213,9 +214,11 @@ void Qtgl::createMeshDisplayList() {
 
     // Loop through fem elements
     for (const auto &element : femElements) {
+      short main_nodes_count =
+          ElementProvider.at(element->type).MAIN_NODES_COUNT;
+
       glBegin(GL_QUADS);
-      // Рисуем прямоугольник по 4 узлам
-      for (int i = 0; i < element->nodesCount; i++) {
+      for (int i = 0; i < main_nodes_count; i++) {
         const Node *node = element->nodes[i];
         glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);
       }
@@ -224,7 +227,7 @@ void Qtgl::createMeshDisplayList() {
       // Рисуем контур элемента (черный)
       glBegin(GL_LINE_LOOP);
       glColor4f(0.0f, 0.0f, 0.0f, 1.0f);
-      for (int i = 0; i < element->nodesCount; i++) {
+      for (int i = 0; i < main_nodes_count; i++) {
         const Node *node = element->nodes[i];
         glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);
       }
