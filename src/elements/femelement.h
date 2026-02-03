@@ -1,5 +1,6 @@
 #pragma once
 
+#include <qcontainerfwd.h>
 #define FEM_ELEMENT
 
 // #include "displacement/displacement.h"
@@ -36,9 +37,6 @@ using Eigen::VectorXd;
 static unsigned counterOfElements = 0;
 
 class FemAbstractElement {
-private:
-  // const ElementData &check(ElementType type);
-
 public:
   const ElementType type;
   QVector<Node *> nodes;
@@ -75,4 +73,9 @@ public:
   void setLoad(AbstractLoad *load) { this->generalLoad = load; }
 
   void setDisp(AbstractDisplacement *disp) { this->generalDisp = disp; }
+
+  inline static unsigned getCorrection(unsigned cur_node_loc_id,
+                                       unsigned cur_node_glob_id,
+                                       const ElementData &data,
+                                       const QVector<unsigned> &ids_to_cor);
 };

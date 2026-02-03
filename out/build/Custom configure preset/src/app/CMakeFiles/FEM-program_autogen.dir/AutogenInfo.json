@@ -49,6 +49,12 @@
 			null
 		],
 		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc9my.h",
+			"MU",
+			"3UGVIL2ZXO/moc_fem_plate_mitc9my.cpp",
+			null
+		],
+		[
 			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.h",
 			"MU",
 			"LFVNSI46CU/moc_femelement.cpp",
@@ -237,6 +243,11 @@
 		],
 		[
 			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc4my.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc9my.cpp",
 			"MU",
 			null
 		],

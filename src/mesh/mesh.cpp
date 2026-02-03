@@ -1,6 +1,8 @@
 #include <QList>
 #include <QtAlgorithms>
+#include <concepts>
 #include <memory>
+#include <qcontainerfwd.h>
 #include <qglobal.h>
 // #include <stdexcept>
 
@@ -65,6 +67,7 @@ void Mesh::createDefaultMesh(shared_ptr<AbstractElement> element) {
   float lenghtPlate = element->getLenght(); // В мм
   int steps = (int)(lenghtPlate / step);
   int elementCount = lenghtPlate * lenghtPlate / (step * step);
+  element->meshData_->ids_to_cor_.reserve(elementCount);
 
   unsigned globaStiffMatrixSize = 0;
   QVector<Node *> nodes;

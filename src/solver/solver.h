@@ -24,16 +24,16 @@ class FemAbstractElement;
 class Solver : public QObject {
   Q_OBJECT
 private:
-  unsigned globalMatrixSize = 0;
+  unsigned global_matrix_size = 0;
 
   inline void setParams(size_t i, const FemAbstractElement *element,
-                        unsigned &correction, unsigned &curDof,
-                        unsigned &localId, unsigned &nodeId, unsigned &fullDof,
-                        const ElementData &data);
+                        unsigned &correction, unsigned &cur_dof,
+                        unsigned &local_id, unsigned &node_id,
+                        unsigned &full_dof, const ElementData &data);
 
   inline unsigned
   getGlobalIndexAndSetLoad(size_t i, const FemAbstractElement *element,
-                           SparseVector<double> &globalLoadVector,
+                           SparseVector<double> &global_load_vector,
                            const ElementData &data);
 
   inline unsigned getGlobalIndex(size_t i, const FemAbstractElement *element,
@@ -43,14 +43,14 @@ private:
   getGlobalStiffMatrixAndLoadVector(shared_ptr<MeshData> mesh,
                                     const ElementData &data);
 
-  SparseVector<double> getGlobalLoadVector(shared_ptr<MeshData> mesh);
+  SparseVector<double> getglobal_load_vector(shared_ptr<MeshData> mesh);
 
-  void applyBaundaryConditions(SparseMatrix<double> &globalMatrix,
-                               SparseVector<double> &globalVector,
+  void applyBaundaryConditions(SparseMatrix<double> &global_matrix,
+                               SparseVector<double> &global_vector,
                                shared_ptr<MeshData> mesh);
 
   void setOutputValuesToNodes(shared_ptr<MeshData> mesh,
-                              const SparseVector<double> &globalU,
+                              const SparseVector<double> &global_u,
                               shared_ptr<AbstractElement> elements);
 
 public:

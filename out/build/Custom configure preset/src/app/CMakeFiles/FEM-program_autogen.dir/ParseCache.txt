@@ -2621,6 +2621,7 @@ C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_m
 C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/plates/plate.cpp
 C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.h
 C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/displacement/displacement.h
+C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc9my.h
 C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/element.h
 C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/load/load.h
 C:/Users/vlada/Documents/FEM/FEM-program-win/src/graphics/qtgl/qtgl.cpp
@@ -6621,6 +6622,7 @@ C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_m
 C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.cpp
 C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/load/femload.cpp
 C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/PlateMaterial.cpp
+C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc9my.cpp
 C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/element.cpp
 C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/load/load.cpp
 C:/Users/vlada/Documents/FEM/FEM-program-win/src/mesh/mesh.cpp

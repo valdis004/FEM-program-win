@@ -1,7 +1,8 @@
-#include "PlateMaterial.h"
-#include "material.h"
 #include <memory>
 #include <stdexcept>
+
+#include "PlateMaterial.h"
+#include "material.h"
 
 PlateMaterial::PlateMaterial(double youngModule, double kFactor,
                              double poissonRatio, double thickness)
@@ -9,7 +10,7 @@ PlateMaterial::PlateMaterial(double youngModule, double kFactor,
       thickness(thickness) {};
 
 /* static */ std::shared_ptr<Material> PlateMaterial::getDefaultMaterial() {
-  return std::make_shared<PlateMaterial>(3e7, 0.833333, 0.2, 4.0);
+  return std::make_shared<PlateMaterial>(3e7, 0.833333, 0.2, 8.0);
 };
 
 double *PlateMaterial::getMaterialProperties(double *physicalPropertiesArr) {

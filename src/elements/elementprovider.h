@@ -34,23 +34,23 @@ using GetPointFunc = Point3 (*)(int index, Point3 &point0, double step,
 
 struct ElementData {
   short MAIN_NODES_COUNT;
-  std::span<const double> MAIN_NODES_XI_SET; // Для
+  std::span<const double> MAIN_NODES_XI_SET; // For qtgl quad draw
   std::span<const double> MAIN_NODES_ETA_SET;
   short NODES_COUNT;
   short INT_POINTS_COUNT;
   short STIFF_MATRIX_SIZE;
   bool IS_FULL_DOF;
-  short FULL_DOF_COUNT;
-  short BAD_DOF_BEGIN; // С какого индекса надо начинат учитывать коррекцию от
-                       // предыдущего элемента (для MITC16 = 16)
-  short BAD_DOF_COUNT; // Количество степеней свободы, которое надо добавить //
-                       // чтобы получить fullDoff
+  short FULL_DOF_COUNT; // Count of usual dof count in node
+  short BAD_DOF_BEGIN;  // DELETE, its actually NODES_COUNT
+  short BAD_DOF_COUNT;  // Количество степеней свободы, которое надо добавить //
+                        // чтобы получить fullDoff
   const short OUTPUT_VALUES_COUNT;
   std::span<const double> XI_SET;
   std::span<const double> ETA_SET;
   std::span<const double> W_COEFS;
   std::span<const short> DOF_MAP;
   std::span<const short> LOCAL_ID_FROM_STIFFMAT;
+  std::span<const bool> IS_NODE_BAD_DOF_MAP;
   std::span<const short> BAD_DOF_MAP;
   std::span<const LoadType> LOAD_MAP;
   std::span<const short> OUTPUT_INDEX_MAP;

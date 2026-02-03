@@ -1,6 +1,6 @@
 #pragma once
 
-enum ElementType { MITC4MY = 0, MITC9 = 1, MITC16 = 2, DKMQ = 3, NONE = 3 };
+enum ElementType { MITC4MY = 0, MITC9MY = 1, MITC16 = 2, DKMQ = 3, NONE = 3 };
 
 // enum DisplType // Тип степеней свободы, который поддерживает узел
 // {

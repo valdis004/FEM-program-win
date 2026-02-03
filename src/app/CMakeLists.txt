@@ -11,6 +11,7 @@ add_executable(FEM-program
      ${CMAKE_HOME_DIRECTORY}/src/generalElement/displacement/displacement.cpp
      ${CMAKE_HOME_DIRECTORY}/src/generalElement/element.cpp
      ${CMAKE_HOME_DIRECTORY}/src/elements/fem_plates/fem_plate_mitc4my.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/elements/fem_plates/fem_plate_mitc9my.cpp
       ${CMAKE_HOME_DIRECTORY}/src/elements/fem_plates/fem_plate_dkmq.cpp
      ${CMAKE_HOME_DIRECTORY}/src/elements/femelement.cpp
      ${CMAKE_HOME_DIRECTORY}/src/elements/load/femload.cpp

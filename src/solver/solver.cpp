@@ -11,33 +11,33 @@
 #include "solver.h"
 
 void Solver::setParams(size_t i, const FemAbstractElement *element,
-                       unsigned &correction, unsigned &curDof,
-                       unsigned &localId, unsigned &nodeId, unsigned &fullDof,
-                       const ElementData &data) {
+                       unsigned &correction, unsigned &cur_dof,
+                       unsigned &local_id, unsigned &node_id,
+                       unsigned &full_dof, const ElementData &data) {
   correction = 0;
-  localId = data.LOCAL_ID_FROM_STIFFMAT[i];
-  nodeId = element->nodes[localId]->id;
-  curDof = data.FULL_DOF_COUNT;
-  fullDof = curDof;
+  local_id = data.LOCAL_ID_FROM_STIFFMAT[i];
+  node_id = element->nodes[local_id]->id;
+  cur_dof = data.FULL_DOF_COUNT;
+  full_dof = cur_dof;
 
   if (!data.IS_FULL_DOF) {
-    unsigned corCount = nodeId / data.BAD_DOF_BEGIN;
-    unsigned corFromCurElem = data.BAD_DOF_MAP[i];
-    correction = corCount * data.BAD_DOF_BEGIN + corFromCurElem;
-    curDof = data.DOF_MAP[localId];
+    auto ids_to_cor = element->genetalElement->meshData_->ids_to_cor_;
+    correction =
+        FemAbstractElement::getCorrection(local_id, node_id, data, ids_to_cor);
+    cur_dof = data.DOF_MAP[local_id];
   }
 }
 
 unsigned Solver::getGlobalIndex(size_t i, const FemAbstractElement *element,
                                 const ElementData &data) {
   unsigned correction;
-  unsigned localId;
-  unsigned nodeId;
-  unsigned curDof;
-  unsigned fullDof;
-  setParams(i, element, correction, curDof, localId, nodeId, fullDof, data);
+  unsigned local_id;
+  unsigned node_id;
+  unsigned cur_dof;
+  unsigned full_dof;
+  setParams(i, element, correction, cur_dof, local_id, node_id, full_dof, data);
 
-  return nodeId * fullDof + i % curDof - correction;
+  return node_id * full_dof + i % cur_dof - correction;
 }
 
 unsigned
@@ -45,15 +45,15 @@ Solver::getGlobalIndexAndSetLoad(size_t i, const FemAbstractElement *element,
                                  SparseVector<double> &globalLoadVector,
                                  const ElementData &data) {
   unsigned correction;
-  unsigned localId;
-  unsigned nodeId;
-  unsigned curDof;
-  unsigned fullDof;
-  setParams(i, element, correction, curDof, localId, nodeId, fullDof, data);
+  unsigned local_id;
+  unsigned node_id;
+  unsigned cur_dof;
+  unsigned full_dof;
+  setParams(i, element, correction, cur_dof, local_id, node_id, full_dof, data);
 
-  unsigned dofIndex = i % curDof;
-  double value = element->nodes[localId]->nodeLoad->values[dofIndex];
-  double globalId = nodeId * fullDof + dofIndex - correction;
+  unsigned dofIndex = i % cur_dof;
+  double value = element->nodes[local_id]->nodeLoad->values[dofIndex];
+  double globalId = node_id * full_dof + dofIndex - correction;
   globalLoadVector.coeffRef(globalId) += value;
 
   return globalId;
@@ -62,9 +62,10 @@ Solver::getGlobalIndexAndSetLoad(size_t i, const FemAbstractElement *element,
 std::pair<SparseMatrix<double>, SparseVector<double>>
 Solver::getGlobalStiffMatrixAndLoadVector(shared_ptr<MeshData> mesh,
                                           const ElementData &data) {
-  globalMatrixSize = mesh->globaStiffMatrixSize;
-  SparseMatrix<double> globalStiffMatrix(globalMatrixSize, globalMatrixSize);
-  SparseVector<double> globalLoadVector(globalMatrixSize);
+  global_matrix_size = mesh->globaStiffMatrixSize;
+  SparseMatrix<double> global_stiff_matrix(global_matrix_size,
+                                           global_matrix_size);
+  SparseVector<double> global_load_vector(global_matrix_size);
   unsigned count = 0;
 
   auto elements = mesh->femElements;
@@ -75,17 +76,17 @@ Solver::getGlobalStiffMatrixAndLoadVector(shared_ptr<MeshData> mesh,
     MatrixXd localStiffMatrix = element->getLocalStiffMatrix();
 
     for (size_t i = 0; i < data.STIFF_MATRIX_SIZE; i++) {
-      unsigned colGlobId =
-          getGlobalIndexAndSetLoad(i, element, globalLoadVector, data);
+      unsigned col_glob_id =
+          getGlobalIndexAndSetLoad(i, element, global_load_vector, data);
       for (size_t j = 0; j < data.STIFF_MATRIX_SIZE; j++) {
-        unsigned rowGlobId = getGlobalIndex(j, element, data);
+        unsigned row_glob_id = getGlobalIndex(j, element, data);
         double loc = localStiffMatrix(i, j);
-        globalStiffMatrix.coeffRef(rowGlobId, colGlobId) +=
+        global_stiff_matrix.coeffRef(row_glob_id, col_glob_id) +=
             localStiffMatrix(i, j);
       }
     }
   }
-  return {globalStiffMatrix, globalLoadVector};
+  return {global_stiff_matrix, global_load_vector};
 }
 
 void Solver::applyBaundaryConditions(SparseMatrix<double> &globalMatrix,
@@ -102,7 +103,7 @@ void Solver::applyBaundaryConditions(SparseMatrix<double> &globalMatrix,
     for (size_t i = 0; i < countToZero; i++) {
       unsigned id = node->nodeDisplacement->nodeIdsToZero[i];
       globalVector.coeffRef(id) = 0;
-      for (size_t j = 0; j < globalMatrixSize; j++) {
+      for (size_t j = 0; j < global_matrix_size; j++) {
         if (j == id)
           globalMatrix.coeffRef(id, j) = 1;
         else {

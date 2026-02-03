@@ -904,6 +904,8 @@ FEM-program_autogen/timestamp: \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_dkmq.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc4my.cpp \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc4my.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc9my.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc9my.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.cpp \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femtypes.h \

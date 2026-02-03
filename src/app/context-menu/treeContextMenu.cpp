@@ -213,6 +213,7 @@ void TreeContextMenu::createDiologDefualtSchemePlate(
 void TreeContextMenu::setElementTypeComboBox(QComboBox *comboBox) {
   QVariant var = ElementType::MITC4MY;
   comboBox->addItem("my MITC4", ElementType::MITC4MY);
+  comboBox->addItem("my MITC9", ElementType::MITC9MY);
   comboBox->addItem("DKMQ", ElementType::DKMQ);
   // comboBox->addItem("MITC16");
 }

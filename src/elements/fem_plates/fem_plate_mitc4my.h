@@ -82,6 +82,7 @@ public:
       W_COEFS,
       DOF_MAP,
       LOCAL_ID_FROM_STIFFMAT,
+      {},
       BAD_DOF_MAP,
       LOAD_MAP,
       OUTPUT_INDEX_MAP,

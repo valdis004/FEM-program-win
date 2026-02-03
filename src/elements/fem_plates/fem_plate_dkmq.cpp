@@ -1,3 +1,4 @@
+#include <Eigen/Core>
 #include <cstddef>
 #include <exception>
 #include <qdebug.h>
@@ -10,7 +11,7 @@ using ShapeFunc = double (*)(double, double);
 using DerivFunc = double (*)(double);
 
 constexpr static auto N1 = [](double xi, double eta) {
-  return 0.25f * (1 - eta) * (1 - xi);
+  return 0.25 * (1 - eta) * (1 - xi);
 };
 constexpr static auto N2 = [](double xi, double eta) -> double {
   return 0.25 * (1 - eta) * (1 + xi);
@@ -145,7 +146,7 @@ MatrixXd FemPlateDkmq::jMatrix(double xi, double eta) {
   Cb(0, 1) = D * nu;
   Cb(1, 0) = D * nu;
   Cb(1, 1) = D;
-  Cb(2, 2) = (1 - nu) * D / 2;
+  Cb(2, 2) = (1 - nu) * D / 2.0;
 
   Cs(0, 0) = K * G * t;
   Cs(1, 1) = K * G * t;
@@ -166,25 +167,25 @@ MatrixXd FemPlateDkmq::bMatrix(double xi, double eta, int type) {
 
   double Gm11 = Gm(0, 0), Gm12 = Gm(0, 1), Gm21 = Gm(1, 0), Gm22 = Gm(1, 1);
 
-  float N1_ξ = 0.25f * (-1) * (1 - eta);
-  float N2_ξ = 0.25f * (1 - eta);
-  float N3_ξ = 0.25f * (1 + eta);
-  float N4_ξ = 0.25f * (-1) * (1 + eta);
+  double N1_ξ = 0.25 * (-1) * (1 - eta);
+  double N2_ξ = 0.25 * (1 - eta);
+  double N3_ξ = 0.25 * (1 + eta);
+  double N4_ξ = 0.25 * (-1) * (1 + eta);
 
-  float N1_η = 0.25f * (1 - xi) * (-1);
-  float N2_η = 0.25f * (1 + xi) * (-1);
-  float N3_η = 0.25f * (1 + xi);
-  float N4_η = 0.25f * (1 - xi);
+  double N1_η = 0.25 * (1 - xi) * (-1);
+  double N2_η = 0.25 * (1 + xi) * (-1);
+  double N3_η = 0.25 * (1 + xi);
+  double N4_η = 0.25 * (1 - xi);
 
-  float N1x = Gm11 * N1_ξ + Gm12 * N1_η;
-  float N2x = Gm11 * N2_ξ + Gm12 * N2_η;
-  float N3x = Gm11 * N3_ξ + Gm12 * N3_η;
-  float N4x = Gm11 * N4_ξ + Gm12 * N4_η;
+  double N1x = Gm11 * N1_ξ + Gm12 * N1_η;
+  double N2x = Gm11 * N2_ξ + Gm12 * N2_η;
+  double N3x = Gm11 * N3_ξ + Gm12 * N3_η;
+  double N4x = Gm11 * N4_ξ + Gm12 * N4_η;
 
-  float N1y = Gm21 * N1_ξ + Gm22 * N1_η;
-  float N2y = Gm21 * N2_ξ + Gm22 * N2_η;
-  float N3y = Gm21 * N3_ξ + Gm22 * N3_η;
-  float N4y = Gm21 * N4_ξ + Gm22 * N4_η;
+  double N1y = Gm21 * N1_ξ + Gm22 * N1_η;
+  double N2y = Gm21 * N2_ξ + Gm22 * N2_η;
+  double N3y = Gm21 * N3_ξ + Gm22 * N3_η;
+  double N4y = Gm21 * N4_ξ + Gm22 * N4_η;
 
   double Ndx[4];
   NDiffAny(Ndx, xi, eta, Gm11, Gm12);
@@ -195,30 +196,30 @@ MatrixXd FemPlateDkmq::bMatrix(double xi, double eta, int type) {
                          {0, 0, N1y, 0, 0, N2y, 0, 0, N3y, 0, 0, N4y},
                          {0, N1y, N1x, 0, N2y, N2x, 0, N3y, N3x, 0, N4y, N4x}};
 
-  float P5_ξ = -((1 - eta) * xi);
-  float P6_ξ = 0.5f * (1 - eta * eta);
-  float P7_ξ = -((1 + eta) * xi);
-  float P8_ξ = 0.5f * (-1 + eta * eta);
+  double P5_ξ = -((1.0 - eta) * xi);
+  double P6_ξ = 0.5 * (1.0 - eta * eta);
+  double P7_ξ = -((1 + eta) * xi);
+  double P8_ξ = 0.5 * (-1.0 + eta * eta);
 
-  float P5_η = 0.5f * (-1 + xi * xi);
-  float P6_η = -eta * (1 + xi);
-  float P7_η = 0.5f * (1 - xi * xi);
-  float P8_η = -eta * (1 - xi);
+  double P5_η = 0.5 * (-1.0 + xi * xi);
+  double P6_η = -eta * (1.0 + xi);
+  double P7_η = 0.5 * (1.0 - xi * xi);
+  double P8_η = -eta * (1.0 - xi);
 
-  float P5x = Gm11 * P5_ξ + Gm12 * P5_η;
-  float P6x = Gm11 * P6_ξ + Gm12 * P6_η;
-  float P7x = Gm11 * P7_ξ + Gm12 * P7_η;
-  float P8x = Gm11 * P8_ξ + Gm12 * P8_η;
+  double P5x = Gm11 * P5_ξ + Gm12 * P5_η;
+  double P6x = Gm11 * P6_ξ + Gm12 * P6_η;
+  double P7x = Gm11 * P7_ξ + Gm12 * P7_η;
+  double P8x = Gm11 * P8_ξ + Gm12 * P8_η;
 
-  float P5y = Gm21 * P5_ξ + Gm22 * P5_η;
-  float P6y = Gm21 * P6_ξ + Gm22 * P6_η;
-  float P7y = Gm21 * P7_ξ + Gm22 * P7_η;
-  float P8y = Gm21 * P8_ξ + Gm22 * P8_η;
+  double P5y = Gm21 * P5_ξ + Gm22 * P5_η;
+  double P6y = Gm21 * P6_ξ + Gm22 * P6_η;
+  double P7y = Gm21 * P7_ξ + Gm22 * P7_η;
+  double P8y = Gm21 * P8_ξ + Gm22 * P8_η;
 
-  float Ck[] = {1.0f, 0, -1.0f, 0};
-  float Sk[] = {0, 1.0f, 0, -1.0f};
-  float step = genetalElement->meshData_->step / 1000.0;
-  float l[] = {step, step, step, step};
+  double Ck[] = {1.0, 0, -1.0, 0};
+  double Sk[] = {0, 1.0, 0, -1.0};
+  double step = genetalElement->meshData_->step / 1000.0;
+  double l[] = {step, step, step, step};
 
   double physicalProperties[6];
   genetalElement->getMaterial()->getMaterialProperties(physicalProperties);
@@ -229,44 +230,50 @@ MatrixXd FemPlateDkmq::bMatrix(double xi, double eta, int type) {
   double D = physicalProperties[4];
   double G = physicalProperties[5];
 
-  float φ5 = (2.0f / (K * (1 - nu))) * (t / step) * (t / step);
-  float φ6 = φ5, φ7 = φ5, φ8 = φ5;
-  float L5 = l[0];
-  float L6 = l[1];
-  float L7 = l[2];
-  float L8 = l[3];
+  double K1 = 1.0f;
+  double v1 = 0.3f;
+  double t1 = 7.0f;
 
-  float C5 = Ck[0];
-  float C6 = Ck[1];
-  float C7 = Ck[2];
-  float C8 = Ck[3];
+  double φ5 = (2.0 / (K1 * (1.0 - v1))) * (t1 / step) * (t1 / step);
+  double φ6 = φ5, φ7 = φ5, φ8 = φ5;
+  double L5 = l[0];
+  double L6 = l[1];
+  double L7 = l[2];
+  double L8 = l[3];
 
-  float S5 = Sk[0];
-  float S6 = Sk[1];
-  float S7 = Sk[2];
-  float S8 = Sk[3];
+  double C5 = Ck[0];
+  double C6 = Ck[1];
+  double C7 = Ck[2];
+  double C8 = Ck[3];
+
+  double S5 = Sk[0];
+  double S6 = Sk[1];
+  double S7 = Sk[2];
+  double S8 = Sk[3];
 
   MatrixXd Gs = MatrixXd{{Gm11, Gm12}, {Gm21, Gm22}};
 
-  MatrixXd As = MatrixXd{{L5 / 2, 0, 0, 0},
-                         {0, L6 / 2, 0, 0},
-                         {0, 0, -L7 / 2, 0},
-                         {0, 0, 0, -L8 / 2}};
+  MatrixXd As = MatrixXd{{L5 / 2.0, 0, 0, 0},
+                         {0, L6 / 2.0, 0, 0},
+                         {0, 0, -L7 / 2.0, 0},
+                         {0, 0, 0, -L8 / 2.0}};
 
   MatrixXd Ns = MatrixXd{
-      {(1 - eta) / 2, 0, (1 + eta) / 2, 0},
-      {0, (1 + xi) / 2, 0, (1 - xi) / 2},
+      {(1 - eta) / 2.0, 0, (1 + eta) / 2.0, 0},
+      {0, (1 + xi) / 2.0, 0, (1 - xi) / 2.0},
   };
 
-  MatrixXd ADeltaDKQM = MatrixXd{{1 + φ5, 0, 0, 0},
-                                 {0, 1 + φ6, 0, 0},
-                                 {0, 0, 1 + φ7, 0},
-                                 {0, 0, 0, 1 + φ8}};
+  MatrixXd ADeltaDKQM = (2.0 / 3.0) * MatrixXd{{1 + φ5, 0, 0, 0},
+                                               {0, 1 + φ6, 0, 0},
+                                               {0, 0, 1 + φ7, 0},
+                                               {0, 0, 0, 1 + φ8}};
 
   MatrixXd APhi =
+      (2.0 / 3.0) *
       MatrixXd{{φ5, 0, 0, 0}, {0, φ6, 0, 0}, {0, 0, φ7, 0}, {0, 0, 0, φ8}};
 
-  MatrixXd Ad = MatrixXd{{2 / L5, C5, S5, -2 / L5, C5, S5, 0, 0, 0, 0, 0, 0},
+  MatrixXd Ad = (-1.0 / 2.0) *
+                MatrixXd{{2 / L5, C5, S5, -2 / L5, C5, S5, 0, 0, 0, 0, 0, 0},
                          {0, 0, 0, 2 / L6, C6, S6, -2 / L6, C6, S6, 0, 0, 0},
                          {0, 0, 0, 0, 0, 0, 2 / L7, C7, S7, -2 / L7, C7, S7},
                          {-2 / L8, C8, S8, 0, 0, 0, 0, 0, 0, 2 / L8, C8, S8}};
@@ -343,13 +350,70 @@ VectorXd FemPlateDkmq::getLoadVector() {
 QVector<double> FemPlateDkmq::getResultVector(VectorXd U, double xi,
                                               double eta) {
 
+  double Ck[] = {1.0, 0, -1.0, 0};
+  double Sk[] = {0, 1.0, 0, -1.0};
+  double step = genetalElement->meshData_->step / 1000.0;
+  double l[] = {step, step, step, step};
+
+  double physicalProperties[6];
+  genetalElement->getMaterial()->getMaterialProperties(physicalProperties);
+  double Em = physicalProperties[0];
+  double K = physicalProperties[1];
+  double nu = physicalProperties[2];
+  double t = physicalProperties[3];
+  double D = physicalProperties[4];
+  double G = physicalProperties[5];
+
+  double φ5 = (2.0 / (K * (1 - nu))) * (t / step) * (t / step);
+  double φ6 = φ5, φ7 = φ5, φ8 = φ5;
+  double L5 = l[0];
+  double L6 = l[1];
+  double L7 = l[2];
+  double L8 = l[3];
+
+  double C5 = Ck[0];
+  double C6 = Ck[1];
+  double C7 = Ck[2];
+  double C8 = Ck[3];
+
+  double S5 = Sk[0];
+  double S6 = Sk[1];
+  double S7 = Sk[2];
+  double S8 = Sk[3];
+
+  MatrixXd Ad = (-1.0 / 2.0) *
+                MatrixXd{{2 / L5, C5, S5, -2 / L5, C5, S5, 0, 0, 0, 0, 0, 0},
+                         {0, 0, 0, 2 / L6, C6, S6, -2 / L6, C6, S6, 0, 0, 0},
+                         {0, 0, 0, 0, 0, 0, 2 / L7, C7, S7, -2 / L7, C7, S7},
+                         {-2 / L8, C8, S8, 0, 0, 0, 0, 0, 0, 2 / L8, C8, S8}};
+
+  MatrixXd ADeltaDKQM = (2.0 / 3.0) * MatrixXd{{1 + φ5, 0, 0, 0},
+                                               {0, 1 + φ6, 0, 0},
+                                               {0, 0, 1 + φ7, 0},
+                                               {0, 0, 0, 1 + φ8}};
+
+  MatrixXd deltaPsi = ADeltaDKQM.inverse() * Ad * U;
+
+  double deltaPsi5 = deltaPsi(0);
+  double deltaPsi6 = deltaPsi(1);
+  double deltaPsi7 = deltaPsi(2);
+  double deltaPsi8 = deltaPsi(3);
+
+  double P5 = (1.0 / 2.0) * (1 - xi * xi) * (1 - eta);
+  double P6 = (1.0 / 2.0) * (1 + xi) * (1 - eta * eta);
+  double P7 = (1.0 / 2.0) * (1 - xi * xi) * (1 + eta);
+  double P8 = (1.0 / 2.0) * (1 - xi) * (1 - eta * eta);
+
   double uz = N1(xi, eta) * U[0] + N2(xi, eta) * U[3] + N3(xi, eta) * U[6] +
               N4(xi, eta) * U[9];
-  double psix = (N1(xi, eta) * U[2] + N2(xi, eta) * U[5] + N3(xi, eta) * U[8] +
-                 N4(xi, eta) * U[11]);
 
-  double psiy = (N1(xi, eta) * U[1] + N2(xi, eta) * U[4] + N3(xi, eta) * U[7] +
-                 N4(xi, eta) * U[10]);
+  double psix = N1(xi, eta) * U[1] + N2(xi, eta) * U[4] + N3(xi, eta) * U[7] +
+                N4(xi, eta) * U[10] + P5 * C5 * deltaPsi5 +
+                P6 * C6 * deltaPsi6 + P7 * C7 * deltaPsi7 + P8 * C8 * deltaPsi8;
+
+  double psiy = N1(xi, eta) * U[2] + N2(xi, eta) * U[5] + N3(xi, eta) * U[8] +
+                N4(xi, eta) * U[11] + P5 * C5 * deltaPsi5 +
+                P6 * C6 * deltaPsi6 + P7 * C7 * deltaPsi7 + P8 * C8 * deltaPsi8;
 
   MatrixXd Bb = bMatrix(xi, eta, 0);
   MatrixXd Bs = bMatrix(xi, eta, 1);

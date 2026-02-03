@@ -169,7 +169,7 @@ void Qtgl::setResulthIndex(MainWindow *mainwindow, short index) {
   mainwindow->statusLabel->setText(labelText);
 
   double scaleForOutput =
-      1000.0 / (*elements).first()->max_abs_values_[resultIndex];
+      8000.0 / (*elements).first()->max_abs_values_[resultIndex];
 
   for (auto &element : *elements) {
     auto nodes = element->meshData_->nodes;

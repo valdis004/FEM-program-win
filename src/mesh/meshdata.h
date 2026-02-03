@@ -1,9 +1,10 @@
 #pragma once
 
-#include "femelement.h"
 #include <QVector>
 // #include <memory>
 #include <qglobal.h>
+
+#include "femelement.h"
 
 class Node;
 class FemAbstractElement;
@@ -11,11 +12,16 @@ class FemAbstractElement;
 class MeshData {
 public:
   // Settings of mesh
-  int step{1000};
+  int step{8000};
 
   QVector<Node *> nodes;
   QVector<FemAbstractElement *> femElements;
+
   unsigned globaStiffMatrixSize{0};
+
+  // Ids after which need to considering correction of previos node (id current
+  // type of element need it)
+  QVector<unsigned> ids_to_cor_;
 
   MeshData();
 
