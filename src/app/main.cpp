@@ -2,7 +2,7 @@
 #include <QStyleFactory>
 
 // #include "elements/elementprovider.h"
-#include "mainwindow.h"
+#include "main_window.h"
 
 int main(int argc, char *argv[]) {
   // ElementProvider::init();

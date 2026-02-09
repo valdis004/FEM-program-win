@@ -1,0 +1,3 @@
+BasedOnStyle: Google  # или любой другой базовый стиль
+
+BinPackParameters: false

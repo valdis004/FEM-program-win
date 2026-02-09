@@ -13,22 +13,22 @@ MeshData::~MeshData() {
 
 MeshData::MeshData() {};
 
-MeshData::MeshData(QVector<Node *> &&nodes,
-                   QVector<FemAbstractElement *> &&femElements,
+MeshData::MeshData(QVector<Node*>&& nodes,
+                   QVector<FemAbstractElement*>&& femElements,
                    unsigned globaStiffMatrixSize) noexcept {
-  this->nodes = nodes;
+  this->nodes_ = nodes;
   this->femElements = femElements;
   this->globaStiffMatrixSize = globaStiffMatrixSize;
 }
 
-void MeshData::setData(QVector<Node *> &&nodes,
-                       QVector<FemAbstractElement *> &&femElements,
+void MeshData::setData(QVector<Node*>&& nodes,
+                       QVector<FemAbstractElement*>&& femElements,
                        unsigned globaStiffMatrixSize) noexcept {
-  this->nodes = nodes;
+  this->nodes_ = nodes;
   this->femElements = femElements;
   this->globaStiffMatrixSize = globaStiffMatrixSize;
 }
 
 bool MeshData::isEmpty() const noexcept {
-  return femElements.isEmpty() && nodes.isEmpty();
+  return femElements.isEmpty() && nodes_.isEmpty();
 }

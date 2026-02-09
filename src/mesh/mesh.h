@@ -10,8 +10,8 @@
 #include <qobject.h>
 #include <qtmetamacros.h>
 
-#include "elements/femelement.h"
-#include "elements/point.h"
+#include "fem_elements/fem_element.h"
+#include "fem_elements/point.h"
 
 class AbstractElement;
 using std::shared_ptr;

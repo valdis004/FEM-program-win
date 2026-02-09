@@ -1,8 +1,5 @@
 #pragma once
 
-#include <QLabel>
-#include <QList>
-#include <QOpenGLWidget>
 #include <qcontainerfwd.h>
 #include <qevent.h>
 #include <qglobal.h>
@@ -10,9 +7,13 @@
 #include <qpoint.h>
 #include <qtmetamacros.h>
 
-#include "elements/node.h"
-#include "elements/point.h"
-#include "generalElement/element.h"
+#include <QLabel>
+#include <QList>
+#include <QOpenGLWidget>
+
+#include "fem_elements/node.h"
+#include "fem_elements/point.h"
+#include "general_element/element.h"
 
 class MainWindow;
 class AbstractElement;
@@ -24,55 +25,55 @@ struct GraphickElement {
 class Qtgl : public QOpenGLWidget {
   Q_OBJECT
 
-private:
-  GLuint m_nMesh;
-  GLfloat m_xRotate;
-  GLfloat m_yRotate;
-  GLfloat m_scale = 1.0f;
-  QPoint m_ptPosition;
-  QPoint m_ptPositionOld;
-  QPointF m_ptPositionDelta{0, 0};
-  bool isLeftBut{false};
-  bool isMiddleBut{false};
-  bool isNeedSetCoods{true};
+ private:
+  GLuint n_mesh_;
+  GLfloat x_rotate_;
+  GLfloat y_rotate_;
+  GLfloat scale_ = 1.0f;
+  QPoint pt_position_;
+  QPoint pt_position_old_;
+  QPointF pt_position_delta_{0, 0};
+  bool is_left_but_{false};
+  bool is_middle_but_{false};
+  bool is_need_set_coods_{true};
 
-  QVector<shared_ptr<AbstractElement>> *elements;
+  QVector<shared_ptr<AbstractElement>>* elements_;
 
-  QVector<double> maxAbsValues;
-  QVector<double> maxValues;
-  QVector<double> minValues;
+  QVector<double> max_abs_values_;
+  QVector<double> max_values_;
+  QVector<double> min_values_;
 
-  short resultIndex{-1};
+  short result_index_{-1};
 
-  bool m_meshDataValid = false; // Флаг наличия данных
-  float m_minX, m_maxX, m_minY, m_maxY, m_minZ, m_maxZ;
-  float m_centerX, m_centerY, m_centerZ, m_scaleFactor;
+  bool is_mesh_data_valid_ = false;  // Флаг наличия данных
+  float min_x_, max_x_, min_y_, max_y_, min_z_, max_z_;
+  float center_x_, center_y_, center_z_, scale_factor_;
 
-  void normalizeMeshData();   // Нормировка данных сетки
-  void calculateMeshBounds(); // Вычисление границ
+  void normalizeMeshData();    // Нормировка данных сетки
+  void calculateMeshBounds();  // Вычисление границ
   void createMeshDisplayList();
   void normalizeOutData();
   void updateProjection();
 
-protected:
+ protected:
   virtual void initializeGL();
-  virtual void resizeGL(int nWidth, int nHeight);
+  virtual void resizeGL(int n_width, int n_height);
   virtual void paintGL();
-  virtual void mousePressEvent(QMouseEvent *pe);
-  virtual void mouseMoveEvent(QMouseEvent *pe);
-  virtual void wheelEvent(QWheelEvent *pe);
+  virtual void mousePressEvent(QMouseEvent* pe);
+  virtual void mouseMoveEvent(QMouseEvent* pe);
+  virtual void wheelEvent(QWheelEvent* pe);
   // virtual void mouseReleaseEvent(QMouseEvent *pe);
 
-public:
-  Qtgl(QWidget *pwgt = 0);
-  void setMeshData(QVector<shared_ptr<AbstractElement>> *elements);
+ public:
+  Qtgl(QWidget* pwgt = 0);
+  void setMeshData(QVector<shared_ptr<AbstractElement>>* elements);
 
-  void setResulthData(const QVector<double> &maxAbsValues,
-                      const QVector<double> &maxValues,
-                      const QVector<double> &minValues);
+  void setResulthData(const QVector<double>& max_abs_values,
+                      const QVector<double>& max_values,
+                      const QVector<double>& min_values);
 
-  void setResulthIndex(MainWindow *mainwindow, short index);
+  void setResulthIndex(MainWindow* mainwindow, short index);
 
-signals:
-  void needOutputTableDock(const QVector<Node *> &nodes, bool isNeedSetCoods);
+ signals:
+  void needOutputTableDock(const QVector<Node*>& nodes, bool is_need_set_coods);
 };

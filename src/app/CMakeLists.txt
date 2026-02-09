@@ -1,24 +1,24 @@
 add_executable(FEM-program
-    mainwindow.cpp
+    main_window.cpp
     main.cpp
-    context-menu/treeContextMenu.cpp
+    context_menu/tree_context_menu.cpp
      ../graphics/qtgl/qtgl.cpp
      # модули FEM
      ${CMAKE_HOME_DIRECTORY}/src/mesh/mesh.cpp
      ${CMAKE_HOME_DIRECTORY}/src/mesh/meshdata.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/generalElement/plates/plate.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/generalElement/load/load.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/generalElement/displacement/displacement.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/generalElement/element.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/elements/fem_plates/fem_plate_mitc4my.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/elements/fem_plates/fem_plate_mitc9my.cpp
-      ${CMAKE_HOME_DIRECTORY}/src/elements/fem_plates/fem_plate_dkmq.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/elements/femelement.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/elements/load/femload.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/elements/displacement/femdisplacement.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/elements/elementprovider.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/general_element/plates/plate.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/general_element/load/load.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/general_element/displacement/displacement.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/general_element/element.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/fem_elements/fem_plates/fem_plate_mitc4my.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/fem_elements/fem_plates/fem_plate_mitc9my.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/fem_elements/fem_plates/fem_plate_dkmq.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/fem_elements/fem_element.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/fem_elements/load/fem_load.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/fem_elements/displacement/fem_displacement.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/fem_elements/element_provider.cpp
      ${CMAKE_HOME_DIRECTORY}/src/solver/solver.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/elements/material/PlateMaterial.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/fem_elements/material/plate_Material.cpp
 )
 
 
@@ -27,19 +27,19 @@ target_include_directories(FEM-program
         ${PROJECT_SOURCE_DIR}
         ${PROJECT_SOURCE_DIR}/src
         ${PROJECT_SOURCE_DIR}/src/app
-        ${PROJECT_SOURCE_DIR}/src/app/context-menu
-        ${PROJECT_SOURCE_DIR}/src/elements
-        ${PROJECT_SOURCE_DIR}/src/elements/load
-        ${PROJECT_SOURCE_DIR}/src/elements/displacement
-        ${PROJECT_SOURCE_DIR}/src/elements/material
-        ${PROJECT_SOURCE_DIR}/src/elements/fem_plates
+        ${PROJECT_SOURCE_DIR}/src/context_menu
+        ${PROJECT_SOURCE_DIR}/src/fem_elements
+        ${PROJECT_SOURCE_DIR}/src/fem_elements/load
+        ${PROJECT_SOURCE_DIR}/src/fem_elements/displacement
+        ${PROJECT_SOURCE_DIR}/src/fem_elements/material
+        ${PROJECT_SOURCE_DIR}/src/fem_elements/fem_plates
         ${PROJECT_SOURCE_DIR}/src/graphics
         ${PROJECT_SOURCE_DIR}/src/mesh
         ${PROJECT_SOURCE_DIR}/src/solver
 
-        ${PROJECT_SOURCE_DIR}/src/generalElement
-        ${PROJECT_SOURCE_DIR}/src/generalElement/load
-        ${PROJECT_SOURCE_DIR}/src/generalElement/displacement
+        ${PROJECT_SOURCE_DIR}/src/general_element
+        ${PROJECT_SOURCE_DIR}/src/general_element/load
+        ${PROJECT_SOURCE_DIR}/src/general_element/displacement
 )
 
 

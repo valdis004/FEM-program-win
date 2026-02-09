@@ -45,7 +45,7 @@ template <> constexpr inline auto Qtgl::qt_create_metaobjectdata<qt_meta_tag_ZN4
         "",
         "QList<Node*>",
         "nodes",
-        "isNeedSetCoods"
+        "is_need_set_coods"
     };
 
     QtMocHelpers::UintData qt_methods {

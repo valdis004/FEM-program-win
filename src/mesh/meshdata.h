@@ -4,18 +4,18 @@
 // #include <memory>
 #include <qglobal.h>
 
-#include "femelement.h"
+#include "fem_element.h"
 
 class Node;
 class FemAbstractElement;
 
 class MeshData {
-public:
+ public:
   // Settings of mesh
-  int step{8000};
+  int step{2000};
 
-  QVector<Node *> nodes;
-  QVector<FemAbstractElement *> femElements;
+  QVector<Node*> nodes_;
+  QVector<FemAbstractElement*> femElements;
 
   unsigned globaStiffMatrixSize{0};
 
@@ -25,11 +25,12 @@ public:
 
   MeshData();
 
-  MeshData(QVector<Node *> &&nodes, QVector<FemAbstractElement *> &&femElements,
+  MeshData(QVector<Node*>&& nodes,
+           QVector<FemAbstractElement*>&& femElements,
            unsigned globaStiffMatrixSize) noexcept;
 
-  void setData(QVector<Node *> &&nodes,
-               QVector<FemAbstractElement *> &&femElements,
+  void setData(QVector<Node*>&& nodes,
+               QVector<FemAbstractElement*>&& femElements,
                unsigned globaStiffMatrixSize) noexcept;
 
   bool isEmpty() const noexcept;

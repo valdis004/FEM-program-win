@@ -889,17 +889,17 @@ C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom\ configure\ preset
   C:/Program\ Files/LLVM/lib/clang/21/include/stdint.h \
   C:/Program\ Files/LLVM/lib/clang/21/include/vadefs.h \
   C:/Program\ Files/LLVM/lib/clang/21/include/xmmintrin.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/displacement/femdisplacement.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/elementprovider.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femtypes.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/global.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/load/femload.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/material.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/node.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/point.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/displacement/displacement.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/load/load.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/displacement/fem_displacement.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/element_provider.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/fem_element.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/fem_types.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/global.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/load/fem_load.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/material/material.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/node.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/point.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/displacement/displacement.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/load/load.h \
   C:/msys64/mingw64/include/eigen3/Eigen/Cholesky \
   C:/msys64/mingw64/include/eigen3/Eigen/Core \
   C:/msys64/mingw64/include/eigen3/Eigen/Dense \

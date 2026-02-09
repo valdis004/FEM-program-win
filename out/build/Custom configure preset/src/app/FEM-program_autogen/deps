@@ -891,40 +891,40 @@ FEM-program_autogen/timestamp: \
 	C:/Program\ Files/LLVM/lib/clang/21/include/xmmintrin.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom\ configure\ preset/src/app/FEM-program_autogen/moc_predefs.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/CMakeLists.txt \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/context-menu/treeContextMenu.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/context-menu/treeContextMenu.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/context_menu/tree_context_menu.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/context_menu/tree_context_menu.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/main.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/mainwindow.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/mainwindow.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/displacement/femdisplacement.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/displacement/femdisplacement.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/elementprovider.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/elementprovider.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_dkmq.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_dkmq.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc4my.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc4my.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc9my.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/fem_plates/fem_plate_mitc9my.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femelement.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/femtypes.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/global.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/load/femload.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/load/femload.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/PlateMaterial.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/PlateMaterial.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/material/material.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/node.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/elements/point.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/displacement/displacement.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/displacement/displacement.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/element.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/element.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/load/load.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/load/load.h \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/plates/plate.cpp \
-	C:/Users/vlada/Documents/FEM/FEM-program-win/src/generalElement/plates/plate.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/main_window.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/app/main_window.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/displacement/fem_displacement.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/displacement/fem_displacement.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/element_provider.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/element_provider.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/fem_element.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/fem_element.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/fem_plates/fem_plate_dkmq.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/fem_plates/fem_plate_dkmq.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/fem_plates/fem_plate_mitc4my.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/fem_plates/fem_plate_mitc4my.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/fem_plates/fem_plate_mitc9my.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/fem_plates/fem_plate_mitc9my.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/fem_types.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/global.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/load/fem_load.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/load/fem_load.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/material/material.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/material/plate_Material.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/material/plate_Material.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/node.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/point.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/displacement/displacement.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/displacement/displacement.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/element.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/element.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/load/load.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/load/load.h \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/plates/plate.cpp \
+	C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/plates/plate.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/graphics/qtgl/qtgl.cpp \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/graphics/qtgl/qtgl.h \
 	C:/Users/vlada/Documents/FEM/FEM-program-win/src/mesh/mesh.cpp \
