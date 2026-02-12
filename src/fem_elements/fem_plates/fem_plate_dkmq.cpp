@@ -7,7 +7,7 @@
 #include <cstddef>
 #include <exception>
 
-#include "general_element/element.h"
+#include "structural_element/structural_element.h"
 
 using ShapeFunc = double (*)(double, double);
 using DerivFunc = double (*)(double);
@@ -96,15 +96,14 @@ constexpr static auto NDiffAny =
 
 FemPlateDkmq::FemPlateDkmq(unsigned id,
                            Node** nodes,
-                           std::shared_ptr<AbstractElement> generalElement)
-    : FemAbstractElement(id, nodes, 4, ElementType::DKMQ, generalElement) {};
+                           std::shared_ptr<AStructuralElement> generalElement)
+    : AFemElement(id, nodes, 4, ElementType::DKMQ, generalElement) {};
 
 FemPlateDkmq::FemPlateDkmq(unsigned id,
                            Node** nodes,
                            const Material& material,
-                           std::shared_ptr<AbstractElement> generalElement)
-    : FemAbstractElement(
-          id, nodes, 4, material, ElementType::DKMQ, generalElement) {};
+                           std::shared_ptr<AStructuralElement> generalElement)
+    : AFemElement(id, nodes, 4, material, ElementType::DKMQ, generalElement) {};
 
 MatrixXd FemPlateDkmq::jMatrix(double xi, double eta) {
   double y1 = nodes_[0]->point.y / 1000.0;

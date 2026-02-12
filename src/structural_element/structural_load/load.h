@@ -7,23 +7,23 @@
 #include <span>
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.h"
 
-class NodeLoad;
+class ANodeLoad;
 
-class AbstractLoad {
+class AStructuralLoad {
  protected:
   QVector<double> values;
 
  public:
   virtual void setValues(double* values) = 0;
 
-  AbstractLoad(short count);
+  AStructuralLoad(short count);
 
-  AbstractLoad(double* values, short count);
+  AStructuralLoad(double* values, short count);
 
-  AbstractLoad(std::span<double> values);
+  AStructuralLoad(std::span<double> values);
 };
 
-class AreaLoadFzMxMy : public AbstractLoad {
+class AreaLoadFzMxMy : public AStructuralLoad {
  private:
   double qz, mx, my;
 
@@ -37,7 +37,7 @@ class AreaLoadFzMxMy : public AbstractLoad {
   virtual void setValues(double* values) override;
 };
 
-class AreaLoadFxFyFzMxMyMz : public AbstractLoad {
+class AreaLoadFxFyFzMxMyMz : public AStructuralLoad {
  private:
   double qx, qy, qz, mx, my, mz;
 

@@ -899,12 +899,12 @@ C:/Users/vlada/Documents/FEM/FEM-program-win/out/build/Custom\ configure\ preset
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/material/material.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/node.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/fem_elements/point.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/displacement/displacement.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/element.h \
-  C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/load/load.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/graphics/qtgl/qtgl.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/mesh/mesh.h \
   C:/Users/vlada/Documents/FEM/FEM-program-win/src/mesh/meshdata.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_displacement/displacement.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_element.h \
+  C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_load/load.h \
   C:/msys64/mingw64/include/eigen3/Eigen/Cholesky \
   C:/msys64/mingw64/include/eigen3/Eigen/Core \
   C:/msys64/mingw64/include/eigen3/Eigen/Dense \

@@ -73,30 +73,6 @@
 			null
 		],
 		[
-			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/displacement/displacement.h",
-			"MU",
-			"I6Z76H6UYQ/moc_displacement.cpp",
-			null
-		],
-		[
-			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/element.h",
-			"MU",
-			"MWK5IVNXHC/moc_element.cpp",
-			null
-		],
-		[
-			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/load/load.h",
-			"MU",
-			"LODSWA6VT5/moc_load.cpp",
-			null
-		],
-		[
-			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/plates/plate.h",
-			"MU",
-			"R6L5JM4JDY/moc_plate.cpp",
-			null
-		],
-		[
 			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/graphics/qtgl/qtgl.h",
 			"MU",
 			"UDFWO6HIE5/moc_qtgl.cpp",
@@ -118,6 +94,30 @@
 			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/solver/solver.h",
 			"MU",
 			"LACER7ZNF2/moc_solver.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_displacement/displacement.h",
+			"MU",
+			"TL6JGAJU4V/moc_displacement.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_element.h",
+			"MU",
+			"PLCZ5FUNVP/moc_structural_element.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_load/load.h",
+			"MU",
+			"LOEJT7GZ64/moc_load.cpp",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_plates/plate.h",
+			"MU",
+			"JKJ5WLYEA6/moc_plate.cpp",
 			null
 		]
 	],
@@ -163,9 +163,9 @@
 		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/graphics",
 		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/mesh",
 		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/solver",
-		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element",
-		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/load",
-		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/displacement",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_load",
+		"C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_displacement",
 		"C:/msys64/mingw64/include/qt6/QtWidgets",
 		"C:/msys64/mingw64/include/qt6",
 		"C:/msys64/mingw64/include/qt6/QtCore",
@@ -267,26 +267,6 @@
 			null
 		],
 		[
-			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/displacement/displacement.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/element.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/load/load.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/general_element/plates/plate.cpp",
-			"MU",
-			null
-		],
-		[
 			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/graphics/qtgl/qtgl.cpp",
 			"MU",
 			null
@@ -303,6 +283,26 @@
 		],
 		[
 			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/solver/solver.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_displacement/displacement.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_element.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_load/load.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/vlada/Documents/FEM/FEM-program-win/src/structural_element/structural_plates/plate.cpp",
 			"MU",
 			null
 		]

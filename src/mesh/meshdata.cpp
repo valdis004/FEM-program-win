@@ -14,7 +14,7 @@ MeshData::~MeshData() {
 MeshData::MeshData() {};
 
 MeshData::MeshData(QVector<Node*>&& nodes,
-                   QVector<FemAbstractElement*>&& femElements,
+                   QVector<AFemElement*>&& femElements,
                    unsigned globaStiffMatrixSize) noexcept {
   this->nodes_ = nodes;
   this->femElements = femElements;
@@ -22,7 +22,7 @@ MeshData::MeshData(QVector<Node*>&& nodes,
 }
 
 void MeshData::setData(QVector<Node*>&& nodes,
-                       QVector<FemAbstractElement*>&& femElements,
+                       QVector<AFemElement*>&& femElements,
                        unsigned globaStiffMatrixSize) noexcept {
   this->nodes_ = nodes;
   this->femElements = femElements;

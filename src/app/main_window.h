@@ -1,13 +1,14 @@
 #pragma once
 
-#include <QDialogButtonBox>
-#include <QMainWindow>
 #include <qglobal.h>
 #include <qmdiarea.h>
 #include <qstandarditemmodel.h>
 #include <qtableview.h>
 #include <qtablewidget.h>
 #include <qtoolbutton.h>
+
+#include <QDialogButtonBox>
+#include <QMainWindow>
 
 #include "context_menu/tree_context_menu.h"
 // #include "femtypes.h"
@@ -21,42 +22,42 @@ class QStandardItemModel;
 class MainWindow : public QMainWindow {
   Q_OBJECT
 
-public:
-  QVector<shared_ptr<AbstractElement>> elements;
+ public:
+  QVector<shared_ptr<AStructuralElement>> elements;
 
   MainWindow();
-  QMdiArea *mid_area_;
-  Qtgl *scene_{nullptr};
-  Mesh *mesh{nullptr};
-  Solver *solver_{nullptr};
-  QVector<QToolButton *> result_buttons_;
-  QLabel *status_label_;
-  QToolButton *tables_btn_;
+  QMdiArea* mid_area_;
+  Qtgl* scene_{nullptr};
+  Mesh* mesh{nullptr};
+  Solver* solver_{nullptr};
+  QVector<QToolButton*> result_buttons_;
+  QLabel* status_label_;
+  QToolButton* tables_btn_;
 
   ~MainWindow();
 
-private:
+ private:
   // Result table vars
   // QStandardItemModel *model{nullptr};
-  QTableWidget *results_view_{nullptr};
-  shared_ptr<AbstractElement> selected_eLement_{nullptr};
-  QTreeWidget *tree_widget_;
-  TreeContextMenu *tree_context_menu_;
+  QTableWidget* results_view_{nullptr};
+  shared_ptr<AStructuralElement> selected_eLement_{nullptr};
+  QTreeWidget* tree_widget_;
+  TreeContextMenu* tree_context_menu_;
 
   void createLeftDock();
   void createMenus();
   void createToolBar();
   void createToolStrip();
-  QToolBar *createToolBarFromWidget(QWidget *widget);
+  QToolBar* createToolBarFromWidget(QWidget* widget);
   void setupTreeContextMenu();
-  void getResultTable(shared_ptr<AbstractElement> selected_eLement,
+  void getResultTable(shared_ptr<AStructuralElement> selected_eLement,
                       int selectedId);
-  void setSpanResultTable(shared_ptr<AbstractElement> selected_eLement,
-                          QTableView *results_view);
+  void setSpanResultTable(shared_ptr<AStructuralElement> selected_eLement,
+                          QTableView* results_view);
 
-private slots:
-  void onTreeContextMenuRequested(const QPoint &pos);
-  void createDefaultPlateScheme(QTreeWidgetItem *item);
+ private slots:
+  void onTreeContextMenuRequested(const QPoint& pos);
+  void createDefaultPlateScheme(QTreeWidgetItem* item);
   void calculateButtonClicked();
   void createTableResultsTab();
   void copySelectionToClipboard();

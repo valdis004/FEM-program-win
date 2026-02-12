@@ -6,7 +6,7 @@
 #include <cstddef>
 #include <exception>
 
-#include "general_element/element.h"
+#include "structural_element/structural_element.h"
 
 using ShapeFunc = double (*)(double, double);
 using DerivFunc = double (*)(double);
@@ -94,15 +94,17 @@ constexpr static auto NDiffAny =
     };
 
 FemPlateMitc4My::FemPlateMitc4My(
-    unsigned id, Node** nodes, std::shared_ptr<AbstractElement> generalElement)
-    : FemAbstractElement(id, nodes, 4, ElementType::MITC4MY, generalElement) {};
+    unsigned id,
+    Node** nodes,
+    std::shared_ptr<AStructuralElement> generalElement)
+    : AFemElement(id, nodes, 4, ElementType::MITC4MY, generalElement) {};
 
 FemPlateMitc4My::FemPlateMitc4My(
     unsigned id,
     Node** nodes,
     const Material& material,
-    std::shared_ptr<AbstractElement> generalElement)
-    : FemAbstractElement(
+    std::shared_ptr<AStructuralElement> generalElement)
+    : AFemElement(
           id, nodes, 4, material, ElementType::MITC4MY, generalElement) {};
 
 MatrixXd FemPlateMitc4My::jMatrix(double xi, double eta) {

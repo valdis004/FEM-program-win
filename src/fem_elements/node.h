@@ -1,7 +1,8 @@
 #pragma once
 
-#include <QVector>
 #include <qglobal.h>
+
+#include <QVector>
 
 #include "displacement/fem_displacement.h"
 #include "fem_elements/load/fem_load.h"
@@ -12,13 +13,13 @@
 static unsigned nodeCounter = 0;
 
 class Node {
-public:
+ public:
   Point3 point;
   double glOutputValue;
   int dofCount;
   unsigned id;
-  NodeLoad *nodeLoad{nullptr};
-  NodeDisplacement *nodeDisplacement{nullptr};
+  ANodeLoad* nodeLoad{nullptr};
+  ANodeDisplacement* nodeDisplacement{nullptr};
   unsigned firstGlobStiffId;
   QVector<double> outputValues;
 
@@ -28,9 +29,12 @@ public:
 
   Node() = default;
 
-  Node(unsigned id, const Node &other)
-      : point(other.point), glPoint(other.point), dofCount(other.dofCount),
-        id(id), nodeLoad(other.nodeLoad),
+  Node(unsigned id, const Node& other)
+      : point(other.point),
+        glPoint(other.point),
+        dofCount(other.dofCount),
+        id(id),
+        nodeLoad(other.nodeLoad),
         nodeDisplacement(other.nodeDisplacement),
         firstGlobStiffId(other.firstGlobStiffId) {}
 
@@ -40,11 +44,9 @@ public:
   }
 
   ~Node() {
-    if (nodeLoad)
-      delete nodeLoad;
+    if (nodeLoad) delete nodeLoad;
 
-    if (nodeDisplacement)
-      delete nodeDisplacement;
+    if (nodeDisplacement) delete nodeDisplacement;
   }
 
   void setValues(Point3 point, int dofCount, int id) {

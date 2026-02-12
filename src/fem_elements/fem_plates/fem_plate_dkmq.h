@@ -11,7 +11,7 @@
 #include "fem_types.h"
 #include "material.h"
 
-class FemPlateDkmq : public FemAbstractElement {
+class FemPlateDkmq : public AFemElement {
  private:
   MatrixXd jMatrix(double xi, double eta);
 
@@ -22,12 +22,12 @@ class FemPlateDkmq : public FemAbstractElement {
  public:
   FemPlateDkmq(unsigned id,
                Node** nodes,
-               std::shared_ptr<AbstractElement> generalElement);
+               std::shared_ptr<AStructuralElement> generalElement);
 
   FemPlateDkmq(unsigned id,
                Node** nodes,
                const Material& material,
-               std::shared_ptr<AbstractElement> generalElement);
+               std::shared_ptr<AStructuralElement> generalElement);
 
   virtual MatrixXd getLocalStiffMatrix() override;
 
@@ -73,6 +73,8 @@ class FemPlateDkmq : public FemAbstractElement {
       MAIN_NODES_XI_SET,
       MAIN_NODES_ETA_SET,
       4,
+      MAIN_NODES_XI_SET,   // In this element match
+      MAIN_NODES_ETA_SET,  // In this element match
       4,
       12,
       true,

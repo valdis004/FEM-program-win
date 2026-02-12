@@ -15,7 +15,7 @@
 #include "meshdata.h"
 
 void Solver::setParams(size_t i,
-                       const FemAbstractElement* element,
+                       const AFemElement* element,
                        unsigned& correction,
                        unsigned& cur_dof,
                        unsigned& local_id,
@@ -31,13 +31,13 @@ void Solver::setParams(size_t i,
   if (!data.IS_FULL_DOF) {
     auto ids_to_cor = element->genetal_element_->meshData_->ids_to_cor_;
     correction =
-        FemAbstractElement::getCorrection(local_id, node_id, data, ids_to_cor);
+        AFemElement::getCorrection(local_id, node_id, data, ids_to_cor);
     cur_dof = data.DOF_MAP[local_id];
   }
 }
 
 unsigned Solver::getGlobalIndex(size_t i,
-                                const FemAbstractElement* element,
+                                const AFemElement* element,
                                 const ElementData& data) {
   unsigned correction;
   unsigned local_id;
@@ -51,7 +51,7 @@ unsigned Solver::getGlobalIndex(size_t i,
 
 unsigned Solver::getGlobalIndexAndSetLoad(
     size_t i,
-    const FemAbstractElement* element,
+    const AFemElement* element,
     SparseVector<double>& globalLoadVector,
     const ElementData& data) {
   unsigned correction;
@@ -62,7 +62,11 @@ unsigned Solver::getGlobalIndexAndSetLoad(
   setParams(i, element, correction, cur_dof, local_id, node_id, full_dof, data);
 
   unsigned dofIndex = i % cur_dof;
-  double value = element->nodes_[local_id]->nodeLoad->values[dofIndex];
+  auto node_load = element->nodes_[local_id]->nodeLoad;
+  double value = 0;
+  if (node_load) {
+    value = element->nodes_[local_id]->nodeLoad->values_[dofIndex];
+  }
   double globalId = node_id * full_dof + dofIndex - correction;
   globalLoadVector.coeffRef(globalId) += value;
 
@@ -79,7 +83,7 @@ Solver::getGlobalStiffMatrixAndLoadVector(MeshData* mesh,
   unsigned count = 0;
 
   auto elements = mesh->femElements;
-  for (FemAbstractElement* element : elements) {
+  for (AFemElement* element : elements) {
     emit newElementStiffMatrixStep(count++);
 
     const QVector<Node*>& nodes_ = element->nodes_;
@@ -107,9 +111,10 @@ void Solver::applyBaundaryConditions(SparseMatrix<double>& globalMatrix,
   for (const auto& node : nodes_) {
     if (!node->nodeDisplacement) continue;
 
-    short countToZero = node->nodeDisplacement->nodesCountToZero;
+    short countToZero = node->nodeDisplacement->node_ids_to_zero_.size();
     for (size_t i = 0; i < countToZero; i++) {
-      unsigned id = node->nodeDisplacement->nodeIdsToZero[i];
+      unsigned id = node->nodeDisplacement->node_ids_to_zero_[i];
+
       globalVector.coeffRef(id) = 0;
       for (size_t j = 0; j < global_matrix_size; j++) {
         if (j == id)
@@ -123,7 +128,7 @@ void Solver::applyBaundaryConditions(SparseMatrix<double>& globalMatrix,
   }
 }
 
-void Solver::calculate(QVector<shared_ptr<AbstractElement>>& elements) {
+void Solver::calculate(QVector<shared_ptr<AStructuralElement>>& elements) {
   this->elements = &elements;
 
   for (auto& element : elements) {
@@ -160,6 +165,7 @@ void Solver::calculate(QVector<shared_ptr<AbstractElement>>& elements) {
     SparseVector<double> u = solver.solve(load);
 
     // for (size_t i = 0; i < u.size(); i++) {
+    //   double ui = u.coeff(i);
     //   qDebug() << i << " " << u.coeff(i) << "\n";
     // }
 
@@ -171,7 +177,7 @@ void Solver::calculate(QVector<shared_ptr<AbstractElement>>& elements) {
 
 void Solver::setOutputValuesToNodes(MeshData* mesh,
                                     const SparseVector<double>& globalU,
-                                    shared_ptr<AbstractElement> element) {
+                                    shared_ptr<AStructuralElement> element) {
   bool flag = true;
   const auto& data = ElementProvider.at(element->getType());
 
@@ -187,11 +193,11 @@ void Solver::setOutputValuesToNodes(MeshData* mesh,
       elementU(i) = globalU.coeff(globalId);
     }
 
-    for (size_t i = 0; i < data.MAIN_NODES_COUNT; i++) {
+    for (size_t i = 0; i < data.NODES_COUNT; i++) {
       Node* curNode = element->nodes_[i];
 
       QVector<double> outputValues = element->getResultVector(
-          elementU, data.MAIN_NODES_XI_SET[i], data.MAIN_NODES_ETA_SET[i]);
+          elementU, data.NODES_XI_SET[i], data.NODES_ETA_SET[i]);
       if (flag) {
         for (size_t i = 0; i < outputValues.size(); i++) {
           maxAbsValues[i] = abs(outputValues[i]);

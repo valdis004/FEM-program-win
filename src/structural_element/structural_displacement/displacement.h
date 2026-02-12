@@ -6,31 +6,32 @@
 
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
 // #include "femdisplacement.h"
-#include <QVector>
 #include <qglobal.h>
+
+#include <QVector>
 class Node;
-class NodeDisplacement;
+class ANodeDisplacement;
 
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.h"
 
-class AbstractDisplacement {
-protected:
+class AStructuralDisplacement {
+ protected:
   QVector<bool> values;
 
-public:
-  virtual void setValues(bool *values) = 0;
+ public:
+  virtual void setValues(bool* values) = 0;
 
   // virtual NodeDisplacement *createChildNodeDisplacement() = 0;
 };
 
-class DisplacementUzPsixPsiy : public AbstractDisplacement {
-private:
+class DisplacementUzPsixPsiy : public AStructuralDisplacement {
+ private:
   bool u_z{false}, psi_x{false}, psi_y{false};
 
-public:
+ public:
   DisplacementUzPsixPsiy(bool u_z, bool psi_x, bool psi_y);
 
-  virtual void setValues(bool *values) override;
+  virtual void setValues(bool* values) override;
 
   // virtual NodeDisplacement *createChildNodeDisplacement() override;
 };

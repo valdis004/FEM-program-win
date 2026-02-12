@@ -125,7 +125,7 @@ void Qtgl::wheelEvent(QWheelEvent* pe) {
   pt_position_ = pe->pos();
 }
 
-void Qtgl::setMeshData(QVector<shared_ptr<AbstractElement>>* elements) {
+void Qtgl::setMeshData(QVector<shared_ptr<AStructuralElement>>* elements) {
   this->elements_ = elements;
 
   for (auto& element : *elements) {

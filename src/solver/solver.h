@@ -20,7 +20,7 @@ using Eigen::SparseVector;
 using Eigen::VectorXd;
 using std::shared_ptr;
 
-class FemAbstractElement;
+class AFemElement;
 
 class Solver : public QObject {
   Q_OBJECT
@@ -28,7 +28,7 @@ class Solver : public QObject {
   unsigned global_matrix_size = 0;
 
   inline void setParams(size_t i,
-                        const FemAbstractElement* element,
+                        const AFemElement* element,
                         unsigned& correction,
                         unsigned& cur_dof,
                         unsigned& local_id,
@@ -38,12 +38,12 @@ class Solver : public QObject {
 
   inline unsigned getGlobalIndexAndSetLoad(
       size_t i,
-      const FemAbstractElement* element,
+      const AFemElement* element,
       SparseVector<double>& global_load_vector,
       const ElementData& data);
 
   inline unsigned getGlobalIndex(size_t i,
-                                 const FemAbstractElement* element,
+                                 const AFemElement* element,
                                  const ElementData& data);
 
   std::pair<SparseMatrix<double>, SparseVector<double>>
@@ -57,15 +57,15 @@ class Solver : public QObject {
 
   void setOutputValuesToNodes(MeshData* mesh,
                               const SparseVector<double>& global_u,
-                              shared_ptr<AbstractElement> elements);
+                              shared_ptr<AStructuralElement> elements);
 
  public:
   QVector<double> maxAbsValues;
   QVector<double> maxValues;
   QVector<double> minValues;
-  QVector<shared_ptr<AbstractElement>>* elements;
+  QVector<shared_ptr<AStructuralElement>>* elements;
 
-  void calculate(QVector<shared_ptr<AbstractElement>>& elements);
+  void calculate(QVector<shared_ptr<AStructuralElement>>& elements);
 
  signals:
   void newElementStiffMatrixStep(unsigned count);

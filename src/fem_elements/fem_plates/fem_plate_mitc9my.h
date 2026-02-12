@@ -16,7 +16,7 @@
 #include "fem_load.h"
 #include "material.h"
 
-class FemPlateMitc9My : public FemAbstractElement {
+class FemPlateMitc9My : public AFemElement {
  private:
   MatrixXd jMatrix(double xi, double eta);
 
@@ -27,12 +27,12 @@ class FemPlateMitc9My : public FemAbstractElement {
  public:
   FemPlateMitc9My(unsigned id,
                   Node** nodes,
-                  std::shared_ptr<AbstractElement> generalElement);
+                  std::shared_ptr<AStructuralElement> generalElement);
 
   FemPlateMitc9My(unsigned id,
                   Node** nodes,
                   const Material& material,
-                  std::shared_ptr<AbstractElement> generalElement);
+                  std::shared_ptr<AStructuralElement> generalElement);
 
   virtual MatrixXd getLocalStiffMatrix() override;
 
@@ -50,6 +50,9 @@ class FemPlateMitc9My : public FemAbstractElement {
 
   C_S_C double MAIN_NODES_XI_SET[]{-1, 1, 1, -1};
   C_S_C double MAIN_NODES_ETA_SET[]{-1, -1, 1, 1};
+
+  C_S_C double NODES_XI_SET[]{-1.0, 1.0, 1.0, -1.0, 0, 1.0, 0, -1.0, 0};
+  C_S_C double NODES_ETA_SET[]{-1.0, -1.0, 1.0, 1.0, -1.0, 0, 1.0, 0, 0};
 
   C_S_C double XI_SET[]{-SQRT_0_6, 0, SQRT_0_6};
   C_S_C double ETA_SET[]{-SQRT_0_6, 0, SQRT_0_6};
@@ -86,6 +89,8 @@ class FemPlateMitc9My : public FemAbstractElement {
       MAIN_NODES_XI_SET,
       MAIN_NODES_ETA_SET,
       9,
+      NODES_XI_SET,
+      NODES_ETA_SET,
       9,
       26,
       false,

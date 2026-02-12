@@ -1,6 +1,6 @@
-#include "general_element/element.h"
+#include "structural_element/structural_element.h"
 
-class Plate : public AbstractElement {
+class Plate : public AStructuralElement {
  public:
   Plate(ElementType type, unsigned lenght, Point3 startPoint);
 
@@ -8,9 +8,9 @@ class Plate : public AbstractElement {
         unsigned lenght,
         Point3 startPoint,
         unique_ptr<Material> material,
-        shared_ptr<AbstractLoad> load);
+        shared_ptr<AStructuralLoad> load);
 
-  virtual shared_ptr<AbstractLoad> createAndAddLoad() override;
+  virtual shared_ptr<AStructuralLoad> createAndAddLoad() override;
 
   virtual void addMaterial(unique_ptr<Material> material) override;
 

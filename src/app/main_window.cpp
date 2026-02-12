@@ -48,10 +48,10 @@
 #include <cstddef>
 #include <memory>
 
-#include "element.h"
 #include "fem_types.h"
 #include "graphics/qtgl/qtgl.h"
 #include "solver/solver.h"
+#include "structural_element.h"
 
 MainWindow::MainWindow() {
   setWindowTitle("Fem test");
@@ -536,7 +536,7 @@ void MainWindow::createTableResultsTab() {
 }
 
 // Initialize s default result table with all results type
-void MainWindow::getResultTable(shared_ptr<AbstractElement> selected_eLement,
+void MainWindow::getResultTable(shared_ptr<AStructuralElement> selected_eLement,
                                 int selected_id) {
   auto& mesh = selected_eLement->meshData_;
   auto DATA = ElementProvider.at(selected_eLement->getType());
@@ -601,7 +601,7 @@ void MainWindow::getResultTable(shared_ptr<AbstractElement> selected_eLement,
 
 // Span element rows
 void MainWindow::setSpanResultTable(
-    shared_ptr<AbstractElement> selected_eLement, QTableView* results_view) {
+    shared_ptr<AStructuralElement> selected_eLement, QTableView* results_view) {
   auto& mesh = selected_eLement->meshData_;
   auto DATA = ElementProvider.at(selected_eLement->getType());
   auto nodes = mesh->nodes_;

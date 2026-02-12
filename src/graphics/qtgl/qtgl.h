@@ -13,10 +13,10 @@
 
 #include "fem_elements/node.h"
 #include "fem_elements/point.h"
-#include "general_element/element.h"
+#include "structural_element/structural_element.h"
 
 class MainWindow;
-class AbstractElement;
+class AStructuralElement;
 
 struct GraphickElement {
   QVector<Point3> points;
@@ -37,7 +37,7 @@ class Qtgl : public QOpenGLWidget {
   bool is_middle_but_{false};
   bool is_need_set_coods_{true};
 
-  QVector<shared_ptr<AbstractElement>>* elements_;
+  QVector<shared_ptr<AStructuralElement>>* elements_;
 
   QVector<double> max_abs_values_;
   QVector<double> max_values_;
@@ -66,7 +66,7 @@ class Qtgl : public QOpenGLWidget {
 
  public:
   Qtgl(QWidget* pwgt = 0);
-  void setMeshData(QVector<shared_ptr<AbstractElement>>* elements);
+  void setMeshData(QVector<shared_ptr<AStructuralElement>>* elements);
 
   void setResulthData(const QVector<double>& max_abs_values,
                       const QVector<double>& max_values,

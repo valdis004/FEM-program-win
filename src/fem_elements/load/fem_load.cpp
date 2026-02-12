@@ -2,23 +2,23 @@
 
 #include <cstddef>
 
-#include "general_element/load/load.h"
-// #include <exception>
-// #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
-// #include <stdexcept>
 #include "fem_elements/element_provider.h"
+#include "fem_elements/fem_element.h"
+#include "fem_elements/node.h"
+#include "structural_element/structural_element.h"
+#include "structural_element/structural_load/load.h"
 
-NodeLoad::NodeLoad(std::span<double> values) {
-  this->values = new double[values.size()];
+ANodeLoad::ANodeLoad(std::span<double> values) {
+  values_.resize(values.size());
   for (std::size_t i = 0; i < values.size(); i++) {
-    this->values[i] = values[i];
+    values_[i] = values[i];
   }
 }
 
-NodeLoad* NodeLoad::createNodeLoadFromLoad(ElementType type,
-                                           AbstractLoad* load,
-                                           double* coefs,
-                                           int localNodeId) {
+ANodeLoad* ANodeLoad::createNodeLoadFromLoad(ElementType type,
+                                             AStructuralLoad* load,
+                                             double* coefs,
+                                             int localNodeId) {
   auto data = ElementProvider.at(type);
   const int dof = data.FULL_DOF_COUNT;
 
@@ -28,77 +28,97 @@ NodeLoad* NodeLoad::createNodeLoadFromLoad(ElementType type,
   return data.LOAD_FN_MAP[localNodeId](values, coefs);
 }
 
-/* virtual */ void NodeLoadFzMxMy::appendValuesToNodeLoad(
-    AbstractLoad* generalLoad, double* coefs) {
-  double values[3];
-  generalLoad->setValues(values);
-  this->values[0] += values[0] * coefs[0];
-  this->values[1] += values[1] * coefs[1];
-  this->values[2] += values[2] * coefs[2];
+/* static */ void ANodeLoad::setNodeLoadToNodeFromLoad(Node* node,
+                                                       AFemElement* fem_element,
+                                                       double* coefs,
+                                                       int localNodeId) {
+  auto data = ElementProvider.at(fem_element->type_);
+  const int dof = data.FULL_DOF_COUNT;
+
+  double values[dof];
+  for (auto& load : fem_element->genetal_element_->getLoads()) {
+    load->setValues(values);
+
+    if (node->nodeLoad) {
+      node->nodeLoad = data.LOAD_FN_MAP[localNodeId](values, coefs);
+    } else {
+      node->nodeLoad->appendValuesToNodeLoad(values, coefs);
+    }
+  }
+};
+
+/* virtual */ void NodeLoadFzMxMy::appendValuesToNodeLoad(double* values,
+                                                          double* coefs) {
   fz += values[0] * coefs[0];
   mx += values[1] * coefs[1];
   my += values[2] * coefs[2];
+
+  for (size_t i = 0; i < 3; i++) {
+    values_[i] += values[i] * coefs[i];
+  }
 }
 
-/* virtual */ void NodeLoadFzMxMy::setNodeLoadValues(double* value,
-                                                     double* coefs) {
-  fz = value[0] * coefs[0];
-  mx = value[1] * coefs[1];
-  my = value[2] * coefs[2];
-  values = new double[3]{fz, mx, my};
-  countValues = 3;
-};
-
-/*virtual*/ NodeLoad* NodeLoadFzMxMy::create(double* values, double* coefs) {
-  NodeLoad* nodeLoad = new NodeLoadFzMxMy();
+/*virtual*/ ANodeLoad* NodeLoadFzMxMy::create(double* values, double* coefs) {
+  ANodeLoad* nodeLoad = new NodeLoadFzMxMy();
   nodeLoad->setNodeLoadValues(values, coefs);
 
   return nodeLoad;
 }
 
-NodeLoadFz::NodeLoadFz(std::span<double> values) : NodeLoad(values) {}
+/* virtual */ void NodeLoadFzMxMy::setNodeLoadValues(double* values,
+                                                     double* coefs) {
+  fz = values[0] * coefs[0];
+  mx = values[1] * coefs[1];
+  my = values[2] * coefs[2];
 
-/* virtual */ void NodeLoadFz::appendValuesToNodeLoad(AbstractLoad* generalLoad,
+  values_.resize(3);
+  for (size_t i = 0; i < 3; i++) {
+    values_[i] += values[i] * coefs[i];
+  }
+};
+
+/* virtual */ void NodeLoadFz::appendValuesToNodeLoad(double* values,
                                                       double* coefs) {
-  double values[3];
-  generalLoad->setValues(values);
-  this->values[0] += values[0] * coefs[0];
   fz += values[0] * coefs[0];
+
+  values_[0] += values[0] * coefs[0];
 }
 
 /*virtual */ void NodeLoadFz::setNodeLoadValues(double* value, double* coefs) {
   fz = value[0] * coefs[0];
-  values = new double[1]{fz};
-  countValues = 1;
+
+  values_.resize(1);
+  values_[0] = fz;
 };
 
-/*virtual*/ NodeLoad* NodeLoadFz::create(double* values, double* coefs) {
-  NodeLoad* nodeLoad = new NodeLoadFz();
+/*virtual*/ ANodeLoad* NodeLoadFz::create(double* values, double* coefs) {
+  ANodeLoad* nodeLoad = new NodeLoadFz();
   nodeLoad->setNodeLoadValues(values, coefs);
 
   return nodeLoad;
 }
 
-/* virtual */ void NodeLoadMxMy::appendValuesToNodeLoad(
-    AbstractLoad* generalLoad, double* coefs) {
-  double values[3];
-  generalLoad->setValues(values);
-  this->values[0] += values[1] * coefs[1];
-  this->values[1] += values[2] * coefs[2];
+/* virtual */ void NodeLoadMxMy::appendValuesToNodeLoad(double* values,
+                                                        double* coefs) {
   mx += values[1] * coefs[1];
   my += values[2] * coefs[2];
+
+  values_[0] += values[1] * coefs[1];
+  values_[1] += values[2] * coefs[2];
 }
 
 /*virtual */ void NodeLoadMxMy::setNodeLoadValues(double* value,
                                                   double* coefs) {
   mx = value[1] * coefs[1];
   my = value[2] * coefs[1];
-  values = new double[2]{mx, my};
-  countValues = 2;
+
+  values_.resize(2);
+  values_[0] += mx;
+  values_[1] += my;
 };
 
-/*virtual*/ NodeLoad* NodeLoadMxMy::create(double* values, double* coefs) {
-  NodeLoad* nodeLoad = new NodeLoadFzMxMy();
+/*virtual*/ ANodeLoad* NodeLoadMxMy::create(double* values, double* coefs) {
+  ANodeLoad* nodeLoad = new NodeLoadMxMy();
   nodeLoad->setNodeLoadValues(values, coefs);
 
   return nodeLoad;

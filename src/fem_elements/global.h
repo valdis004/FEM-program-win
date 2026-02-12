@@ -2,6 +2,6 @@
 
 // #include "femelement.h"
 #include <memory>
-class FemAbstractElement;
+class AFemElement;
 
-using sptrAbsElem = std::shared_ptr<FemAbstractElement>;
+using sptrAbsElem = std::shared_ptr<AFemElement>;

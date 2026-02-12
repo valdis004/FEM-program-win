@@ -20,12 +20,12 @@
 #include <memory>
 
 #include "fem_types.h"
-#include "general_element/plates/plate.h"
 #include "graphics/qtgl/qtgl.h"
 #include "load.h"
 #include "mesh/mesh.h"
 #include "plate_material.h"
 #include "point.h"
+#include "structural_element/structural_plates/plate.h"
 
 #define TEXT_PLATE_STANDART_SCHEME "Create default scheme"
 
@@ -101,7 +101,7 @@ void TreeContextMenu::onActionTriggered() {
 }
 
 void TreeContextMenu::createDiologDefualtSchemePlate(
-    QVector<shared_ptr<AbstractElement>>* elements,
+    QVector<shared_ptr<AStructuralElement>>* elements,
     QWidget* mainWindow,
     Qtgl* scene,
     Mesh*& mesh) {
@@ -161,11 +161,11 @@ void TreeContextMenu::createDiologDefualtSchemePlate(
 
     // Creating general element
     double load_values[] = {-100, 0, 0};
-    shared_ptr<AbstractLoad> load = make_shared<AreaLoadFzMxMy>(load_values);
+    shared_ptr<AStructuralLoad> load = make_shared<AreaLoadFzMxMy>(load_values);
 
-    shared_ptr<AbstractElement> plate =
-        make_shared<Plate>(selected_type, 2000, start_point);
-    plate->addMaterial(make_unique<PlateMaterial>(3e7, 5.0 / 6.0, 0.2, 8.0));
+    shared_ptr<AStructuralElement> plate =
+        make_shared<Plate>(selected_type, 4000.0, start_point);
+    plate->addMaterial(make_unique<PlateMaterial>(2e11, 5.0 / 6.0, 0.2, 0.02));
     plate->addLoad(load);
 
     elements->push_back(plate);

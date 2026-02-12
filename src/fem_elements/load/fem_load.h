@@ -1,73 +1,86 @@
 #pragma once
 
+#include <qcontainerfwd.h>
+
+#include <QVector>
 #include <span>
 
+// #include "fem_element.h"
+// #include "fem_element.h"
 #include "fem_elements/fem_types.h"
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.h"
 
 // #include <stdexcept>
 class Node;
-class AbstractLoad;
+class AStructuralLoad;
+class AFemElement;
 
-class NodeLoad {
+class ANodeLoad {
  public:
-  double* values{nullptr};
-  int countValues{0};
-  //   double fx, fy, fz, mx, my, mz;
+  QVector<double> values_;
 
-  NodeLoad() = default;
+  ANodeLoad() = default;
 
-  NodeLoad(std::span<double> values);
+  ANodeLoad(std::span<double> values);
 
   virtual void setNodeLoadValues(double* values, double* coefs) = 0;
 
-  virtual void appendValuesToNodeLoad(AbstractLoad* generalLoad,
-                                      double* coefs) = 0;
+  virtual void appendValuesToNodeLoad(double* values, double* coefs) = 0;
 
-  static NodeLoad* createNodeLoadFromLoad(ElementType type,
-                                          AbstractLoad* load,
-                                          double* coefs,
-                                          int localNodeId);
+  static ANodeLoad* createNodeLoadFromLoad(ElementType type,
+                                           AStructuralLoad* load,
+                                           double* coefs,
+                                           int localNodeId);
 
-  virtual ~NodeLoad() = default;
+  static void setNodeLoadToNodeFromLoad(Node* node,
+                                        AFemElement* fem_element,
+                                        double* coefs,
+                                        int localNodeId);
+
+  virtual ~ANodeLoad() = default;
 };
 
-class NodeLoadFzMxMy : public NodeLoad {
+class NodeLoadFzMxMy : public ANodeLoad {
  public:
   double fz, mx, my;
 
+  NodeLoadFzMxMy() = default;
+
+  NodeLoadFzMxMy(std::span<double> values) : ANodeLoad(values) {}
+
   virtual void setNodeLoadValues(double* values, double* coefs) override;
 
-  virtual void appendValuesToNodeLoad(AbstractLoad* generalLoad,
-                                      double* coefs) override;
+  virtual void appendValuesToNodeLoad(double* values, double* coefs) override;
 
-  static NodeLoad* create(double* values, double* coefs);
+  static ANodeLoad* create(double* values, double* coefs);
 };
 
-class NodeLoadFz : public NodeLoad {
+class NodeLoadFz : public ANodeLoad {
  public:
   double fz;
 
   NodeLoadFz() = default;
 
-  NodeLoadFz(std::span<double> values);
+  NodeLoadFz(std::span<double> values) : ANodeLoad(values) {}
 
   virtual void setNodeLoadValues(double* values, double* coefs) override;
 
-  virtual void appendValuesToNodeLoad(AbstractLoad* generalLoad,
-                                      double* coefs) override;
+  virtual void appendValuesToNodeLoad(double* values, double* coefs) override;
 
-  static NodeLoad* create(double* values, double* coefs);
+  static ANodeLoad* create(double* values, double* coefs);
 };
 
-class NodeLoadMxMy : public NodeLoad {
+class NodeLoadMxMy : public ANodeLoad {
  public:
   double mx, my;
 
+  NodeLoadMxMy() = default;
+
+  NodeLoadMxMy(std::span<double> values) : ANodeLoad(values) {};
+
   virtual void setNodeLoadValues(double* values, double* coefs) override;
 
-  virtual void appendValuesToNodeLoad(AbstractLoad* generalLoad,
-                                      double* coefs) override;
+  virtual void appendValuesToNodeLoad(double* values, double* coefs) override;
 
-  static NodeLoad* create(double* values, double* coefs);
+  static ANodeLoad* create(double* values, double* coefs);
 };

@@ -13,9 +13,9 @@
 #include "fem_elements/node.h"
 #include "fem_elements/point.h"
 #include "fem_types.h"
-#include "general_element/displacement/displacement.h"
-#include "general_element/load/load.h"
 #include "material.h"
+#include "structural_element/structural_displacement/displacement.h"
+#include "structural_element/structural_load/load.h"
 // #include "plates.h"
 
 class Material;
@@ -26,8 +26,8 @@ using Eigen::MatrixXd;
 #define C_S_C const static constexpr
 
 using MethodCMatrix = MatrixXd (*)(Material* material, int type);
-using MethodPtrDisp = NodeDisplacement* (*)(bool* value, Node* node);
-using MethodPtrLoad = NodeLoad* (*)(double* values, double* coefs);
+using MethodPtrDisp = ANodeDisplacement* (*)(bool* value, Node* node);
+using MethodPtrLoad = ANodeLoad* (*)(double* values, double* coefs);
 using GetPointFunc = Point3 (*)(
     int index, Point3& point0, double step, double cosA, double sinA);
 
@@ -36,6 +36,8 @@ struct ElementData {
   std::span<const double> MAIN_NODES_XI_SET;  // For qtgl quad draw
   std::span<const double> MAIN_NODES_ETA_SET;
   short NODES_COUNT;
+  std::span<const double> NODES_XI_SET;  //
+  std::span<const double> NODES_ETA_SET;
   short INT_POINTS_COUNT;
   short STIFF_MATRIX_SIZE;
   bool IS_FULL_DOF;

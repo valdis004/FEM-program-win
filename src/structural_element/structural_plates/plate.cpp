@@ -4,19 +4,19 @@
 #include "element_provider.h"
 // #include "fem_plate_mitc4my.h"
 #include "fem_types.h"
-#include "load/load.h"
 #include "material.h"
 #include "plate.h"
 #include "point.h"
+#include "structural_load/load.h"
 
 Plate::Plate(ElementType type, unsigned lenght, Point3 startPoint)
-    : AbstractElement(type, lenght, startPoint) {}
+    : AStructuralElement(type, lenght, startPoint) {}
 
 Plate::Plate(ElementType type,
              unsigned lenght,
              Point3 startPoint,
              unique_ptr<Material> material,
-             shared_ptr<AbstractLoad> load)
+             shared_ptr<AStructuralLoad> load)
     : Plate(type, lenght, startPoint) {
   material_ = std::move(material);
   addLoad(load);
@@ -27,7 +27,7 @@ Plate::Plate(ElementType type,
       ElementProvider.at(type).ELASTICITY_MATRIX_FN(getMaterial(), 1));
 }
 
-/* virtual */ shared_ptr<AbstractLoad> Plate::createAndAddLoad() {
+/* virtual */ shared_ptr<AStructuralLoad> Plate::createAndAddLoad() {
   shared_ptr<AreaLoadFzMxMy> load = std::make_shared<AreaLoadFzMxMy>();
   addLoad(load);
   return load;

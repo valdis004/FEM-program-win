@@ -1,26 +1,30 @@
+#include "fem_element.h"
+
 #include <qdebug.h>
 #include <qexception.h>
 #include <qglobal.h>
+
 #include <Eigen/Core>
 #include <cstddef>
 #include <exception>
 #include <memory>
 
 #include "element_provider.h"
-#include "fem_element.h"
 #include "fem_plates/fem_plate_dkmq.h"
 #include "fem_plates/fem_plate_mitc9my.h"
 #include "fem_types.h"
-#include "general_element/displacement/displacement.h"
 #include "load/fem_load.h"
+#include "structural_element/structural_displacement/displacement.h"
 // #include "load/load.h"
 #include "fem_plates/fem_plate_mitc4my.h"
-#include "general_element/element.h"
 #include "mesh\mesh.h"
+#include "structural_element/structural_element.h"
 
-FemAbstractElement::FemAbstractElement(
-    unsigned id, Node** nodes, int count, ElementType type,
-    std::shared_ptr<AbstractElement> generalElement)
+AFemElement::AFemElement(unsigned id,
+                         Node** nodes,
+                         int count,
+                         ElementType type,
+                         std::shared_ptr<AStructuralElement> generalElement)
     : id_(id),
       nodes_count_(count),
       type_(type),
@@ -30,14 +34,20 @@ FemAbstractElement::FemAbstractElement(
   }
 }
 
-FemAbstractElement::FemAbstractElement(
-    unsigned id, Node** nodes, int count, const Material& material,
-    ElementType type, std::shared_ptr<AbstractElement> generalElement)
-    : FemAbstractElement(id, nodes, count, type, generalElement) {}
+AFemElement::AFemElement(unsigned id,
+                         Node** nodes,
+                         int count,
+                         const Material& material,
+                         ElementType type,
+                         std::shared_ptr<AStructuralElement> generalElement)
+    : AFemElement(id, nodes, count, type, generalElement) {}
 
-FemAbstractElement* FemAbstractElement::create(
-    unsigned id, ElementType type, Node** nodes, int count,
-    std::shared_ptr<AbstractElement> generalElement) {
+AFemElement* AFemElement::create(
+    unsigned id,
+    ElementType type,
+    Node** nodes,
+    int count,
+    std::shared_ptr<AStructuralElement> generalElement) {
   switch (type) {
     case ElementType::MITC4MY: {
       return new FemPlateMitc4My(id, nodes, generalElement);
@@ -53,9 +63,11 @@ FemAbstractElement* FemAbstractElement::create(
   }
 }
 
-/* static */ unsigned FemAbstractElement::getCorrection(
-    unsigned cur_node_loc_id, unsigned cur_node_glob_id,
-    const ElementData& data, const QVector<unsigned>& ids_to_cor) {
+/* static */ unsigned AFemElement::getCorrection(
+    unsigned cur_node_loc_id,
+    unsigned cur_node_glob_id,
+    const ElementData& data,
+    const QVector<unsigned>& ids_to_cor) {
   unsigned cor_count = 0;
 
   for (size_t i = 0; i < ids_to_cor.size(); i++) {
@@ -74,15 +86,15 @@ FemAbstractElement* FemAbstractElement::create(
 
 static unsigned element_count = 0;
 
-void FemAbstractElement::setCalcProps(FemAbstractElement* p_element,
-                                      unsigned& global_matrix_size,
-                                      const ElementData& data) {
-  auto general_element = p_element->genetal_element_;
+void AFemElement::setCalcProps(AFemElement* fem_element,
+                               unsigned& global_matrix_size,
+                               const ElementData& data) {
+  auto general_element = fem_element->genetal_element_;
 
   // Set load parameters
-  bool is_load = p_element->general_Load_ != nullptr;
-  bool is_displ = p_element->general_disp_ != nullptr;
-  VectorXd coefs = p_element->getLoadVector();
+  bool is_load = general_element->getLoads().size() != 0;
+  bool is_displ = general_element->getDisplacements().size() != 0;
+  VectorXd coefs = fem_element->getLoadVector();
 
   // Bad dof parameters
   short bad_dof_count = data.BAD_DOF_COUNT;
@@ -96,7 +108,7 @@ void FemAbstractElement::setCalcProps(FemAbstractElement* p_element,
   int count_coefs = 0;
   for (size_t i = 0; i < data.NODES_COUNT; i++) {
     const short cur_dof = dof_map[i];
-    Node* current_node = p_element->nodes_[i];
+    Node* current_node = fem_element->nodes_[i];
     double current_coefs[cur_dof];
     short id = current_node->id;
 
@@ -128,16 +140,17 @@ void FemAbstractElement::setCalcProps(FemAbstractElement* p_element,
 
     // if general element has load and current node dont has node load create
     // from general load node load
-    if (is_load && !current_node->nodeLoad) {
-      current_node->nodeLoad = NodeLoad::createNodeLoadFromLoad(
-          p_element->type_, p_element->general_Load_, current_coefs, i);
+    if (is_load || current_node->nodeLoad) {
+      current_node->nodeLoad = ANodeLoad::createNodeLoadFromLoad(
+          fem_element->type_, general_element->getLoads().first().get(),
+          current_coefs, i);
     }
   }
   // Set index that used to define the correc_count variable
   if (!is_full_dof) {
     for (size_t i = 0; i < data.NODES_COUNT; i++) {
       if (data.IS_NODE_BAD_DOF_MAP[i]) {
-        unsigned id_to_add = p_element->nodes_[i]->id;
+        unsigned id_to_add = fem_element->nodes_[i]->id;
         general_element->meshData_->ids_to_cor_.push_back(id_to_add);
       }
     }

@@ -6,23 +6,23 @@
 #include <QVector>
 #include <memory>
 
-#include "displacement/displacement.h"
 #include "fem_elements/fem_types.h"
 #include "fem_elements/global.h"
 #include "fem_elements/point.h"
-#include "load/load.h"
 #include "material.h"
 #include "mesh/meshdata.h"
+#include "structural_displacement/displacement.h"
+#include "structural_load/load.h"
 
 class Node;
-class FemAbstractElement;
+class AFemElement;
 
 using std::shared_ptr;
 using std::unique_ptr;
 
 static unsigned count_ = 0;
 
-class AbstractElement {
+class AStructuralElement {
  private:
   // Geometry
   ElementType type_{ElementType::NONE};
@@ -30,8 +30,8 @@ class AbstractElement {
   unsigned lenght_{0};
 
   // Structural parameters
-  QVector<shared_ptr<AbstractLoad>> loads_;
-  QVector<shared_ptr<AbstractDisplacement>> displacements_;
+  QVector<shared_ptr<AStructuralLoad>> loads_;
+  QVector<shared_ptr<AStructuralDisplacement>> displacements_;
 
  public:
   // Material
@@ -53,15 +53,15 @@ class AbstractElement {
   QVector<double> min_values_;
   QVector<double> max_values_;
 
-  AbstractElement();
+  AStructuralElement();
 
-  AbstractElement(ElementType type, unsigned lenght, Point3 start_point);
+  AStructuralElement(ElementType type, unsigned lenght, Point3 start_point);
 
-  AbstractElement(ElementType type,
-                  unsigned lenght,
-                  Point3 start_point,
-                  unique_ptr<Material> material,
-                  shared_ptr<AbstractLoad> load);
+  AStructuralElement(ElementType type,
+                     unsigned lenght,
+                     Point3 start_point,
+                     unique_ptr<Material> material,
+                     shared_ptr<AStructuralLoad> load);
 
   static sptrAbsElem createByType(ElementType type);
 
@@ -73,13 +73,17 @@ class AbstractElement {
 
   Material* getMaterial() const;
 
-  void addLoad(shared_ptr<AbstractLoad> load);
+  void addLoad(shared_ptr<AStructuralLoad> load);
+
+  QVector<shared_ptr<AStructuralLoad>>& getLoads();
+
+  QVector<shared_ptr<AStructuralDisplacement>>& getDisplacements();
 
   inline short loadCount() const;
 
   virtual void addMaterial(unique_ptr<Material> material) = 0;
 
-  virtual shared_ptr<AbstractLoad> createAndAddLoad() = 0;
+  virtual shared_ptr<AStructuralLoad> createAndAddLoad() = 0;
 
   virtual void initElasticityMatrixies() = 0;
 

@@ -6,10 +6,10 @@ add_executable(FEM-program
      # модули FEM
      ${CMAKE_HOME_DIRECTORY}/src/mesh/mesh.cpp
      ${CMAKE_HOME_DIRECTORY}/src/mesh/meshdata.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/general_element/plates/plate.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/general_element/load/load.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/general_element/displacement/displacement.cpp
-     ${CMAKE_HOME_DIRECTORY}/src/general_element/element.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/structural_element/structural_plates/plate.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/structural_element/structural_load/load.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/structural_element/structural_displacement/displacement.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/structural_element/structural_element.cpp
      ${CMAKE_HOME_DIRECTORY}/src/fem_elements/fem_plates/fem_plate_mitc4my.cpp
      ${CMAKE_HOME_DIRECTORY}/src/fem_elements/fem_plates/fem_plate_mitc9my.cpp
      ${CMAKE_HOME_DIRECTORY}/src/fem_elements/fem_plates/fem_plate_dkmq.cpp
@@ -37,9 +37,9 @@ target_include_directories(FEM-program
         ${PROJECT_SOURCE_DIR}/src/mesh
         ${PROJECT_SOURCE_DIR}/src/solver
 
-        ${PROJECT_SOURCE_DIR}/src/general_element
-        ${PROJECT_SOURCE_DIR}/src/general_element/load
-        ${PROJECT_SOURCE_DIR}/src/general_element/displacement
+        ${PROJECT_SOURCE_DIR}/src/structural_element
+        ${PROJECT_SOURCE_DIR}/src/structural_element/structural_load
+        ${PROJECT_SOURCE_DIR}/src/structural_element/structural_displacement
 )
 
 

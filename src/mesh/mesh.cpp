@@ -3,21 +3,26 @@
 
 #include <QList>
 #include <QtAlgorithms>
+#include <cstddef>
+#include <fstream>
 #include <memory>
+#include <stdexcept>
+
 // #include <stdexcept>
 
 // #include <new>
 
 // #include "../elements/element.h"
+#include "fem_displacement.h"
 #include "fem_elements/element_provider.h"
 // #include "../elements/load/load.h"
 #include "fem_element.h"
 #include "fem_load.h"
 #include "fem_types.h"
-#include "general_element/displacement/displacement.h"
-#include "general_element/element.h"
 #include "mesh.h"
 #include "meshdata.h"
+#include "structural_displacement/displacement.h"
+#include "structural_element/structural_element.h"
 
 // Mesh::~Mesh() {
 //   for (auto node : nodes) {
@@ -44,20 +49,21 @@ unsigned Mesh::maxNodeIndexInList(const QList<Node>& list) {
   return maxIndex;
 }
 
-void Mesh::meshCreateManager(QVector<shared_ptr<AbstractElement>>* elements,
+void Mesh::meshCreateManager(QVector<shared_ptr<AStructuralElement>>* elements,
                              bool standartScheme) {
   if (standartScheme) {
     for (auto element : *elements) {
-      if (element->meshData_ == nullptr) createDefaultMesh(element);
+      if (element->meshData_ == nullptr) {
+        createDefaultMesh(element);
+        writeElementData(element);
+      }
     }
   }
 }
 
-void Mesh::createDefaultMesh(shared_ptr<AbstractElement> element) {
+void Mesh::createDefaultMesh(shared_ptr<AStructuralElement> element) {
   ElementType type = element->getType();
   auto& DATA = ElementProvider.at(element->getType());
-  double loadv[] = {-100, 0, 0};
-  AbstractLoad* load = new AreaLoadFzMxMy(loadv, 3);
 
   Point3 point00 = element->getStartPoint();
 
@@ -70,7 +76,7 @@ void Mesh::createDefaultMesh(shared_ptr<AbstractElement> element) {
 
   unsigned globa_stiffm_size = 0;
   QVector<Node*> nodes;
-  QVector<FemAbstractElement*> femElements;
+  QVector<AFemElement*> femElements;
   femElements.reserve(+element_count);
   nodes.reserve(element_count * 20);
 
@@ -119,22 +125,40 @@ void Mesh::createDefaultMesh(shared_ptr<AbstractElement> element) {
           node->nodeDisplacement = disp;
         }
 
-        if (node->point.y == (point00.y + lenght_plate) / 2.0 ||
-            node->point.x == (point00.x + lenght_plate) / 2.0) {
-          double f_z[] = {-10};
-          NodeLoadFz* load = new NodeLoadFz(f_z);
-          node->nodeLoad = load;
-        }
+        // Load opensees
+        // if (node->point.x == lenght_plate && node->glPoint.y == 0) {
+        //   double v[] = {-10, 0, 0};
+        //   NodeLoad* load = new NodeLoadFzMxMy(v);
+        //   node->nodeLoad = load;
+        // }
+
+        // // disp opensees
+        // if (node->point == point00) {
+        //   NodeDisplacement* disp =
+        //       new NodeDisplacementUzPsixPsiy(true, false, false);
+        //   node->nodeDisplacement = disp;
+        // }
+
+        // if (node->point.x == lenght_plate && node->point.y == lenght_plate) {
+        //   NodeDisplacement* disp =
+        //       new NodeDisplacementUzPsixPsiy(true, false, false);
+        //   node->nodeDisplacement = disp;
+        // }
+
+        // if (node->point.x == 0 && node->point.y == lenght_plate) {
+        //   NodeDisplacement* disp =
+        //       new NodeDisplacementUzPsixPsiy(true, false, false);
+        //   node->nodeDisplacement = disp;
+        // }
 
       node_already_exists:
         nodes.push_back(node);
         nodes_to_elem[j] = node;
       }
 
-      auto fem_element = FemAbstractElement::create(
+      auto fem_element = AFemElement::create(
           elem_counter++, type, nodes_to_elem, DATA.NODES_COUNT, element);
-      fem_element->setLoad(load);
-      FemAbstractElement::setCalcProps(fem_element, globa_stiffm_size, DATA);
+      AFemElement::setCalcProps(fem_element, globa_stiffm_size, DATA);
       femElements.push_back(fem_element);
 
       emit progressChanged(elem_counter);
@@ -145,4 +169,70 @@ void Mesh::createDefaultMesh(shared_ptr<AbstractElement> element) {
                               globa_stiffm_size);
 
   emit meshFinished(element_count);
+}
+
+void Mesh::writeElementData(shared_ptr<AStructuralElement> str_element) {
+  auto& mesh = str_element->meshData_;
+  auto fem_elements = mesh->femElements;
+  auto fem_nodes = mesh->nodes_;
+
+  // load and displacement text for shell
+  std::ostringstream load_text;
+  load_text << "pattern Plain 1 Linear {\n";
+  std::ostringstream displacement_text;
+
+  std::ofstream out("C:\\Users\\vlada\\Documents\\FEM\\OpenSees\\mesh.txt.txt");
+
+  if (!out.is_open()) {
+    throw std::runtime_error("Mesh file cant open and dont know why");
+  }
+
+  out << "# nodes\n";
+  for (size_t i = 0; i < fem_nodes.size(); i++) {
+    Node* node = fem_nodes[i];
+
+    out << "node " << node->id << " " << node->point.x << " " << node->point.y
+        << " " << node->point.z << ";\n";
+
+    if (node->nodeDisplacement) {
+      displacement_text << "fix " << node->id << " ";
+
+      auto disp_data = node->nodeDisplacement->getDisplacementInfo();
+
+      for (auto value : disp_data) {
+        displacement_text << value << " ";
+      }
+      displacement_text << ";\n";
+    }
+
+    if (node->nodeLoad) {
+      double fz = node->nodeLoad->values_[0];
+      double mx = node->nodeLoad->values_[1];
+      double my = node->nodeLoad->values_[2];
+      load_text << "load " << node->id << " 0 0 " << fz << " " << mx << " "
+                << my << " 0;\n";
+    }
+  }
+  load_text << "}";
+
+  out << "\n\n# loads\n";
+  out << load_text.str();
+  out << "\n\n# displacements\n";
+  out << displacement_text.str();
+
+  out << "\n\n# Elements\n";
+  // Write element mesh code
+  for (size_t i = 0; i < fem_elements.size(); i++) {
+    out << "element $EleType ";
+
+    for (size_t j = 0; j < fem_elements[i]->nodes_count_; j++) {
+      out << fem_elements[i]->nodes_[j]->id << " ";
+    }
+
+    out << "$secArgs;\n";
+
+    // After one iteration: element $EleType 1 1 2 3 4 $secArgs;
+  }
+
+  out.close();
 }

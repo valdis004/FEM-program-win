@@ -8,7 +8,7 @@
 #include <exception>
 
 #include "element_provider.h"
-#include "general_element/element.h"
+#include "structural_element/structural_element.h"
 
 using ShapeFunc = double (*)(double, double);
 
@@ -268,15 +268,17 @@ C_S_C auto NwDiffAny =
     };
 
 FemPlateMitc9My::FemPlateMitc9My(
-    unsigned id, Node** nodes, std::shared_ptr<AbstractElement> generalElement)
-    : FemAbstractElement(id, nodes, 9, ElementType::MITC9MY, generalElement) {};
+    unsigned id,
+    Node** nodes,
+    std::shared_ptr<AStructuralElement> generalElement)
+    : AFemElement(id, nodes, 9, ElementType::MITC9MY, generalElement) {};
 
 FemPlateMitc9My::FemPlateMitc9My(
     unsigned id,
     Node** nodes,
     const Material& material,
-    std::shared_ptr<AbstractElement> generalElement)
-    : FemAbstractElement(
+    std::shared_ptr<AStructuralElement> generalElement)
+    : AFemElement(
           id, nodes, 9, material, ElementType::MITC9MY, generalElement) {};
 
 MatrixXd FemPlateMitc9My::jMatrix(double xi, double eta) {

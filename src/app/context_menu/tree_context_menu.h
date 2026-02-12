@@ -40,7 +40,7 @@ class TreeContextMenu : public QObject {
   void createDefaultMenu();
 
   void createDiologDefualtSchemePlate(
-      QVector<shared_ptr<AbstractElement>>* elements,
+      QVector<shared_ptr<AStructuralElement>>* elements,
       QWidget* main_window,
       Qtgl* scene,
       Mesh*& mesh);

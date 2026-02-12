@@ -8,12 +8,12 @@
 // #include "/home/vladislav/Документы/FEM/FEM
 // program/src/elements/elementprovider.h" #include "femload.h"
 
-AbstractLoad::AbstractLoad(short count) {
+AStructuralLoad::AStructuralLoad(short count) {
   assert(count > 0);
   this->values.resize(count);
 };
 
-AbstractLoad::AbstractLoad(double* values, short count) {
+AStructuralLoad::AStructuralLoad(double* values, short count) {
   assert(count > 0);
   this->values.resize(count);
 
@@ -22,7 +22,7 @@ AbstractLoad::AbstractLoad(double* values, short count) {
   }
 };
 
-AbstractLoad::AbstractLoad(std::span<double> values) {
+AStructuralLoad::AStructuralLoad(std::span<double> values) {
   this->values.resize(values.size());
 
   for (size_t i = 0; i < values.size(); i++) {
@@ -30,13 +30,13 @@ AbstractLoad::AbstractLoad(std::span<double> values) {
   }
 };
 
-AreaLoadFzMxMy::AreaLoadFzMxMy() : AbstractLoad(3) {};
+AreaLoadFzMxMy::AreaLoadFzMxMy() : AStructuralLoad(3) {};
 
 AreaLoadFzMxMy::AreaLoadFzMxMy(double* values, short count)
-    : AbstractLoad(values, count) {};
+    : AStructuralLoad(values, count) {};
 
 AreaLoadFzMxMy::AreaLoadFzMxMy(std::span<double> values)
-    : AbstractLoad(values) {};
+    : AStructuralLoad(values) {};
 
 void AreaLoadFzMxMy::setValues(double* values) {
   for (size_t i = 0; i < 3; i++) {
@@ -44,10 +44,10 @@ void AreaLoadFzMxMy::setValues(double* values) {
   }
 }
 
-AreaLoadFxFyFzMxMyMz::AreaLoadFxFyFzMxMyMz() : AbstractLoad(6) {};
+AreaLoadFxFyFzMxMyMz::AreaLoadFxFyFzMxMyMz() : AStructuralLoad(6) {};
 
 AreaLoadFxFyFzMxMyMz::AreaLoadFxFyFzMxMyMz(std::span<double> values)
-    : AbstractLoad(values) {};
+    : AStructuralLoad(values) {};
 
 // AreaLoadQzMxMy::AreaLoadQzMxMy(double qz, double mx, double my)
 //     : qz(qz), mx(mx), my(my) {};
