@@ -141,9 +141,8 @@ void AFemElement::setCalcProps(AFemElement* fem_element,
     // if general element has load and current node dont has node load create
     // from general load node load
     if (is_load || current_node->nodeLoad) {
-      current_node->nodeLoad = ANodeLoad::createNodeLoadFromLoad(
-          fem_element->type_, general_element->getLoads().first().get(),
-          current_coefs, i);
+      ANodeLoad::setNodeLoadToNodeFromLoad(current_node, fem_element,
+                                           current_coefs, i);
     }
   }
   // Set index that used to define the correc_count variable

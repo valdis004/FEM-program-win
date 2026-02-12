@@ -164,8 +164,8 @@ void TreeContextMenu::createDiologDefualtSchemePlate(
     shared_ptr<AStructuralLoad> load = make_shared<AreaLoadFzMxMy>(load_values);
 
     shared_ptr<AStructuralElement> plate =
-        make_shared<Plate>(selected_type, 4000.0, start_point);
-    plate->addMaterial(make_unique<PlateMaterial>(2e11, 5.0 / 6.0, 0.2, 0.02));
+        make_shared<Plate>(selected_type, 2000.0, start_point);
+    plate->addMaterial(make_unique<PlateMaterial>(2e2, 5.0 / 6.0, 0.2, 2.0));
     plate->addLoad(load);
 
     elements->push_back(plate);

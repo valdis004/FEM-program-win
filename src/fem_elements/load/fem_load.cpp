@@ -39,7 +39,9 @@ ANodeLoad* ANodeLoad::createNodeLoadFromLoad(ElementType type,
   for (auto& load : fem_element->genetal_element_->getLoads()) {
     load->setValues(values);
 
-    if (node->nodeLoad) {
+    // If node load dont existst create load, else append values to node load
+    // which already exists
+    if (!node->nodeLoad) {
       node->nodeLoad = data.LOAD_FN_MAP[localNodeId](values, coefs);
     } else {
       node->nodeLoad->appendValuesToNodeLoad(values, coefs);

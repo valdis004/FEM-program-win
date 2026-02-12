@@ -102,7 +102,7 @@ void Mesh::createDefaultMesh(shared_ptr<AStructuralElement> element) {
         Node* node;
         for (auto item : nodes) {
           if (isEqual(item->point, point_for_node)) {
-            node = new Node(*item);
+            node = item;
             goto node_already_exists;
           }
         }
@@ -151,8 +151,8 @@ void Mesh::createDefaultMesh(shared_ptr<AStructuralElement> element) {
         //   node->nodeDisplacement = disp;
         // }
 
-      node_already_exists:
         nodes.push_back(node);
+      node_already_exists:
         nodes_to_elem[j] = node;
       }
 
@@ -191,8 +191,8 @@ void Mesh::writeElementData(shared_ptr<AStructuralElement> str_element) {
   for (size_t i = 0; i < fem_nodes.size(); i++) {
     Node* node = fem_nodes[i];
 
-    out << "node " << node->id << " " << node->point.x << " " << node->point.y
-        << " " << node->point.z << ";\n";
+    out << "node " << node->id << " " << node->point.x / 1000 << " "
+        << node->point.y / 1000 << " " << node->point.z / 1000 << ";\n";
 
     if (node->nodeDisplacement) {
       displacement_text << "fix " << node->id << " ";
@@ -223,7 +223,7 @@ void Mesh::writeElementData(shared_ptr<AStructuralElement> str_element) {
   out << "\n\n# Elements\n";
   // Write element mesh code
   for (size_t i = 0; i < fem_elements.size(); i++) {
-    out << "element $EleType ";
+    out << "element $EleType " << fem_elements[i]->id_ << " ";
 
     for (size_t j = 0; j < fem_elements[i]->nodes_count_; j++) {
       out << fem_elements[i]->nodes_[j]->id << " ";
